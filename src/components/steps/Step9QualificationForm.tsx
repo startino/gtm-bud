@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, PlayCircle, ExternalLink, Zap } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -12,7 +12,6 @@ interface Step9QualificationFormProps {
 export function Step9QualificationForm({ onComplete }: Step9QualificationFormProps) {
   const [businessRevenue, setBusinessRevenue] = useState('')
   const [consultingInterest, setConsultingInterest] = useState(false)
-  const [additionalInfo, setAdditionalInfo] = useState('')
 
   const isQualifiedForSalesCall = businessRevenue && parseFloat(businessRevenue) >= 10000
 
@@ -23,15 +22,22 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
   }
 
   return (
-    <Card className="max-w-2xl mx-auto animate-in">
-      <h2 className="text-2xl font-semibold mb-2 text-[var(--text)] tracking-tight">Your campaign is being prepared</h2>
-      <p className="text-[var(--subtle)] mb-8 font-medium">We'll send your leads to your email within the delivery window you selected.</p>
-      <p className="text-sm text-[var(--subtle)] mb-8">Help us serve you better with a quick question:</p>
+    <div className="max-w-7xl mx-auto animate-in">
+      <div className="mb-6">
+        <h2 className="text-2xl font-semibold mb-2 text-[var(--text)] tracking-tight">Your campaign is being prepared</h2>
+        <p className="text-[var(--subtle)] font-medium">We'll send your leads to your email within the delivery window you selected.</p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Left Column - Upsell Form */}
+        <div className="lg:col-span-2">
+          <Card>
+            <p className="text-sm text-[var(--subtle)] mb-6">Help us serve you better with a quick question:</p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Business Revenue */}
         <div>
-          <label className="block text-sm font-medium mb-2">
+                <label className="block text-sm font-semibold mb-3 text-[var(--text)]">
             What's your current monthly revenue?
           </label>
           <Select value={businessRevenue} onChange={(e) => setBusinessRevenue(e.target.value)} required>
@@ -47,7 +53,7 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
 
         {/* Consulting Interest */}
         <div>
-          <label className="block text-sm font-medium mb-2">
+                <label className="block text-sm font-semibold mb-3 text-[var(--text)]">
             Are you interested in a personalized strategy session?
           </label>
           <div className="flex gap-4">
@@ -55,10 +61,10 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
               type="button"
               onClick={() => setConsultingInterest(true)}
               className={cn(
-                'flex-1 p-4 rounded-lg transition-all border-0',
+                      'flex-1 p-4 rounded-lg transition-premium border-0',
                 consultingInterest
-                  ? 'bg-[var(--color-accent)] text-white'
-                  : 'bg-[var(--muted)] text-[var(--text)]'
+                        ? 'bg-[var(--color-accent)] text-white shadow-[var(--shadow-button)]'
+                        : 'bg-[var(--muted)] text-[var(--text)] hover:bg-[var(--surface)]'
               )}
             >
               Yes, I'm interested
@@ -67,29 +73,15 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
               type="button"
               onClick={() => setConsultingInterest(false)}
               className={cn(
-                'flex-1 p-4 rounded-lg transition-all border-0',
+                      'flex-1 p-4 rounded-lg transition-premium border-0',
                 !consultingInterest
-                  ? 'bg-[var(--color-accent)] text-white'
-                  : 'bg-[var(--muted)] text-[var(--text)]'
+                        ? 'bg-[var(--color-accent)] text-white shadow-[var(--shadow-button)]'
+                        : 'bg-[var(--muted)] text-[var(--text)] hover:bg-[var(--surface)]'
               )}
             >
               Not right now
             </button>
           </div>
-        </div>
-
-        {/* Additional Info */}
-        <div>
-          <label className="block text-sm font-medium mb-2">
-            Anything else you'd like us to know?
-          </label>
-          <textarea
-            value={additionalInfo}
-            onChange={(e) => setAdditionalInfo(e.target.value)}
-            rows={3}
-            className="w-full px-4 py-3 rounded-[var(--radius-ctl)] bg-[var(--muted)] text-[var(--text)] placeholder-[var(--subtle)] focus:outline-none focus:ring-4 focus:ring-[color:rgb(80_172_228_/_20%)] transition-all resize-none border-0"
-            placeholder="Optional..."
-          />
         </div>
 
         {/* Sales Call CTA for qualified users */}
@@ -111,6 +103,111 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
         <Button type="submit" className="w-full">Complete</Button>
       </form>
     </Card>
+        </div>
+
+        {/* Right Column - Recommended Resources */}
+        <div className="lg:col-span-1">
+          <Card className="sticky top-8">
+            <h3 className="text-lg font-semibold mb-4 text-[var(--text)]">Helpful Resources</h3>
+            <div className="space-y-4">
+              {/* Booking BUD */}
+              <a
+                href="#"
+                className="block p-4 rounded-[var(--radius-card)] bg-gradient-to-br from-[var(--color-accent)]/10 to-[#6b9eff]/10 border border-[var(--color-accent)]/20 hover:shadow-[var(--shadow-card)] transition-premium group"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--color-accent)] to-[#6b9eff] flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-sm text-[var(--text)] mb-1 group-hover:text-[var(--color-accent)] transition-premium">
+                      Booking BUD
+                    </h4>
+                    <p className="text-xs text-[var(--subtle)] mb-2">
+                      Manage full campaigns on autopilot with AI. Use your lead list seamlessly.
+                    </p>
+                    <span className="text-xs font-medium text-[var(--color-accent)] flex items-center gap-1">
+                      Learn more
+                      <ExternalLink className="w-3 h-3" />
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              {/* LinkedIn Strategy Videos */}
+              <a
+                href="#"
+                className="block p-4 rounded-[var(--radius-card)] bg-[var(--surface)] border border-[var(--border-subtle)] hover:border-[var(--border)] hover:shadow-[var(--shadow-card)] transition-premium group"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[var(--muted)] flex items-center justify-center flex-shrink-0">
+                    <PlayCircle className="w-5 h-5 text-[var(--color-accent)]" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-sm text-[var(--text)] mb-1 group-hover:text-[var(--color-accent)] transition-premium">
+                      LinkedIn Outreach Strategy
+                    </h4>
+                    <p className="text-xs text-[var(--subtle)] mb-2">
+                      Master the art of LinkedIn outreach with proven tactics.
+                    </p>
+                    <span className="text-xs font-medium text-[var(--color-accent)] flex items-center gap-1">
+                      Watch video
+                      <ExternalLink className="w-3 h-3" />
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                className="block p-4 rounded-[var(--radius-card)] bg-[var(--surface)] border border-[var(--border-subtle)] hover:border-[var(--border)] hover:shadow-[var(--shadow-card)] transition-premium group"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[var(--muted)] flex items-center justify-center flex-shrink-0">
+                    <PlayCircle className="w-5 h-5 text-[var(--color-accent)]" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-sm text-[var(--text)] mb-1 group-hover:text-[var(--color-accent)] transition-premium">
+                      Building Your ICP
+                    </h4>
+                    <p className="text-xs text-[var(--subtle)] mb-2">
+                      Learn how to refine your ideal customer profile for better targeting.
+                    </p>
+                    <span className="text-xs font-medium text-[var(--color-accent)] flex items-center gap-1">
+                      Watch video
+                      <ExternalLink className="w-3 h-3" />
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                className="block p-4 rounded-[var(--radius-card)] bg-[var(--surface)] border border-[var(--border-subtle)] hover:border-[var(--border)] hover:shadow-[var(--shadow-card)] transition-premium group"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[var(--muted)] flex items-center justify-center flex-shrink-0">
+                    <PlayCircle className="w-5 h-5 text-[var(--color-accent)]" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-sm text-[var(--text)] mb-1 group-hover:text-[var(--color-accent)] transition-premium">
+                      Message Personalization Tips
+                    </h4>
+                    <p className="text-xs text-[var(--subtle)] mb-2">
+                      Create compelling messages that get responses.
+                    </p>
+                    <span className="text-xs font-medium text-[var(--color-accent)] flex items-center gap-1">
+                      Watch video
+                      <ExternalLink className="w-3 h-3" />
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
   )
 }
 

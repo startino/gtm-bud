@@ -40,8 +40,7 @@ export function LandingPage({ onSubmit }: LandingPageProps) {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-[var(--subtle)] max-w-2xl mx-auto mb-10">
-            The easiest way to create personalized LinkedIn outreach campaigns. 
-            Start generating qualified leads in seconds.
+            Real conversations from your outreach. No pitching, just value.
           </p>
 
           {/* Main Input Form - Prominently Featured */}
@@ -90,10 +89,6 @@ export function LandingPage({ onSubmit }: LandingPageProps) {
                 >
                   {isSubmitting ? 'Creating Your Campaign...' : 'Create My Campaign →'}
                 </Button>
-
-                <p className="text-xs text-center text-[var(--subtle)] mt-2">
-                  No credit card required • Try it free
-                </p>
               </form>
             </div>
           </div>

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useCampaign } from '@/contexts/CampaignContext'
 import { mockMessages } from '@/lib/mockData'
 import type { Message } from '@/lib/mockData'
-import { Sparkles, Check, Edit2, Copy, Plus } from 'lucide-react'
+import { Sparkles, Check, Edit2, Plus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -24,21 +24,21 @@ export function Step5MessageGeneration({ onNext, onBack }: Step5MessageGeneratio
   // Simulate AI message generation
   useEffect(() => {
     if (isGenerating) {
-      const timer = setTimeout(() => {
-        const generatedMessages = [
-          ...mockMessages.casual.slice(0, 2),
-          ...mockMessages.professional.slice(0, 2),
-          ...mockMessages['value-first'].slice(0, 2),
-        ]
-        updateState({ generatedMessages })
-        setIsGenerating(false)
-      }, 2000)
+    const timer = setTimeout(() => {
+      const generatedMessages = [
+          mockMessages.casual[0],
+          mockMessages.professional[0],
+          mockMessages['value-first'][0],
+        ].filter(Boolean)
+      updateState({ generatedMessages })
+      setIsGenerating(false)
+    }, 2000)
 
-      return () => clearTimeout(timer)
+    return () => clearTimeout(timer)
     }
   }, [isGenerating, updateState])
 
-  const allMessages = state.generatedMessages || []
+  const allMessages = (state.generatedMessages || []).slice(0, 3)
 
   const handleUseMessage = (message: Message) => {
     setSelectedMessage(message)
@@ -72,12 +72,6 @@ export function Step5MessageGeneration({ onNext, onBack }: Step5MessageGeneratio
     setEditedMessageContent('')
   }
 
-  const handleCopyToNew = (message: Message) => {
-    setCustomMessage(message.content)
-    setShowCustomForm(true)
-    setEditingMessageId(null)
-  }
-
   const handleUseCustom = () => {
     if (customMessage.trim()) {
       const customMessageObj: Message = {
@@ -107,15 +101,15 @@ export function Step5MessageGeneration({ onNext, onBack }: Step5MessageGeneratio
   }
 
   if (isGenerating) {
-    return (
-      <Card className="max-w-3xl mx-auto">
+  return (
+    <Card className="max-w-3xl mx-auto">
         <h2 className="text-2xl font-semibold mb-2 text-[var(--text)] tracking-tight flex items-center gap-3">
           <Sparkles className="w-6 h-6 text-[var(--color-accent)]" />
-          Generating personalized messages
-        </h2>
+        Generating personalized messages
+      </h2>
         <p className="text-[var(--subtle)] mb-6 font-medium">
           AI is crafting multiple message variations for your sample prospects...
-        </p>
+      </p>
 
         <div className="flex items-center justify-center py-20">
           <div className="text-center">
@@ -213,14 +207,6 @@ export function Step5MessageGeneration({ onNext, onBack }: Step5MessageGeneratio
                     >
                       <Edit2 className="w-3 h-3 mr-1" />
                       Edit
-                    </Button>
-                    <Button
-                      variant="secondary"
-                      onClick={() => handleCopyToNew(message)}
-                      className="text-sm py-2"
-                    >
-                      <Copy className="w-3 h-3 mr-1" />
-                      Copy to Create New
                     </Button>
                   </div>
                 </Card>

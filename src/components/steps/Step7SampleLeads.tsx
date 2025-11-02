@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useCampaign } from '@/contexts/CampaignContext'
-import { useAuth } from '@/contexts/AuthContext'
 import { mockSampleLeads } from '@/lib/mockData'
-import { CheckCircle, Linkedin } from 'lucide-react'
+import { Linkedin } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { SignInModal } from '@/components/SignInModal'
+import { Spinner } from '@/components/ui/Spinner'
 
 interface Step7SampleLeadsProps {
   onNext: () => void
@@ -15,11 +14,9 @@ interface Step7SampleLeadsProps {
 
 export function Step7SampleLeads({ onNext, onBack }: Step7SampleLeadsProps) {
   const { updateState } = useCampaign()
-  const { isAuthenticated, isAnonymous } = useAuth()
   const [isLoading, setIsLoading] = useState(true)
   const [leads] = useState(mockSampleLeads)
   const [selectedLeadId, setSelectedLeadId] = useState<string | null>(null)
-  const [showSignInModal, setShowSignInModal] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,13 +27,7 @@ export function Step7SampleLeads({ onNext, onBack }: Step7SampleLeadsProps) {
     return () => clearTimeout(timer)
   }, [updateState, leads])
 
-  useEffect(() => {
-    if (!selectedLeadId && leads.length > 0) {
-      setSelectedLeadId(leads[0].id)
-    }
-  }, [leads, selectedLeadId])
-
-  const selectedLead = leads.find(l => l.id === selectedLeadId) || leads[0]
+  const selectedLead = leads.find(l => l.id === selectedLeadId) || null
 
   if (isLoading) {
     return (
@@ -46,45 +37,34 @@ export function Step7SampleLeads({ onNext, onBack }: Step7SampleLeadsProps) {
           Searching for qualified prospects matching your ICP...
         </p>
         <div className="flex items-center justify-center py-20">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[var(--color-accent)]"></div>
+          <Spinner size="lg" className="text-[var(--color-accent)]" />
         </div>
       </Card>
     )
   }
 
-  const handleOrderClick = () => {
-    // If anonymous user, show sign-in modal first
-    if (isAnonymous && !isAuthenticated) {
-      setShowSignInModal(true)
-    } else {
-      onNext()
-    }
-  }
 
   return (
     <>
     <div className="max-w-7xl mx-auto">
       <Card className="mb-6">
-        <h2 className="text-2xl font-semibold mb-2 text-[var(--text)] tracking-tight">Sample leads ready</h2>
-        <p className="text-[var(--subtle)] font-medium">
-          Here are {leads.length} example prospects that match your criteria. Your full list will be delivered within 24 hours.
+        <h2 className="text-2xl font-semibold mb-2 text-[var(--text)] tracking-tight">Sample leads preview</h2>
+        <p className="text-[var(--subtle)] font-medium mb-2">
+          This is a preview of {leads.length} example prospects that match your criteria.
+        </p>
+        <p className="text-sm text-[var(--subtle)]">
+          Continue to the next step to export your full lead list with all matching prospects.
         </p>
       </Card>
 
       <div className="flex gap-6">
         {/* Left Panel - Lead Details */}
-        <Card className="w-[400px] flex-shrink-0 h-fit sticky top-8">
-          {selectedLead && (
+        <Card className="w-[400px] flex-shrink-0 min-h-[500px] sticky top-8 flex flex-col">
+          {selectedLead ? (
             <div className="space-y-6">
               <div>
                 <h3 className="text-xl font-semibold text-[var(--text)] mb-1">{selectedLead.name}</h3>
                 <p className="text-sm text-[var(--subtle)] mb-4">{selectedLead.title} • {selectedLead.company}</p>
-                {selectedLead.hasOpenInMail && (
-                  <span className="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-[var(--color-accent)] text-white rounded-full">
-                    <CheckCircle className="w-3 h-3" />
-                    Open InMail Available
-                  </span>
-                )}
               </div>
 
               <div className="space-y-3 pt-4 border-t border-[var(--border-subtle)]">
@@ -116,11 +96,26 @@ export function Step7SampleLeads({ onNext, onBack }: Step7SampleLeadsProps) {
                 </Button>
               </div>
             </div>
+          ) : (
+            <div className="flex-1 flex flex-col items-center justify-center text-center px-6">
+              <div className="w-16 h-16 rounded-full bg-[var(--muted)] flex items-center justify-center mb-4">
+                <Linkedin className="w-8 h-8 text-[var(--subtle)]" />
+              </div>
+              <p className="text-sm font-medium text-[var(--text)] mb-2">Select a lead to view details</p>
+              <p className="text-xs text-[var(--subtle)] max-w-[280px]">
+                Click on any lead from the list to see their full profile and personalized message
+              </p>
+            </div>
           )}
         </Card>
 
         {/* Right Panel - Leads List */}
         <div className="flex-1">
+          <div className="mb-4">
+            <Button onClick={onNext} className="w-full">
+              Export Full Campaign
+            </Button>
+          </div>
           <div className="space-y-3 mb-6">
             {leads.map((lead) => {
               const isSelected = lead.id === selectedLeadId
@@ -135,17 +130,9 @@ export function Step7SampleLeads({ onNext, onBack }: Step7SampleLeadsProps) {
                       : 'hover:shadow-[var(--shadow-card)] border border-[var(--border-subtle)]'
                   )}
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <h3 className="text-lg font-semibold text-[var(--text)] mb-1">{lead.name}</h3>
-                      <p className="text-sm text-[var(--subtle)]">{lead.title} • {lead.company}</p>
-                    </div>
-                    {lead.hasOpenInMail && (
-                      <span className="px-3 py-1 text-xs font-semibold bg-[var(--color-accent)] text-white rounded-full flex items-center gap-1 flex-shrink-0 ml-4">
-                        <CheckCircle className="w-3 h-3" />
-                        Open InMail
-                      </span>
-                    )}
+                  <div className="mb-3">
+                    <h3 className="text-lg font-semibold text-[var(--text)] mb-1">{lead.name}</h3>
+                    <p className="text-sm text-[var(--subtle)]">{lead.title} • {lead.company}</p>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-3">
                     <span className="px-2 py-1 text-xs bg-[var(--muted)] rounded border-0">{lead.industry}</span>
@@ -162,17 +149,10 @@ export function Step7SampleLeads({ onNext, onBack }: Step7SampleLeadsProps) {
 
           <div className="flex gap-3">
             <Button variant="secondary" onClick={onBack} className="flex-1">Back</Button>
-            <Button onClick={handleOrderClick} className="flex-1">Order Full Campaign</Button>
           </div>
         </div>
       </div>
     </div>
-    {showSignInModal && (
-      <SignInModal
-        onClose={() => setShowSignInModal(false)}
-        onSuccess={onNext}
-      />
-    )}
     </>
   )
 }

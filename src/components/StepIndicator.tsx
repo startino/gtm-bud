@@ -25,49 +25,47 @@ export function StepIndicator({ currentStep, totalSteps, onStepClick }: StepIndi
       {steps.map((step) => {
         const isActive = step === currentStep
         const isCompleted = step < currentStep
-        const isClickable = step <= currentStep || isCompleted
         const label = STEP_LABELS[step - 1] || `Step ${step}`
 
         return (
-          <div key={step} className="flex flex-col items-center flex-1">
-            <div className="flex items-center w-full">
-              <button
-                onClick={() => isClickable && onStepClick(step)}
-                disabled={!isClickable}
-                className={cn(
-                  'h-9 w-9 rounded-full flex items-center justify-center text-xs font-semibold transition-premium border-0 flex-shrink-0',
-                  isActive
-                    ? 'bg-gradient-to-br from-[var(--color-accent)] to-[#6b9eff] text-white shadow-[var(--shadow-button)] scale-110'
-                    : isCompleted
-                    ? 'bg-[var(--muted)] text-[var(--color-accent)] hover:bg-[var(--surface)] hover:shadow-[var(--shadow-sm)] cursor-pointer border border-[var(--border-subtle)]'
-                    : 'bg-transparent text-[var(--subtle)] cursor-not-allowed border border-[var(--border-subtle)]'
-                )}
-              >
-                {step}
-              </button>
-              {step < totalSteps && (
-                <div
-                  className={cn(
-                    'h-1 rounded-full transition-premium mx-2 flex-1',
-                    isCompleted 
-                      ? 'bg-gradient-to-r from-[var(--color-accent)] to-[#6b9eff]' 
-                      : 'bg-[var(--border-subtle)]'
-                  )}
-                />
-              )}
-            </div>
-            <span
+          <div key={step} className="flex items-start flex-1">
+            <div className="flex flex-col items-center flex-shrink-0">
+            <button
+                onClick={() => onStepClick(step)}
               className={cn(
-                'text-xs font-medium mt-2 text-center transition-premium',
+                  'h-9 w-9 rounded-full flex items-center justify-center text-xs font-semibold transition-premium border-0 cursor-pointer',
                 isActive
-                  ? 'text-[var(--color-accent)]'
+                    ? 'bg-gradient-to-br from-[var(--color-accent)] to-[#6b9eff] text-white shadow-[var(--shadow-button)] scale-110'
                   : isCompleted
-                  ? 'text-[var(--text)]'
-                  : 'text-[var(--subtle)]'
+                    ? 'bg-[var(--muted)] text-[var(--color-accent)] hover:bg-[var(--surface)] hover:shadow-[var(--shadow-sm)] border border-[var(--border-subtle)]'
+                    : 'bg-transparent text-[var(--subtle)] hover:bg-[var(--muted)] hover:text-[var(--text)] border border-[var(--border-subtle)]'
               )}
             >
-              {label}
-            </span>
+              {step}
+            </button>
+              <span
+                className={cn(
+                  'text-xs font-medium mt-2 text-center w-full transition-premium',
+                  isActive
+                    ? 'text-[var(--color-accent)]'
+                    : isCompleted
+                    ? 'text-[var(--text)]'
+                    : 'text-[var(--subtle)]'
+                )}
+              >
+                {label}
+              </span>
+            </div>
+            {step < totalSteps && (
+              <div
+                className={cn(
+                  'h-1 rounded-full transition-premium mx-2 flex-1 mt-4',
+                  isCompleted 
+                    ? 'bg-gradient-to-r from-[var(--color-accent)] to-[#6b9eff]' 
+                    : 'bg-[var(--border-subtle)]'
+                )}
+              />
+            )}
           </div>
         )
       })}

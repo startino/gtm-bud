@@ -1,16 +1,40 @@
 import { useTheme } from '@/contexts/ThemeContext'
+import { useCampaign } from '@/contexts/CampaignContext'
 import { Sparkles, Moon, Sun } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-const campaigns = [
-  'SaaS Founders Q1',
-  'Marketing Agencies',
-  'Consultants Dec 2024',
-  'Tech Startups',
-]
+function generateCampaignName(state: any): string {
+  // Generate name based on campaign data
+  if (state.selectedStrategy?.name) {
+    const strategyName = state.selectedStrategy.name.toLowerCase()
+    // Extract key words from strategy name
+    const words = strategyName.split(' ')
+    if (words.length > 0) {
+      const firstWord = words[0].charAt(0).toUpperCase() + words[0].slice(1)
+      return `${firstWord} Campaign`
+    }
+  }
+  
+  if (state.icpCriteria && state.icpCriteria.length > 0) {
+    // Try to extract something from ICP criteria
+    const firstCriterion = state.icpCriteria[0].toLowerCase()
+    if (firstCriterion.includes('founder')) {
+      return 'Founders Campaign'
+    } else if (firstCriterion.includes('agency')) {
+      return 'Agencies Campaign'
+    } else if (firstCriterion.includes('consultant')) {
+      return 'Consultants Campaign'
+    }
+  }
+  
+  // Default name
+  return 'New Campaign'
+}
 
 export function Sidenav() {
   const { theme, toggleTheme } = useTheme()
+  const { state } = useCampaign()
+  const campaignName = generateCampaignName(state)
 
   return (
     <div className="fixed left-0 top-0 h-full w-[260px] glass border-r border-[var(--border-subtle)] flex flex-col z-10">
@@ -31,23 +55,23 @@ export function Sidenav() {
       <div className="flex-1 px-5 py-6 overflow-y-auto">
         <div className="mb-6">
           <h2 className="text-xs font-bold text-[var(--subtle)] uppercase tracking-wider mb-4 px-2">
-            Campaigns
-          </h2>
+          Campaigns
+        </h2>
           <nav className="space-y-1">
             {campaigns.map((campaign, index) => (
-              <button
-                key={campaign}
+            <button
+              key={campaign}
                 className={cn(
                   'w-full text-left px-3 py-2.5 rounded-[var(--radius-sm)] text-sm font-medium text-[var(--text)] border-0 transition-premium',
                   index === 0
                     ? 'bg-[var(--muted)] text-[var(--color-accent)] shadow-[var(--shadow-sm)]'
                     : 'hover:bg-[var(--muted)] hover:text-[var(--color-accent)] hover:shadow-[var(--shadow-sm)]'
                 )}
-              >
-                {campaign}
-              </button>
-            ))}
-          </nav>
+            >
+              {campaign}
+            </button>
+          ))}
+        </nav>
         </div>
       </div>
 

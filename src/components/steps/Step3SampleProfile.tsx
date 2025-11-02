@@ -4,6 +4,7 @@ import { Linkedin, Plus, X } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { Button } from '@/components/ui/Button'
+import { Spinner } from '@/components/ui/Spinner'
 import { cn } from '@/lib/utils'
 
 interface Step3SampleProfileProps {
@@ -56,16 +57,34 @@ export function Step3SampleProfile({ onNext, onBack }: Step3SampleProfileProps) 
   }
 
   const isValid = sampleProfileUrls.some(url => url.trim() !== '')
+  const filledUrlsCount = sampleProfileUrls.filter(url => url.trim() !== '').length
+  const hasAtLeastOne = filledUrlsCount > 0
 
   return (
     <Card className="max-w-2xl mx-auto">
       <h2 className="text-2xl font-semibold mb-2 text-[var(--text)] tracking-tight">Provide sample prospects</h2>
-      <p className="text-[var(--subtle)] mb-2 font-medium">
-        Share LinkedIn profiles of ideal prospects. We'll extract ICP attributes and generate example messages.
+      {!hasAtLeastOne ? (
+        <>
+          <p className="text-[var(--subtle)] mb-2 font-medium">
+        Share a LinkedIn profile of an ideal prospect. We'll extract ICP attributes and generate example messages.
       </p>
-      <p className="text-sm text-[var(--subtle)] mb-8">
-        Adding more profiles will make the next step more accurate.
-      </p>
+          <p className="text-sm text-[var(--subtle)] mb-8">
+            You can add more profiles later - the more you add, the more accurate the next step will be.
+          </p>
+        </>
+      ) : (
+        <>
+          <p className="text-[var(--subtle)] mb-2 font-medium">
+            {filledUrlsCount === 1 
+              ? "Great! Add more LinkedIn profiles to improve accuracy."
+              : `You've added ${filledUrlsCount} profiles. Add more for even better results.`
+            }
+          </p>
+          <p className="text-sm text-[var(--subtle)] mb-8">
+            We'll analyze all profiles to extract common ICP attributes and generate personalized messages.
+          </p>
+        </>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {sampleProfileUrls.map((url, index) => (
@@ -73,15 +92,15 @@ export function Step3SampleProfile({ onNext, onBack }: Step3SampleProfileProps) 
             <label className="block text-sm font-semibold mb-2 flex items-center gap-2 text-[var(--text)]">
               <Linkedin className="w-4 h-4 text-[var(--color-accent)]" />
               Sample Prospect Profile URL {sampleProfileUrls.length > 1 ? `#${index + 1}` : ''}
-            </label>
+          </label>
             <div className="flex gap-2">
-              <Input
-                type="url"
+          <Input
+            type="url"
                 value={url}
                 onChange={(e) => handleUrlChange(index, e.target.value)}
-                placeholder="https://linkedin.com/in/prospect"
+            placeholder="https://linkedin.com/in/prospect"
                 required={index === 0}
-                disabled={isLoading}
+            disabled={isLoading}
                 className="flex-1"
               />
               {sampleProfileUrls.length > 1 && (
@@ -96,7 +115,7 @@ export function Step3SampleProfile({ onNext, onBack }: Step3SampleProfileProps) 
                 </button>
               )}
             </div>
-          </div>
+        </div>
         ))}
 
         <Button
@@ -113,7 +132,7 @@ export function Step3SampleProfile({ onNext, onBack }: Step3SampleProfileProps) 
         {isLoading && (
           <div className="flex items-center justify-center py-8">
             <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[var(--color-accent)] mx-auto mb-4"></div>
+              <Spinner size="lg" className="mx-auto mb-4 text-[var(--color-accent)]" />
               <p className="text-sm text-[var(--subtle)]">Analyzing prospects and extracting ICP attributes...</p>
             </div>
           </div>

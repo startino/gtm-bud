@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { X } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Button } from './ui/Button'
+import { Spinner } from './ui/Spinner'
 
 interface SignInModalProps {
   onClose: () => void
@@ -85,7 +86,7 @@ export function SignInModal({ onClose, onSuccess }: SignInModalProps) {
             >
               {isLoading ? (
                 <>
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                  <Spinner size="sm" className="text-white" />
                   Signing in...
                 </>
               ) : (

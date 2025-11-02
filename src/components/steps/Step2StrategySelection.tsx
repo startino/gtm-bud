@@ -23,7 +23,6 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
     id: 'custom',
     title: '',
     description: '',
-    icon: '✨',
   })
 
   const handleSelect = (strategy: Strategy) => {
@@ -72,7 +71,7 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
         AI has generated these strategies based on your profile. Pick one, edit it, or create your own.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-1 gap-4 mb-6">
         {mockStrategies.map((strategy) => {
           const isEditing = editingStrategyId === strategy.id
           const isSelected = selectedStrategy?.id === strategy.id && !isEditing
@@ -81,12 +80,6 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
             return (
               <Card key={strategy.id} className="p-5">
                 <div className="space-y-4">
-                  <Input
-                    value={editedStrategy.icon}
-                    onChange={(e) => setEditedStrategy({ ...editedStrategy, icon: e.target.value })}
-                    placeholder="Icon (emoji)"
-                    className="text-center text-2xl"
-                  />
                   <Input
                     value={editedStrategy.title}
                     onChange={(e) => setEditedStrategy({ ...editedStrategy, title: e.target.value })}
@@ -109,32 +102,33 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
           }
 
           return (
-            <div key={strategy.id} className="relative">
-              <button
-                onClick={() => handleSelect(strategy)}
-                className={cn(
+            <div key={strategy.id} className="relative group">
+            <button
+              onClick={() => handleSelect(strategy)}
+              className={cn(
                   'w-full p-5 rounded-[var(--radius-card)] transition-premium text-left bg-[var(--surface)] border-0',
                   isSelected
                     ? 'shadow-[var(--shadow-card-hover)] border-2 border-[var(--color-accent)]'
                     : 'hover:shadow-[var(--shadow-card)] border border-[var(--border-subtle)]'
-                )}
-              >
-                <div className="text-4xl mb-3">{strategy.icon}</div>
-                <h3 className="text-lg font-semibold mb-2 text-[var(--text)]">{strategy.title}</h3>
-                <p className="text-sm text-[var(--subtle)]">{strategy.description}</p>
-              </button>
-              {isSelected && (
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    handleEdit(strategy)
-                  }}
-                  className="absolute top-4 right-4 p-2 rounded-lg bg-[var(--muted)] hover:bg-[var(--color-accent)] hover:text-white text-[var(--subtle)] transition-premium border-0"
-                  title="Edit strategy"
-                >
-                  <Edit2 className="w-4 h-4" />
-                </button>
               )}
+            >
+              <h3 className="text-lg font-semibold mb-2 text-[var(--text)]">{strategy.title}</h3>
+              <p className="text-sm text-[var(--subtle)]">{strategy.description}</p>
+            </button>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  handleEdit(strategy)
+                }}
+                className={cn(
+                  'absolute top-4 right-4 p-2 rounded-lg bg-[var(--muted)] hover:bg-[var(--color-accent)] hover:text-white text-[var(--subtle)] transition-premium border-0',
+                  'opacity-0 group-hover:opacity-100',
+                  isSelected && 'opacity-100'
+                )}
+                title="Edit strategy"
+              >
+                <Edit2 className="w-4 h-4" />
+              </button>
             </div>
           )
         })}
@@ -159,15 +153,6 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
         <Card className="p-6 mb-6 border-2 border-[var(--color-accent)]">
           <h3 className="text-lg font-semibold mb-4 text-[var(--text)]">Create Custom Strategy</h3>
           <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-semibold mb-2 text-[var(--text)]">Icon (emoji)</label>
-              <Input
-                value={customStrategy.icon}
-                onChange={(e) => setCustomStrategy({ ...customStrategy, icon: e.target.value })}
-                placeholder="✨"
-                className="text-center text-2xl"
-              />
-            </div>
             <div>
               <label className="block text-sm font-semibold mb-2 text-[var(--text)]">Title</label>
               <Input
@@ -198,7 +183,7 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
                 variant="secondary"
                 onClick={() => {
                   setShowCustomForm(false)
-                  setCustomStrategy({ id: 'custom', title: '', description: '', icon: '✨' })
+                  setCustomStrategy({ id: 'custom', title: '', description: '' })
                 }}
                 className="flex-1"
               >

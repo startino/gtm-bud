@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from 'react'
 import { useCampaign } from '@/contexts/CampaignContext'
-import { Plus, X, Ban } from 'lucide-react'
+import { Plus, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
+import { Toggle } from '@/components/ui/Toggle'
 import { criteriaSuggestions, getCriteriaSuggestions } from '@/lib/mockData'
 
 interface Step4ICPRefinementProps {
@@ -15,16 +16,8 @@ interface Step4ICPRefinementProps {
 interface Criterion {
   id: string
   text: string
-  exclude: boolean
+  mustHave: boolean
 }
-
-const COLORS = [
-  'border-l-[4px] border-l-purple-500',
-  'border-l-[4px] border-l-orange-500',
-  'border-l-[4px] border-l-blue-500',
-  'border-l-[4px] border-l-pink-500',
-  'border-l-[4px] border-l-green-500',
-]
 
 export function Step4ICPRefinement({ onNext, onBack }: Step4ICPRefinementProps) {
   const { state, updateState } = useCampaign()
@@ -34,12 +27,12 @@ export function Step4ICPRefinement({ onNext, onBack }: Step4ICPRefinementProps) 
     ? state.icpCriteria.map((text, idx) => ({
         id: `criterion-${idx}`,
         text,
-        exclude: false,
+        mustHave: true,
       }))
     : [
-        { id: '1', text: 'currently founder of an agency established before november 2020', exclude: false },
-        { id: '2', text: 'agency annual revenue is between $500,000 and $10,000,000', exclude: false },
-        { id: '3', text: 'founder is at least 35 years old', exclude: false },
+        { id: '1', text: 'currently founder of an agency established before november 2020', mustHave: true },
+        { id: '2', text: 'agency annual revenue is between $500,000 and $10,000,000', mustHave: true },
+        { id: '3', text: 'founder is at least 35 years old', mustHave: false },
       ]
 
   const [criteria, setCriteria] = useState<Criterion[]>(initialCriteria)
@@ -86,7 +79,7 @@ export function Step4ICPRefinement({ onNext, onBack }: Step4ICPRefinementProps) 
     const newCriterion: Criterion = {
       id: `criterion-${Date.now()}`,
       text: criterionText,
-      exclude: false,
+      mustHave: true,
     }
     setCriteria([...criteria, newCriterion])
     setSuggestionInput('')
@@ -97,9 +90,9 @@ export function Step4ICPRefinement({ onNext, onBack }: Step4ICPRefinementProps) 
     setCriteria(criteria.filter(c => c.id !== id))
   }
 
-  const handleToggleExclude = (id: string) => {
+  const handleToggleMustHave = (id: string) => {
     setCriteria(criteria.map(c => 
-      c.id === id ? { ...c, exclude: !c.exclude } : c
+      c.id === id ? { ...c, mustHave: !c.mustHave } : c
     ))
   }
 
@@ -122,41 +115,45 @@ export function Step4ICPRefinement({ onNext, onBack }: Step4ICPRefinementProps) 
 
       {/* Criteria List */}
       <div className="space-y-3 mb-6">
-        {criteria.map((criterion, index) => {
-          const colorClass = COLORS[index % COLORS.length]
+        {criteria.map((criterion) => {
           return (
-            <div
+          <div
               key={criterion.id}
-              className={cn(
-                'p-4 rounded-[var(--radius-sm)] bg-[var(--surface)] border border-[var(--border-subtle)] transition-premium',
-                colorClass,
-                criterion.exclude && 'opacity-60'
-              )}
-            >
-              <div className="flex items-start justify-between gap-3">
-                <p className={cn(
-                  'text-sm font-medium text-[var(--text)] flex-1',
-                  criterion.exclude && 'line-through'
-                )}>
-                  {criterion.exclude && <span className="text-red-500 mr-2">exclude:</span>}
-                  {criterion.text}
-                </p>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => handleToggleExclude(criterion.id)}
-                    className={cn(
-                      'p-2 rounded-lg transition-premium border-0',
-                      criterion.exclude
-                        ? 'bg-red-100 dark:bg-red-900/20 text-red-600'
-                        : 'bg-[var(--muted)] hover:bg-red-100 dark:hover:bg-red-900/20 text-[var(--subtle)] hover:text-red-600'
-                    )}
-                    title={criterion.exclude ? 'Include' : 'Exclude'}
-                  >
-                    <Ban className="w-4 h-4" />
-                  </button>
+            className={cn(
+                'p-5 rounded-[var(--radius-card)] transition-premium',
+                criterion.mustHave
+                  ? 'bg-[var(--color-accent-light)] shadow-[var(--shadow-sm)]'
+                  : 'bg-[var(--muted)]'
+            )}
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex-1">
+                  <p className="text-sm font-medium text-[var(--text)] mb-4">
+                    {criterion.text}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <span className={cn(
+                      'text-xs font-medium transition-premium',
+                      !criterion.mustHave ? 'text-[var(--text)]' : 'text-[var(--subtle)]'
+                    )}>
+                      Nice-to-have
+                    </span>
+                    <Toggle
+                      checked={criterion.mustHave}
+                      onChange={() => handleToggleMustHave(criterion.id)}
+                    />
+                    <span className={cn(
+                      'text-xs font-medium transition-premium',
+                      criterion.mustHave ? 'text-[var(--color-accent)]' : 'text-[var(--subtle)]'
+                    )}>
+                      Must-have
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 flex-shrink-0">
                   <button
                     onClick={() => handleRemoveCriteria(criterion.id)}
-                    className="p-2 rounded-lg bg-[var(--muted)] hover:bg-red-100 dark:hover:bg-red-900/20 text-[var(--subtle)] hover:text-red-600 transition-premium border-0"
+                    className="p-2 rounded-lg bg-[var(--surface)] hover:bg-red-100 dark:hover:bg-red-900/20 text-[var(--subtle)] hover:text-red-600 transition-premium"
                     title="Remove"
                   >
                     <X className="w-4 h-4" />
@@ -187,19 +184,19 @@ export function Step4ICPRefinement({ onNext, onBack }: Step4ICPRefinementProps) 
             {showSuggestions && filteredSuggestions.length > 0 && (
               <div
                 ref={suggestionsRef}
-                className="absolute z-10 w-full mt-2 bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius-card)] shadow-[var(--shadow-lg)] max-h-60 overflow-y-auto"
+                className="absolute z-10 w-full mt-2 bg-[var(--surface)] rounded-[var(--radius-card)] shadow-[var(--shadow-lg)] max-h-60 overflow-y-auto"
               >
                 {filteredSuggestions.map((suggestion, idx) => (
                   <button
                     key={idx}
                     type="button"
                     onClick={() => handleSelectSuggestion(suggestion)}
-                    className="w-full text-left px-4 py-3 text-sm text-[var(--text)] hover:bg-[var(--muted)] transition-premium border-0 first:rounded-t-[var(--radius-card)] last:rounded-b-[var(--radius-card)]"
+                    className="w-full text-left px-4 py-3 text-sm text-[var(--text)] hover:bg-[var(--muted)] transition-premium first:rounded-t-[var(--radius-card)] last:rounded-b-[var(--radius-card)]"
                   >
                     {suggestion}
-                  </button>
+              </button>
                 ))}
-              </div>
+            </div>
             )}
           </div>
           <Button

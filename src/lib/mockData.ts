@@ -2,7 +2,6 @@ export interface Strategy {
   id: string
   title: string
   description: string
-  icon: string
 }
 
 export interface ICPAttribute {
@@ -36,19 +35,16 @@ export const mockStrategies: Strategy[] = [
     id: '1',
     title: 'AI Product Potential Scan',
     description: 'A simple 1-page report that scores their agency\'s AI product potential based on their current services and client pain points. Helps them see if their unique knowledge can be turned into a valuable AI product.',
-    icon: '📊',
   },
   {
     id: '2',
     title: 'Recurring Revenue Roadmap',
     description: 'A customizable 1-page roadmap template that outlines key steps to shift towards a recurring revenue model. Shows a clear path to escaping the \'find, do, replace\' work cycle.',
-    icon: '🗺️',
   },
   {
     id: '3',
     title: 'Agency Valuation Booster',
     description: 'A simple calculator (spreadsheet or web-based) that shows the potential increase in agency valuation by integrating a SaaS component. Taps into desire for stronger exit strategy.',
-    icon: '📈',
   },
 ]
 
@@ -157,7 +153,7 @@ export const mockSampleLeads: SampleLead[] = [
     industry: 'Creative Agency',
     companySize: '42 employees',
     location: 'New York, NY',
-    hasOpenInMail: false,
+    hasOpenInMail: true,
     message: 'Hi Emily,\n\nCreative Collective\'s design portfolio is impressive. I mapped your service mix and identified 3 AI product opportunities that align with your brand identity work.\n\nWant to see the analysis?',
   },
   {
@@ -190,7 +186,7 @@ export const mockSampleLeads: SampleLead[] = [
     industry: 'Marketing Agency',
     companySize: '9 employees',
     location: 'Denver, CO',
-    hasOpenInMail: false,
+    hasOpenInMail: true,
     message: 'James,\n\nOne product addition could 5x Digital Frontier\'s valuation. Calculated the impact here:\n\n[Calculator Preview]\n\nWant the model?',
   },
 ]
