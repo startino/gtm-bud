@@ -1,0 +1,434 @@
+0:00 - Unidentified Speaker
+Let's go for hooray.
+
+0:00 - Jorge Lewis
+How's your week going?
+
+0:03 - Jorge Lewis
+It's been pretty solid. Well, actually, no, that's a lie. The weekend has been painful. So we do YouTube videos, and I've been grinding the past half a week trying to get this one out. So it's been an exhausting weekend, but hopefully it'll be done today.
+
+0:18 - Thomas Ryan Oakes
+What's the video about?
+
+0:19 - Jorge Lewis
+This one?
+
+0:23 - Jorge Lewis
+This one's about how an agency, how AI is affecting the agency space, and kind of like what the future looks like, So yeah.
+
+0:34 - Unidentified Speaker
+Cool.
+
+0:34 - Thomas Ryan Oakes
+Well, that's an interesting topic. So what are we here to talk about?
+
+0:40 - Jorge Lewis
+So basically, ideally, we could get a customer interview. And basically, that's kind of the main idea.
+
+0:47 - Thomas Ryan Oakes
+A customer interview.
+
+0:51 - Jorge Lewis
+Yeah. So I mean, there's two ways we could do this. Of do it more rapid fire, just boom, boom, boom. Or we can do it, take it slower, depending on how much time you have, and get to know each other a bit more, which one?
+
+1:03 - Thomas Ryan Oakes
+Well, I got 30, I got 28 minutes, I got a call coming up here. But whatever you think is best, you guys just refresh me, I have your profile. You help agencies turn their IP into tech products. That's an interesting statement. I like it. It's pretty clear. But tell me like, what do you guys do exactly?
+
+1:23 - Jorge Lewis
+So we want to help agencies build tech products to all the benefits, improving their profit margins, um, being able to sell for more, um, all these things. And so our mission is work with five agencies to add 500 K in additional revenue from tech products. That's our mission. So we basically want to come into their agency as, as like partners and help them build and scale a tech product.
+
+1:52 - Thomas Ryan Oakes
+Got it. And you want to do that to build testimonials right now? Is that right?
+
+1:57 - Jorge Lewis
+For the moment, we're kind of in our customer research phase where we want to understand our customers better so that we can understand how I can better how I can make these videos that I'm making on YouTube better, how I can make better outreach and all these things. And then eventually, but it turns out that this outreach that I'm doing to do customer research, I'm getting in contact with people that could be potential customers. So kind of two in one.
+
+2:20 - Thomas Ryan Oakes
+Got it. Okay. I mean, I have some ideas of things that I kind of have backlog that I'll work on when I can get to them. But do you guys, do you have like AI, you feel like you're experts in AI right now? Or what's where's your expertise lie?
+
+2:35 - Jorge Lewis
+So our technical expertise definitely lies in AI, generative AI, so AI agents and all that. And then our and then we're quite good with strategy. The one thing I want to get into this, I don't want to speak too much because you don't have too much time. But yeah, we do, SaaS strategy is kind of what we're also really good at. So like the go to market and that.
+
+2:53 - Thomas Ryan Oakes
+Got it. Okay. Cause one idea I had, and I don't know if you guys would be a good fit or not, but like, I'd love to have, and I have a pretty clear idea on how it would work, but just building it as the thing. But one idea I had was like, if you could, you know, some people don't have the, money, or they don't have the confidence in, you know, maybe having like an agency run an outreach campaign for them. And for them, you know, there's all these people that are like losing their jobs, and but they're, but they're, they're experts in their field, and they're gonna have to start their own business. And they're, they're gonna have to figure out kind of their go to market plan and their go to market motion. And so one of the ideas I have is like, well, what if you could have like an AI product that would where you just input like your LinkedIn profile, your website, maybe a couple other inputs. And it kind of gives you some outreach strategies. It gives you some example outreach messages based on like a live prospects profiles. And then you could say, okay, great, this looks good. Now I want to get my, want to, I want to get my first 100 or 500 leads just like this with this targeting with ready to send messages like, like the deliverable would just be like a spreadsheet basically. Right. And we could then go find really good targets like using, you know, some of our neural search tools that we're using now, and generate the like very unique, um, personalized messages for each of the leads and then deliver that to them. So they could like take that and now they could like go up and do the outreach. And we could even identify all of the people on that list that have an open profile. Right. So like now all you need is a sales nav account and you can just go boom. You just go to market.
+
+5:01 - Jorge Lewis
+So how does, how would this tie into your existing business? Like I can see some ideas, but I'd like to hear it from you.
+
+5:09 - Thomas Ryan Oakes
+Well, so what we do right now is we run, like we develop, like, what's your outreach strategy. And then we execute that for you via LinkedIn or email or both.
+
+5:19 - Jorge Lewis
+Yeah. Okay. So this would kind of be, I could imagine this being like a low tickets, kind of adding it to your value letter type of thing so that they have this and they get immediate value maybe for a low ticket or maybe even free. I don't know. And then ideally that builds enough trust and you can upsell them, right?
+
+5:34 - Thomas Ryan Oakes
+Yep. Probably low to mid ticket. Cause I would imagine like, you know, you might, you might charge for something like this, you might charge 50 cents or lead $1 in like blocks, right? So you could buy maybe a minimum of, of like 500 leads or something. And so yeah, that that would be the product. Yeah, much lower ticket than what we have now. But you then execute the campaign on your own.
+
+6:02 - Jorge Lewis
+Yeah. Okay. Um, I love to I love to go deeper into that. Is it all right if we book another meeting to go specifically into that and to figuring out, maybe there's an opportunity here. So our process usually looks like we start off by, we have a tool called Value Tracker. I'd love to hear your thoughts on this, but we install the software onto your team's computers and it records your screens for the next one to two weeks. And we use all that data to figure out what automations can we make that are most efficient. So it basically gives you, a performance audit on everything. Are we spending a lot of time on this? Are we spending a lot of time on this? And from that, we can figure out the most potent automations that we can make, as well as product opportunities like this one, for example. And then from there, we build out the automations, which we eventually, so for example, for the one that you described, we could build like an automation that your team uses. And then eventually we could build like an interface and have it self-serve for the customers. So that's kind of the process we take. Um, so yeah, I'd love to go deeper into that one if you want on another call.
+
+7:08 - Thomas Ryan Oakes
+Yeah, that would be good. What would, what's a good time wait for us to spend our time now then?
+
+7:13 - Jorge Lewis
+So selfishly, um, just if I could ask you like a bunch of questions, is that all right? Sure. Um, so basically let me start off with, um, so for the frame of reference, have you seen any of my LinkedIn content or, YouTube content?
+
+7:33 - Unidentified Speaker
+No.
+
+7:34 - Jorge Lewis
+Okay. By the way, I think I sent a LinkedIn request. I don't know if you accept it or not.
+
+7:38 - Unidentified Speaker
+Uh, there we go.
+
+7:39 - Jorge Lewis
+Yeah, no, I did.
+
+7:41 - Jorge Lewis
+Okay. Um, okay. So, so you haven't seen any of my stuff. Okay, great. That's great. Um, why did you start this business? What was the, what was your thought process? What aspirations did you have and what future did you when you started this out?
+
+8:01 - Thomas Ryan Oakes
+Yeah, I started, I mean, I was a COO at a fintech company here in Bellevue, Washington. And I, I got in, I was an entrepreneur in my 20s, loved it, then moved back to the States. I was living in Italy. I moved back to the US. I started at a, I went into corporate, right. And then kind of realized that corporate wasn't all it's cracked up to be. And I, I've just always been kind of an entrepreneur at heart. Like, and being able to be my own boss, be creative, and have, you know, uncapped upside. So those are the big reasons like, like the independence, that's a big thing.
+
+8:40 - Jorge Lewis
+Yeah. So, so what about the financial side? When you were starting it out? Were you like, this could make me a lot of money? Or?
+
+8:48 - Thomas Ryan Oakes
+Yeah, but that wasn't really the main driver of money. It was, I would say it was more the opposite. Like I need to make enough money in order to have this life in order to have this be my day to day. I need to make like at least this much. And then when I get there, then I, then I can have, then I can, you know, obviously the goal then is to, to make more revenue, but that wasn't really the main reason.
+
+9:12 - Jorge Lewis
+Okay. And, um, what are your next milestones in life in general? Um, so it could be financial family, the impact you have. Yeah.
+
+9:24 - Thomas Ryan Oakes
+Yeah, I think the next milestone, I think to start removing myself from the business as much as possible to create a more sellable asset that that's kind of the I guess the next milestone would be eventually to have an exit.
+
+9:40 - Jorge Lewis
+Okay. And, and how long?
+
+9:43 - Unidentified Speaker
+Probably realistically, like three to five years.
+
+9:46 - Jorge Lewis
+Okay. Interesting. But I'm There's gonna be some personal questions. So if they're too personal just say skip or next or whatever So this one's really personal. I think the most personal one. Do you have any children?
+
+9:57 - Thomas Ryan Oakes
+Yeah How many I have two I have a six-year-old and a four-year-old Okay, sweet.
+
+10:04 - Jorge Lewis
+Yeah, if you're I won't explain why you probably understand why we need that one You know, I don't know it really helps us understand like if you have children it really understands it helps us understand your financial situation a lot cuz like me being 19, I can lose everything today and it won't really matter much. But for you, risk is something that you have to really take into account.
+
+10:26 - Unidentified Speaker
+Yeah, I understood.
+
+10:28 - Jorge Lewis
+So knowing that, it gives us a lot to go off of just because of the inherent nature of having kids. We're going to get more into about your agency now. Could you break down how you guys charge your clients?
+
+10:45 - Thomas Ryan Oakes
+Yeah, we do monthly. For most clients, it's just a monthly retainer.
+
+10:52 - Jorge Lewis
+Okay. And is it consistent? Is it the same across every client? Or does it depend?
+
+11:01 - Thomas Ryan Oakes
+We have exceptions for like some of our bigger more like legacy clients. But right now it's monthly retainer, I will probably I'm actually looking to shift that to more of a performance based model. Where you're buying blocks of leads versus monthly retainer. So that's a shift we're making.
+
+11:24 - Jorge Lewis
+Interesting. That's cool. And what have you come to a sharing, at least a revenue range as well as a profit range that you guys are doing?
+
+11:32 - Thomas Ryan Oakes
+Yeah. So I think we'll do just under a million this year. Our profit margin's about 40%.
+
+11:42 - Jorge Lewis
+Okay, that's pretty good for an agency.
+
+11:45 - Thomas Ryan Oakes
+Yeah, I mean, we're using a lot of AI too. So we're, you know, able to do more faster, better. Sweet.
+
+11:53 - Jorge Lewis
+Okay. And then in the next, sorry, in the past quarter or two, what initiative have you taken that that's taken most of your time? So it could be a content strategy, it could be customer acquisition, a new service line.
+
+12:06 - Thomas Ryan Oakes
+I'd say, I mean, it's all always customer acquisitions, I still take calls. But I would say our process for onboarding new clients and getting their campaigns set up in a more in a stronger way like that, that whole kind of figuring out that piece has been probably the biggest initiative.
+
+12:29 - Jorge Lewis
+Okay. So if we could wave a magic wand right now to solve the most annoying or the most time consuming aspect your business, what would it be?
+
+12:46 - Thomas Ryan Oakes
+Hmm. Probably the probably the the targeting and the finding of available good targets for the campaigns of the campaigns for your clients. Yeah.
+
+13:08 - Jorge Lewis
+Okay. So that's, is that very time consuming?
+
+13:12 - Thomas Ryan Oakes
+Yes, it is. And we're solving it, but, um, yeah, that's, that's pretty time consuming.
+
+13:18 - Jorge Lewis
+Okay. And so I have a list of aspects. I just want you to rate it on a pain scale out So 10 is the most painful. So I constantly. Only failed client pipeline?
+
+13:31 - Thomas Ryan Oakes
+That's like a like a one or two not not painful.
+
+13:35 - Jorge Lewis
+Okay, so you guys have clients in the pipeline, like growth is not really a second thought.
+
+13:40 - Thomas Ryan Oakes
+Well, scaling is because it's like, I'm limited by myself, and I just hired my first salesperson. So, you know, I'm a little bit capped there because of just, you know, time to manage, you know, manage the calls and manage current clients. But getting clients, getting interest, getting calls is not an issue for us.
+
+14:04 - Jorge Lewis
+Okay. What about team member churn?
+
+14:08 - Thomas Ryan Oakes
+That's like a one. We don't have, we really have zero churn.
+
+14:12 - Jorge Lewis
+Okay, nice. And for your marketing, how are you guys getting your clients to just kind of step outside of this rating real quick?
+
+14:19 - Thomas Ryan Oakes
+I mean, we really eat our own dog food. It's outreach. We get outreach I'll reach in referrals and then now layering in more content, email marketing.
+
+14:29 - Jorge Lewis
+How long have you guys been doing the content?
+
+14:32 - Thomas Ryan Oakes
+I mean, I've been doing content for years, but I would say it's the email marketing content that I've been doing more and better job of in the last like month, I would say only. And that's yielding good results already. Like we're getting a couple of booked calls, you know, after I send each email now. Nice.
+
+14:51 - Jorge Lewis
+Okay, and then back on back to the the rating. So I'm wasted on admin work versus or just I'm wasted on admin work like things like that just shouldn't be done. They don't feel like they should be done.
+
+15:03 - Thomas Ryan Oakes
+I don't spend much time on admin work. We have I have an operations manager that does. I'm sure she could shave some of that off. But yeah, I mean, there's always like campaign, like reviewing and all that type of stuff. Yeah, there are like there is a lot of admin work. I don't I don't personally do it. But yeah, we do have I don't know how to quantify it. But we do have quite a bit of admin work.
+
+15:29 - Jorge Lewis
+Okay, gotcha. And so you mentioned you want to sell the next three to five years. Do you know how much you could sell for?
+
+15:37 - Thomas Ryan Oakes
+I mean, right now, I'd probably only be able to sell for I'm guessing like one to two times revenue. But once I become less important to the business, then that could probably go to like five X.
+
+15:54 - Jorge Lewis
+Okay. So, so you use revenue as a multiple just in your head.
+
+15:59 - Unidentified Speaker
+Yeah.
+
+16:00 - Jorge Lewis
+Okay. Um, one to two is pretty average for, for agencies by the way. Yeah. Because of the founder dependency.
+
+16:09 - Thomas Ryan Oakes
+Right. That's kind of systemized so that I, It's not dependent on me.
+
+16:15 - Jorge Lewis
+Yeah. So, so you're very active on LinkedIn posting regularly about different things in the, in a typical day. How much time do you spend on, on different social media? So YouTube, LinkedIn, Instagram, Tik TOK. Probably a couple hours on, is it mostly LinkedIn or LinkedIn?
+
+16:37 - Thomas Ryan Oakes
+I'm on LinkedIn all day. I mean, like, you know, toggling back and forth. Yeah.
+
+16:43 - Unidentified Speaker
+YouTube.
+
+16:44 - Thomas Ryan Oakes
+Yeah, a little bit YouTube, maybe, maybe 20 minutes a day on average, something like that.
+
+16:50 - Jorge Lewis
+Okay, long form or short form? Mostly long form. Okay, Instagram? No, no, tick tock.
+
+16:59 - Unidentified Speaker
+Yeah, but just for fun a little bit here and there.
+
+17:01 - Jorge Lewis
+Yeah. And on the YouTube, what do you usually watch? If you don't mind me asking?
+
+17:06 - Thomas Ryan Oakes
+I watched pretty much strictly to be marketing videos.
+
+17:12 - Jorge Lewis
+Okay, so you're probably familiar with Alex Ramos then?
+
+17:16 - Unidentified Speaker
+Yeah.
+
+17:17 - Jorge Lewis
+Do you watch his stuff often? Or?
+
+17:19 - Thomas Ryan Oakes
+Yeah, but his I'd say like, it's too surface level. He does have some good. Like his books are kind of more in depth, like the offers book, like I've Read those, but I'd say like, in general, his content is kind of like, more geared towards like novices, you know, not that it's bad information, but it's just like, it's not deep enough for me.
+
+17:44 - Jorge Lewis
+It's, um, it's actually targeted towards 19 year olds in places like New Jersey that want to start a business. That's a major audience.
+
+17:52 - Thomas Ryan Oakes
+Right. And it's not bad information. I think he's good. But it's just it's not in depth enough. I like I need like more. This is like an like how to do something with AI or here's like a, uh, an ad strategy or here's an outreach strategy or that things are much more specific and in depth.
+
+18:11 - Jorge Lewis
+Yeah. So, so now we're getting into how you, how you look at the SAS world. Do you know what SAS means by the way?
+
+18:17 - Thomas Ryan Oakes
+The software as a service, you mean?
+
+18:20 - Jorge Lewis
+Yeah. So, okay. So when you hear spin out a tech product from your, from your business's IP, what is, what comes to mind? You mentioned at the very start.
+
+18:31 - Thomas Ryan Oakes
+Yeah, I think, um, It means like, to me, it's like, well, what's something that, you know, you're already maybe doing for your clients that you could productize and sell typically going to be a lower ticket item. Um, that's the way I would look at it. Okay.
+
+18:49 - Jorge Lewis
+Yeah. And so you mentioned one potential idea and I'm guessing you probably have a few others. Have you, what first got you first looking at the potential, like what Why is this a good idea?
+
+19:02 - Thomas Ryan Oakes
+Why is what a good idea? Oh, the one I was telling you about?
+
+19:04 - Unidentified Speaker
+Yeah.
+
+19:05 - Thomas Ryan Oakes
+Because there's a lot of people that don't have budget to hire an agency. But honestly, that market is a lot bigger, but they just don't have budget to spend like thousands of dollars a month on outreach, mostly because they don't have a proven business model, they might just be starting out or they just, it's too big of a price tag for them to wrap their head around. And so, you know, those people probably should be doing their own outreach to begin with anyway, but you know, it's hard to do it correctly with the right data and at a good volume. So it's like, well, here's something you could do for kind of lower ticket that would enable them to do that.
+
+19:44 - Jorge Lewis
+Yeah. And the goal, the goal for that would be eventually to upsell like a small percent of those, right?
+
+19:50 - Thomas Ryan Oakes
+Small percent. Yeah. But the, actually the goal would just be to generate revenue almost like a, like, you but I would see it as almost like a SaaS product. We might be human in the loop in the beginning, but I feel like there's a way you could actually automate the whole thing to make it a true SaaS product.
+
+20:06 - Jorge Lewis
+Yeah. I mean, I'll send you a video, one of my videos that's based around the value letter and how adding a SaaS product as part of your value letter is super useful. But yeah, I think that one sounds quite relevant. But anyways, so what stopped you from actually pursuing that idea?
+
+20:23 - Thomas Ryan Oakes
+What I am pursuing and it's just kind of a new idea. So if I were to like, you know, I actually have built the beginning stages of this in lovable already. It's on, it's actually on my website. Um, I'll show it to you real quick. It's right here.
+
+20:39 - Unidentified Speaker
+Have you tried a replica?
+
+20:42 - Thomas Ryan Oakes
+Yeah, I did. I've tried replica. Um, I have an account with them. I just, I did time is the, is my biggest enemy right now. Right. So, You know, this is kind of the Idea for this right? So you just put in your website and your LinkedIn URL.
+
+20:58 - Jorge Lewis
+Here's just an example and now your time you wouldn't you'd be working on this Yeah So where else is your time going?
+
+21:09 - Thomas Ryan Oakes
+Um, I'll show you this is where my time goes You know, so I have a lot of calls, okay current clients new clients second calls, like, you know, it's team calls, I'm on calls most, most of the day, like even like in the next week, calls, this will fill up here soon. So that's where my time goes now. And in between, I get done what I can get done, right. So but yeah, anyway, that this product, I would say is like, this is like 10% of the way done. But this would the way I would see it is like, you know, you, you, you get the ideas, and then you would get sample messages. And then you'd say, Yep, I like that idea. I like that message. Give me 500 more of these. Right?
+
+22:01 - Unidentified Speaker
+Yeah.
+
+22:03 - Thomas Ryan Oakes
+So that's the way.
+
+22:03 - Jorge Lewis
+and it's AI that generates it, right? Yeah. Would you say what it generates? Like, have you have you tried asking chat to be to generate like examples of these or?
+
+22:16 - Thomas Ryan Oakes
+Well, that's what it's working from now.
+
+22:19 - Jorge Lewis
+Oh, so you've already connected to like chat GPT?
+
+22:21 - Thomas Ryan Oakes
+Yeah.
+
+22:22 - Unidentified Speaker
+Oh, nice. Okay.
+
+22:24 - Jorge Lewis
+Connected with chat GPT. Yeah.
+
+22:26 - Jorge Lewis
+Is that a like a native integration?
+
+22:28 - Unidentified Speaker
+Yeah.
+
+22:29 - Jorge Lewis
+Oh, nice. So when you say the quality that it outputs is like, is is to two expectations?
+
+22:37 - Thomas Ryan Oakes
+Yeah, for this part of it, I'd have to see how it does with generating the actual outreach messages. That would be the next step. And then from there, it would just be a matter of connecting the APIs with like our neural search tools that we're using to find the leads. And then that's how it would like, that's how you'd create the CSV with all the things you would.
+
+22:58 - Jorge Lewis
+Yeah. And what's the, you mentioned a few times, what's the neural search tool is that, um, so use X a bit clay, like there's a, do Can you just call all those tools Neural Search?
+
+23:16 - Thomas Ryan Oakes
+I don't know if Clay is. Exa is. Exa is more impressive than Clay in terms of its ability to find insights on people and companies.
+
+23:28 - Jorge Lewis
+and Clay is just super expensive.
+
+23:32 - Thomas Ryan Oakes
+It is, yeah. It just doesn't get the level of... Clay is good if you want to slice and dice your whole list according to all kinds of things you can do. To find like the actual gold like the nuggets of Goodness that you need to do like effective targeting and outreach like X is better.
+
+23:55 - Jorge Lewis
+Okay Interesting Cool. Um, so at what point would you feel like this this given name for it this little product?
+
+24:08 - Unidentified Speaker
+Not yet.
+
+24:09 - Jorge Lewis
+No Okay.
+
+24:10 - Jorge Lewis
+Well, at what level would you say that this is now successful and it can be a part of a focus of our agency?
+
+24:17 - Thomas Ryan Oakes
+I think after you get like your first 10 customers, I would pull down on it.
+
+24:24 - Jorge Lewis
+Okay. Okay. And what do you, apart from time, what's the skill sets do you think you're missing to make this happen? Or is it just time?
+
+24:35 - Thomas Ryan Oakes
+Um, I guess I don't know yet. I don't know what I don't know. So if I, if I get stuck, like when I, you know, I tried creating a DM generator that was like a Google Chrome extension using replit earlier this year. And I got stuck because adding the backend and, you know, I started in Firebase. I couldn't figure it out. I moved to super base. That was still hard. I'm not technical at all. But I can figure shit out. And that was tough. So I abandoned it. And I don't think it's really that relevant anymore, how fast the market's moving. But now, with a lot of these other tools, Lovable now handles the back end for you. And so they become easier. And so it may just be time, but there could be more advanced coding stuff that I need and we'll see.
+
+25:34 - Jorge Lewis
+Yeah. Okay. And when, what, what budgets have you approved in the last 12 months for, for new initiatives? It could be consulting, whatever.
+
+25:44 - Thomas Ryan Oakes
+I wouldn't say we're at like a level where like I'm approving budgets. Like I spend money to see the opportunity.
+
+25:50 - Jorge Lewis
+What are you guys investing in right now? I could say.
+
+25:54 - Thomas Ryan Oakes
+We invest a lot in data and in, um, you know, in like, email sending infrastructure and in our team, right? So, you know, campaign managers and just software, you know, like we have, you know, I have probably 20 different softwares that we use every month.
+
+26:20 - Jorge Lewis
+Okay. And so I know it's mostly time. So for you to have enough time to be able to focus on this, everything else would have to just make way, right?
+
+26:32 - Thomas Ryan Oakes
+I can just stop taking sales calls. And I may do that here. Or, you know, I'll get the time. But um, but yeah, you kind of sacrifice a little bit of revenue if you're gonna want more time.
+
+26:45 - Jorge Lewis
+Yeah, okay. Yeah, just to wrap up, basically, do you know anyone else that's tried building a tech product as an agency owner?
+
+26:53 - Thomas Ryan Oakes
+Yeah.
+
+26:55 - Jorge Lewis
+and how did that go?
+
+26:59 - Thomas Ryan Oakes
+It's all, you know, I don't know. Um, I got a couple of people that I know are actively building stuff and close to launch and, or maybe thinking about it. So, um, yeah.
+
+27:10 - Jorge Lewis
+So we're, we're actually trying to document some of those journeys. Um, do you think you could connect me with, with anyone, you know, that's already doing that?
+
+27:19 - Thomas Ryan Oakes
+Potentially. Yeah, I guess, um, What's, uh, is that kind of your only purpose is to kind of have these calls or what else are you trying to do from, from these calls or like from this one right here is basically to understand our customer better.
+
+27:37 - Jorge Lewis
+Like I said, but, um, on the backend, like you already have an idea, happy to go through that with you. Um, our goal, like we'd be happy to be completely honest. We'd be happy to not get paid and get a case study. That's like still a really good scenario. Best case scenario is we get paid, we have a successful partnership, and we build a tech product. And also, to thank you for your time as well, I do this for all these causes. I'm happy to just come into your business and do any tech stuff that you guys need. It could be an automation, it could be some tedious tech data analysis, whatever you guys think could be helpful for, or it could just be improving your prototype for this thing that you have.
+
+28:16 - Thomas Ryan Oakes
+Do something just and that would be interesting for me would be to like, focus on one particular project, like the one I mentioned, and then, you know, and I'm even happy to do some kind of revenue share along with the testimonial and do that if that's of interest. And then from there, then, you know, seeing how that goes, I'd be happy to look at what else you could do to kind of, you know, to hire you to, do more automations within the business.
+
+28:48 - Jorge Lewis
+Okay. So you'd actually do it the other way around.
+
+28:49 - Thomas Ryan Oakes
+I think that would make more sense. Yeah. Because I think you guys too would be more incentivized to like, Hey, here's a specific project that's tied to a specific outcome with a monetary gain that we're all rowing in the same direction towards. And, you know, you know that there's something at the end of that, um, between successful.
+
+29:13 - Jorge Lewis
+So just a little push. The automation side of things, we also have a North Star metric, because thanks to the software that we use, we can easily track how much time the automations are saving. And then eventually, the best case scenario is that leads to a tech product. And in this case, you're one. And our deal structure is we do want to take revenue share in all the projects. The range to be decided really depends on the deal structure. But yeah.
+
+29:39 - Thomas Ryan Oakes
+Well, I have another call starting now, but if you want to send me an email with kind of your thoughts on next steps, then I'm happy to go from there.
+
+29:46 - Jorge Lewis
+Yeah, sweet. Sounds good. Thanks so much for your time, man. I really, really do appreciate it, Thomas. Cool. All right. Have a good week. You too, man. Take care.

@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #210aae;
+    --color-accent: #50ace4;
+    
+    --color-background: var(--color-primary);
+    --color-surface: #2d17d9;
+    --color-card: #3a24eb;
+    
+    --color-text: #ffffff;
+    --color-text-secondary: #b8b5f0;
+    --color-text-muted: #8580d8;
+  }
+
+  .light,
+  :root:not(.dark) {
+    --color-background: #ffffff;
+    --color-surface: #f5f5f9;
+    --color-card: #e8e8f4;
+    
+    --color-text: #1a1a2e;
+    --color-text-secondary: #4a4a6e;
+    --color-text-muted: #6a6a8e;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html.light {
+    color-scheme: light;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  .fade-in {
+    animation-name: fade-in;
+  }
+
+  .duration-300 {
+    animation-duration: 300ms;
+  }
+}

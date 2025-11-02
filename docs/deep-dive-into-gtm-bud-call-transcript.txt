@@ -1,0 +1,827 @@
+0:00 - Thomas Ryan Oakes
+How are you doing?
+
+0:01 - Thomas Ryan Oakes
+Doing pretty good. Doing pretty good. Rocking and rolling.
+
+0:06 - Jorge Lewis
+Nice. Nice. Well, um, yeah, so basically a few things I want to cover firstly is the approach that we're going to take with this. And then secondly, diving into the, how we're actually going to build out an MVP and kind of how that process could look out.
+
+0:21 - Unidentified Speaker
+Sounds good.
+
+0:22 - Jorge Lewis
+Cool. So in terms of Valley tracker, do you have any questions so far? Like, is it, is it clear what it does? Is the value obvious?
+
+0:32 - Thomas Ryan Oakes
+Yes, it should be with a good landing page at least.
+
+0:37 - Jorge Lewis
+Okay. Have I sent you the link to the landing page?
+
+0:42 - Unidentified Speaker
+Uh, no.
+
+0:44 - Jorge Lewis
+Cause the landing page is like literally just a wait list with an email form.
+
+0:49 - Unidentified Speaker
+Okay.
+
+0:50 - Jorge Lewis
+Yeah. So we're building it right now. We expect to, for that tool to be done early or late this week, coming week. Um, and the goal is to identify, I mean, are you aware of, like, have I explained the process of how it does what it does?
+
+1:06 - Thomas Ryan Oakes
+No.
+
+1:09 - Jorge Lewis
+Okay. So we'll install a tracker into your team's computers and it'll scan, it'll track data screenshots for about a week or two. And we'll use AI to process those into, we'll be able to use an AI agent to talk with the data. And understand where are all the hours going, what processes can be automated, and what processes can be turned into products.
+
+1:32 - Thomas Ryan Oakes
+Sorry, Jorge, I thought we were talking about the actual product that we wanted to build, not the AI tracker.
+
+1:40 - Jorge Lewis
+Yeah. So the idea that you have, it's one idea. And ideas in the SaaS business, they need to be validated. So the processes involved involves talking to customers, is making sure that it's approved, there's enough proof that this is going to work. Right?
+
+1:59 - Thomas Ryan Oakes
+Yeah, I just don't get how that and look, I've already talked to a bunch of customers that I know would want this. But I guess I'm not clear on what you're talking about in terms of like tracking on stuff on our computers and how that relates to this product.
+
+2:12 - Jorge Lewis
+Yeah. So the one of the so there is half of it that's totally separate, which is just automations, just to give you more time. Because I know your time is very, very limited. And I'll to be able to work with you in building this product out. And if you're very time constrained, it's going to be hard to work with you. So that's kind of one aspect, which is a bit of a tangent. And the other aspect is to identify more SaaS opportunities that more opportunities to build other products. In case this were kind of building like a suite of tools like that.
+
+2:42 - Thomas Ryan Oakes
+I got it. I think I'm I'm already, I guess, like working on enough right now to kind of keep me busy in terms of I don't want any more or SaaS products, but I do want this one. So I'd like to just focus on getting this one built, if that's OK with you.
+
+3:00 - Jorge Lewis
+So because the way we work, and we want to take the pricing model that we usually do is revenue share, we really want to work with you on this project instead of just building it for you. And for that to be the case, we need to make sure that we're not just building something that could easily fail in the market. So we can talk about that product. And go through a little bit of a validation process to just make sure there's enough proof that this will work. So we can skip value tracker since that's the main focus is finding automations and finding other product ideas. So if this product that you have in mind right now, if it just shows that it's not good enough to work in the market or for your goals, then we can scrap it and go back to finding other ideas.
+
+3:42 - Thomas Ryan Oakes
+That's fine.
+
+3:43 - Thomas Ryan Oakes
+I think that's a good, that's probably a better way to approach this only because I like what you're doing. I think it's smart the way that you first go and find where the opportunities are. I just that I know that this is a good opportunity because I've already talked to like a lot of the people that we talked to. They've said like, hey, like they want this product they and they don't have enough money to pay an agency to do outreach for them, but they would love to just have a list that they could go attack themselves. With, you know, they know it's the right people. They know that they can send an email to them. They know, and they have the message to actually send to them. They have the Strategy and everything. It's all at their fingertips and then they can just go execute it.
+
+4:26 - Jorge Lewis
+Okay. Yeah. So let's dive into that. So I have a couple of concerns, but we can start off with like the strengths that I see in this, which is your agency's reputation. That's going to be super valuable in proving that this product could work for them. Secondly, is the client data and the strategies that you have with all your clients. That's going to be super useful in training the AI and making sure that it's providing copy and prospects that actually will work. But the concerns that I have are the moat. What's the moat that you could see, the unique value proposition compared to other solutions?
+
+4:58 - Thomas Ryan Oakes
+Yeah, well, one, I don't know that you can have a moat nowadays if it's not based off of a network or data. And so I'm not that concerned about it. I don't know of anything else in the market that exists like this yet. I would imagine people may copy it once they see it, but I don't think you can have a defensible moat these days unless it's built on a network or data.
+
+5:27 - Jorge Lewis
+Okay, that's interesting because a trend that we're seeing right now in any size of organization, including independents, especially independents, is they're turning to chat GPT and tools like lovable to build these tools for themselves. That would reduce our ability to kind of market this. I think the mode that you have is the reputation. You could, you already have an agency that's proven results and you have all this client data in terms of all the campaigns that you've done. So I think we're able to leverage those as part of a mode. It's not a technical mode. The technical mode is it's easy to like, you can build this and replicate. The, the only mode is, is I would say data with your clients. It's not like a big number of data, but it's a Strategy and data that we can kind of juice out to sell this?
+
+6:12 - Thomas Ryan Oakes
+Yeah, I think the moat would be sort of the secret sauce of how the lists are built and how we find the open profiles for them and how the messages get generated. Probably not that last one, because the message generation is pretty easy, but how we come up with the strategies, put all that together and I think it actually becomes a fairly difficult product to replicate.
+
+6:41 - Jorge Lewis
+Okay. So, okay. So I have a question. If someone else were to build a copycat, let's say they're an individual, like they just got laid off. They're an expert at, um, I don't know, 3d design and they try to build this in, in, um, in whatever they, they, they have a copy of this. What, how would their results with their version compared to your version differ? It's speculative. But how much do you think of a difference it would make?
+
+7:10 - Thomas Ryan Oakes
+If they didn't know how we were doing it, you mean?
+
+7:14 - Jorge Lewis
+So let's assume they just use it. Okay, the solution that you have right now, imagine you've built out the rest to find the prospects and to write the copy. After we build a version of yours that's really fine-tuned on the client data, really nails down the Strategy aspect, how would the results of your campaigns differ to this guy? That's just using plain old chat should be D to do kind of the manual step-by-step process.
+
+7:45 - Thomas Ryan Oakes
+Um, probably the message generation could be very similar, probably not much different. Um, to me, it's going to be the strength of the product I'm talking about has to do probably more with the targeting, both from The prospect like like especially if you're running it on LinkedIn. It's like finding well who are The right targets, but also out of those who can you send an inmail to so that's a that's another component of this So yeah, I mean, I'm not look like We live in a world where there's like ten versions of everything now, so I'm actually I'm not worried about The moat is is not too necessary.
+
+8:31 - Jorge Lewis
+Like you can, with rate distribution, which is another aspect that we'll get into, this will work and make, make you a lot of money. But I'm always really powerful and being able to have something that can be working for the next year or two. So I just want to kind of make sure that's clear. So if you could just like speculate, let's say we had 10 users using a manual process and chat GPT and 10 users using your product, what do you think would be the difference in the results in the outcome?
+
+8:55 - Thomas Ryan Oakes
+I see the big difference is going to be Are they gonna be able to come up with Strategy like outreach strategies? For you mean like if someone was trying to sell this or if someone's trying to use it use it I mean so let's say and this is one of the questions that I have just regarding a whole product like what's the North Star that a user using this product will get So for example, it could be one clients within 45 days Yep, I think easily they're they're generating probably at least least like two to five calls per week, if they were to just execute the list that they are given.
+
+9:33 - Jorge Lewis
+Okay, two to five calls per week. And if they were to use a just a manual check to be dissolution, do you think that would differ a lot? Because that kind of shows the additional value that we're giving?
+
+9:45 - Thomas Ryan Oakes
+Yeah, it would differ a lot, because they probably wouldn't be able to come up with a great Strategy right away, which is a big part of it. Their messaging wouldn't be as good. And then the big parts are, they wouldn't be able to do, they wouldn't be able to find the right people who are actually in market for what they are selling, nor would they be able to find out of that group of people, the ones that they actually could message using LinkedIn InMail.
+
+10:15 - Jorge Lewis
+Yeah. Okay. Okay. And this might, this might be a very, Tangential question, but do you guys offer hourly consulting right now?
+
+10:28 - Thomas Ryan Oakes
+No, I mean, I'll throw out my calendar. If someone wants to book a consulting Call, I charge $3.50 an hour and I book some of those, but I'm not trying to, I don't get that excited about it. So no.
+
+10:38 - Jorge Lewis
+Okay. Cause one idea is that this could be a funnel into consultants, into consulting sessions. And that's where we get the value, like the amounts, because they can get this Strategy that they've generated with this AI and they can get a, like, it'll lead them to a consulting Call, but that was just an idea. Um, we can go into that later on.
+
+10:56 - Unidentified Speaker
+Yeah.
+
+10:57 - Jorge Lewis
+I don't really want to sell my time.
+
+10:59 - Jorge Lewis
+and it's just, it's not scalable. Yeah. Yeah. Okay. So, okay. Distribution, right. How many clients do you guys currently have?
+
+11:08 - Thomas Ryan Oakes
+A little over 30.
+
+11:11 - Jorge Lewis
+Okay. And if you were to put a number on the number of, of people that you could send this to, to use today, how many do you think that would be?
+
+11:22 - Thomas Ryan Oakes
+I mean, I could send it to thousands of- That would use it. That would use it? That I know would use it? Yeah. I would guess like between 100 and 200, something like that.
+
+11:37 - Jorge Lewis
+Okay, and those 100 to people, if they use this, they're gonna get results?
+
+11:43 - Unidentified Speaker
+Yeah.
+
+11:44 - Jorge Lewis
+Okay. Yeah, so with distribution like that, results then become your emotes, the proof that this, this platform works. So it's kind of another version of them of emotes. So, okay.
+
+12:01 - Thomas Ryan Oakes
+Yeah, so just one thing on that, like, I mean, it's, it's pretty easy to prove out actually, because like, we get, we get leads for all of our clients each week. And so what we're doing here is we're actually just handing someone the output of like, We're doing everything for them up until the actual act of sending the message See what I mean? Monkey a monkey can do that. You know what I mean?
+
+12:30 - Jorge Lewis
+So We're creating everything spinning it all up and then saying okay now you just have to find someone to literally press the button yeah, but I would say the difference is like The difference with working with someone like us and working the developer is the Strategy aspect like if I know if I'm working with you guys versus a platform Like I'm much more trust, like I can trust you guys that it's going to work out.
+
+12:52 - Thomas Ryan Oakes
+Yeah, understood.
+
+12:53 - Unidentified Speaker
+Yeah.
+
+12:54 - Jorge Lewis
+Okay. So back to the North star, you said two to five meetings per week. Is that like, is there something more concrete, like one client that they can close after a certain number of days?
+
+13:06 - Thomas Ryan Oakes
+It's everybody's different, right? Like if you're trying to sell, you know, a $50 SAS product to a bunch of financial or something, you might get 10 clients a month. But if you're trying to sell an M&A deal to a VP at a big corporation, you might get one deal a year. So it's really tough. You can't make that generalization of how many clients you're going to get from this.
+
+13:34 - Jorge Lewis
+Okay. So the North Star that would be booked calls then, just book calls?
+
+13:42 - Thomas Ryan Oakes
+Yes. And it would be dependent market. So what you could do is you could do what you're talking about, but you would have to separate it by audience, right? So like, on my lead cost calculator that I built, this is a very simple thing, like I have five different markets in there. And each of those markets is progressively more difficult to get calls with and get clients with. And so you could do what you're talking about, but you just have to say, okay, who's your target audience based on your audience, this is what you can Okay, that's super helpful.
+
+14:14 - Jorge Lewis
+So for each market, there's a specific North Star, like an average that they can strive for. Okay.
+
+14:20 - Unidentified Speaker
+Right.
+
+14:21 - Jorge Lewis
+Okay, so those 100 200 people that you can send this out to, is that on LinkedIn?
+
+14:27 - Thomas Ryan Oakes
+Be a mix of LinkedIn and email. Actually, what I would do is probably look at the hundreds of sales calls I've had and that our team has had and pick out the one that were really wanting to do it, the budget was their main objection. And I'd probably feed all those calls into an LLM and be like, go find me these people.
+
+14:50 - Jorge Lewis
+You're using Fathom, right? Yeah. Does it do that automatically?
+
+14:57 - Thomas Ryan Oakes
+No, but I'm setting up a Zapier just to pull in all my Fathom sales calls into a database, probably into Notion. I still haven't done it. It, but I'm going to do that. And so I can like go search the database for like, Hey, go find me these people based on this, but you know.
+
+15:16 - Jorge Lewis
+Okay. Um, okay, well, cool. Yeah. So, I mean, we've got distribution down, which we've also discussed some modes, which the distribution and the results gives us additional modes. Um, the exact personas it's the last time in the last Call and the document, I kind of put a range of like B2B consultants or like, is it, is there a specific persona we're looking at right now? Anyone that can afford your services that's trying to do some outbound?
+
+15:43 - Thomas Ryan Oakes
+Yeah, I think it's gonna be like, it's gonna be like startup founders. It's gonna be like coaches, consultants. Yeah, people that just want to market but don't really have budget for an agency. Okay.
+
+16:01 - Unidentified Speaker
+Okay.
+
+16:07 - Thomas Ryan Oakes
+Yeah. You're probably looking at like companies where they have less than 10 employees. You know, like, that's, that's kind of the sweet spot here is like, they wanted to do outreach. They don't really have the time or the knowledge to do it correctly. But it's going to be a really good channel for them. And they just don't have the budget for it to do it for them, you know?
+
+16:31 - Jorge Lewis
+Yeah. Okay. Um, okay. So now we're getting into more of the long-term view. So let's say we build this out within one to two months, and we're going to sell this out to the first 10, like our Strategy, and it could be, our Strategy, we Call it the first 10 evangelists. But if you have 200 people that we could send this to, it can make sense that we work with 50 people. The goal is to get results for these people. And that way we can use that as moats and as more promotion. So how would you see the first phase working out, we usually just stick to 10 users that we work with on a very close basis to make sure they get those results. So in a way, it's kind of like you're offering agency services, but facilitated through the platform.
+
+17:14 - Thomas Ryan Oakes
+Yeah, that makes sense.
+
+17:16 - Jorge Lewis
+So how many? I need to understand how many hours you'd be willing to work with these people to get those results.
+
+17:24 - Thomas Ryan Oakes
+I see. So like someone pays to use it, and then we're, I guess, fielding their feedback, or.
+
+17:38 - Jorge Lewis
+Yeah, and we'd be facilitating a lot of it, but there'd be probably some certain calls, or probably we'd come to you afterwards and say, hey, their Strategy is clearly not working. What do you think is wrong? Yeah. And then we'd refine that.
+
+17:49 - Thomas Ryan Oakes
+Yeah, I mean, I'm happy to chat with people, or even probably making a library of videos that kind of helps with the product is like, you know, how do you, a good, you know, like some challenges I would see arising is like, okay, you've sent the message and someone responded and they're interested. What do you do from there? How do you follow up? What's like another value?
+
+18:17 - Jorge Lewis
+So all you're mentioning right now is what I'd imagine we'd use for marketing and scaling. This is like, you use this platform in the video and you say, okay, you've got this person. They respond to what you say, right? Okay. And just again, what's the goals in terms of this with your agency? How is it going to play on? We want to upsell, but it is a long-term play for upselling anyone from the SaaS product because for them to get to your budget, it's quite long, right?
+
+18:42 - Thomas Ryan Oakes
+Yeah. I mean, this I see as more of a downsell for people that can't afford it. I don't probably imagine that we're getting a lot of upsells from people. Here and there you would. It's more of a down sell like oh, you can't afford it. Well, hey, here's another Here's the the product you can do this yourself and it's you know a fifth of the cost or whatever Yeah, do you have an idea on the price? Um, I think it's I think what makes sense for the price is probably like a credit based system where it ends up being like between dollar per lead or something like that, you know I'm not exactly sure what the cost is going to be on our end. So You know, like I could see like, you know, if people want to send a thousand messages in a month Like they're paying, you know, 500 bucks like that to me is probably Pretty worth it like for the amount let's say that again. I was thinking I If someone wants to send like a thousand messages in a month, like on LinkedIn, they want to do LinkedIn outreach and send a thousand like high quality messages to the right people. That to me is, and it's just right there, right. Ready for them to execute. That's worth at least 500 bucks, I would say. Yeah.
+
+20:07 - Jorge Lewis
+Yeah. So we'll, I think it'll take a lot of iterating on terms of the pricing also just considering costs. Um, and it's very flexible. Um, one thing I do know as a smaller company is paying per lead. It can get very annoying. Or at least I hate the monthly subscriptions that pay per credit base. It's like, those ones are the worst.
+
+20:26 - Thomas Ryan Oakes
+But yeah, especially if you don't roll over. But I would say like, yeah, I would just say you're paying on a, it could be a credit based system, but you have to do it in batches, right? Because like, you can't be like, Oh, I want to send three messages today. You'd have to be like, buy it in chunks of it could just be chunks. And then like, whenever you want to send it, There's no monthly, it's not based on time. It's based on usage. Right? Yeah. So you might buy 500 leads. But you might use those over the course of three months if you want. Yeah, it's all credit based.
+
+21:01 - Jorge Lewis
+Yeah. And, and we mentioned last time, like we want to turn this into a full self service platform. Is the goal something like reply to IO or or lemlist or something like that. And by the way, those platforms, like the tech wise that I can speak of is horseshit. So in case we got that.
+
+21:26 - Thomas Ryan Oakes
+Yeah, I mean, it's a much different product than what they offer because they're doing all like the automated sending and stuff too. And so this is really for people who just want a list to go execute on and they could put it into a sending tool if they want. Lend lists would be something that they would use after they get our list.
+
+21:44 - Jorge Lewis
+You know what I mean?
+
+21:46 - Thomas Ryan Oakes
+But in the long term, you don't want to expand this or you'd rather- I mean, I don't want to get into creating my own automated sending tool, mostly because I think they're all going to be obsolete in probably another year or two. LinkedIn's not going to tolerate, I don't think, automated sending for much longer.
+
+22:05 - Jorge Lewis
+Yeah, it's getting pretty tight. And so what in the long term, let's say five to ten years. What's how would this play into this product play into your agency? Apart from being a revenue generator.
+
+22:19 - Thomas Ryan Oakes
+So mostly looking at valuation I think what it does is it also it attracts a new broader market, right? So my current price point, you know, it's kind of that sweet spot you're probably like You know maybe slightly lower but middle market like you have to have budget. So this just opens up the market a lot and Allows I think for like feeder a Feeder audience to be more attracted to everything we're doing Okay, and in terms of the valuation, what are your expectations for it to change?
+
+22:58 - Jorge Lewis
+How is it gonna change your your evaluation?
+
+23:01 - Thomas Ryan Oakes
+I Don't know if I can answer that. That's a that's Unknown right now, but I would imagine that it can't hurt.
+
+23:08 - Jorge Lewis
+Okay. And would you be willing to sell the product as a standalone if the price is right?
+
+23:13 - Thomas Ryan Oakes
+Yeah. Okay. I'm an opportunist.
+
+23:17 - Jorge Lewis
+All right, cool. Well, yeah, those are mostly all the the strategic questions that I had. In terms of the actual scope, you said you have some some changes to the document.
+
+23:28 - Thomas Ryan Oakes
+Just some ideas. I don't know if I have any. I have it pulled up. Can I share my screen? Go for it. OK. So I think there was just some really on the how it works piece. Yeah, so this is good. And I sent you the tool that I created, right?
+
+23:56 - Unidentified Speaker
+Yeah, yeah. It's actually pretty cool.
+
+23:58 - Thomas Ryan Oakes
+So if you look at that tool, yeah, it's, it's, this is just the, like, this would be the first step is what I would see in the product that you and I are talking about building. This would kind of be step one. So think of this like tool as like, a few modules that we walk them through. And this is module one, where we think about what is your actual Strategy going to be? And by we're going to help you come up with that just by putting in your website and your profile URL, it's going to spit out some strategies, pick one that you like, and then based on the one you chose, now we're going to move on to the next module, which is going to be example messaging. What does our message want to be? So then you might put in like, hey, grab a prospect that's a good fit for you. Copy and paste your profile in here. And now we're going to give you example messages to send to them. Pick the one you like, Great. That's going to be our kind of our seed, what we Call a seed message that we can use for the next profiles that we're going to have in the campaign. So that's kind of the way I would see it working. And so they have, you have like a, you can, yeah, you probably would want to create a sample list.
+
+25:27 - Jorge Lewis
+and then... I like your idea of them inputting one of their prospects into it.
+
+25:35 - Thomas Ryan Oakes
+Right. Yeah. So you get kind of like, yeah, here's an example prospect, we create some sample. So they see like what, in the end, we're going to end up with messages like this. Okay, great. Now, this is where the hard part comes in, is how do we go find the right people? And this is where we're using something like phantom buster and um exa.ai to go to go um find you know so first you'd have to scrape a list of people from sales nav probably a pretty big list put that into put that in sorry into phantom buster to find which of these people have an open profile on linkedin okay so phantom buster phantom buster can find You might feed it 10,000 profiles, it might come back with 500.
+
+26:27 - Jorge Lewis
+The part of scraping the LinkedIn sales nav, how is that going to be done? Is that from the user?
+
+26:34 - Thomas Ryan Oakes
+No, we would have to do that. There may have to be a human in the loop at some point in here, like someone from our team that does that, at least at first, because you're not going to be able to automate that necessarily.
+
+26:51 - Jorge Lewis
+The point of that is just to get the the lead list, right?
+
+26:55 - Unidentified Speaker
+Yeah, just to get the lead list, right?
+
+26:56 - Jorge Lewis
+Would we be able to use any other data sets like Apollo or just any other one?
+
+27:02 - Thomas Ryan Oakes
+You could yeah, you could use Apollo potentially or you could use but yeah, you could all we need is is to be able to put in the targeting and get the LinkedIn profile you but the thing is in order to here's the catch in order to find a In order for Phantom Buster to find which LinkedIn profiles have an open in-mail profile, it has to be fed the SalesNav URLs, not the normal LinkedIn profile URLs, right? So that's where the rub is. That's where you kind of have to scrape LinkedIn itself to get the SalesNav URLs. And then you put that into Phantom Buster and it gives you, all right, here's the 500 out of your list that have open in mail. Now out of that, you're putting that into X to go find the best, the better targeting based on specific criteria. And then now you have your list and then you generate the messages for each of them. And that's the, that's the product.
+
+28:03 - Jorge Lewis
+Yeah. So, so to understand it wouldn't be, so the, the user is likely to have sales nav, right? Like guaranteed.
+
+28:11 - Thomas Ryan Oakes
+Um, no, no. That would be something they would need to, they could if we, if we wanted to make that, I mean, it would be much better, much, much better, less friction if we did not require them to have a sales nav account.
+
+28:24 - Jorge Lewis
+Okay.
+
+28:27 - Thomas Ryan Oakes
+Um, but it's not a deal breaker. Okay.
+
+28:30 - Jorge Lewis
+Is it an idea? So I have two ideas. One of them is we can work on a, uh, a, a Chrome extension that they open up sales nav and we kind of try to automate that entire sales nav process, since it has to be done from the user side. But if they don't have SalesNav, that's an issue and SalesNav itself is tricky to scrape. The other option is, like you said, we can have someone on our team, a human in the loop, maybe just a really cheap data entry guy that can help us do it.
+
+28:59 - Thomas Ryan Oakes
+Yeah, I have that right now on our team. We could do that right now.
+
+29:02 - Jorge Lewis
+Okay. And how long would it take though? Because users probably expect these softwares to be fast. How long would that take?
+
+29:09 - Thomas Ryan Oakes
+I would I would envision like hey, okay put in your targeting like create your whole campaign We're gonna get you the your campaign your CSV will be delivered in 24 hours. I Feel like that's probably fair enough. You know what I mean?
+
+29:26 - Jorge Lewis
+Okay, and then in the meantime so that they give the feedback The the sample list that we send them to make sure that everything's alright that could be scraped from anywhere and just hopefully by chance the Actually, it doesn't matter if those profiles are open or not, right? Because we don't actually need to sense those sample profiles.
+
+29:43 - Thomas Ryan Oakes
+That's correct. Yeah, you don't need them. You're right. You're right.
+
+29:47 - Jorge Lewis
+OK. That's good. OK. And then after that, they give the output. So they emailed probably a spreadsheet or CSV. And then and then, yeah, they manage it all themselves, right?
+
+30:08 - Thomas Ryan Oakes
+Yep. They have the, you're just getting, yeah, you're getting a spreadsheet with here are your targets. They have open profile. Here are the messages you're going to send to each one. I'm telling you the open profile component here is a huge part of it because it's what allows you to do volume. And without that, it's really, you have to do, otherwise you have to do it manually.
+
+30:29 - Jorge Lewis
+Okay. Take me on that thing. So the, the open profile for in messages, right?
+
+30:34 - Thomas Ryan Oakes
+Or email?
+
+30:37 - Thomas Ryan Oakes
+Yeah, so like, I'll show you real quick. So like on LinkedIn, you have this is sales now. So if I want to put in an audience, I'll just pull one up from one of our clients here. Like say I have this audience of people. Okay, here's like, more or less like not everyone on this list is going to number one, not everyone on this list is going to fit the actual targeting you want because the filters are pretty broad and LinkedIn, right?
+
+31:07 - Jorge Lewis
+So and they're very accurate.
+
+31:08 - Thomas Ryan Oakes
+Yeah, exactly. So that's one problem. The second problem is, I have to go look at who I can actually send an email to. Now all these people so far I can because this list is so big, they're only showing me the actual open email people first, which is noted by this little gold icon. So like Mitchell West, I'm not connected to him, but I can send him I know I can send him a message because he's got an open profile, usually indicated by this little gold thing. Typically, when you're looking at a list like this, you might only find like three or four of these on a page that have the gold icon, right? So that, you know, that actually wasn't, this is probably a more accurate list.
+
+31:50 - Jorge Lewis
+But if, if, if the people using this platform are start just starting out, what are the chances that they're using in mail instead that of just the regular connection requests?
+
+32:03 - Thomas Ryan Oakes
+Pretty high likelihood that they're not using InMail. But if you're not using, yeah, if you're not using InMail, then you can send probably only about the 10% messages that you could be sending. So like, I'll put it this way, when we do outreach for our clients, probably 95% of the leads we generate are coming from InMail. And we're still maxing out the connection requests and all that.
+
+32:30 - Jorge Lewis
+and what are the conversion rates across InMail and connection?
+
+32:34 - Thomas Ryan Oakes
+I don't see a big difference there.
+
+32:37 - Unidentified Speaker
+Okay.
+
+32:39 - Thomas Ryan Oakes
+The reason being is because if we're sending an InMail to someone, that recipient is paying for LinkedIn, they're more active on the platform, like they're paying for SalesNav for a reason, right?
+
+32:56 - Jorge Lewis
+Yeah. And the only way to get do, do platforms like Apollo provide that data or provide those sales nap, they provide the LinkedIn profile URLs.
+
+33:07 - Thomas Ryan Oakes
+They don't provide the sales nav URLs that is only native to LinkedIn, right? So that's where the scraping becomes on LinkedIn becomes pretty necessary for this. Because you need the sales nav URL to give to phantom buster to determine whether Profile is open or not.
+
+33:25 - Jorge Lewis
+Now, if there's another way to do it, I'd love to know but I have not found another way to do that Okay, I'll look into that then because I think that's that's a big aspect in terms of the technical like being able to give them a lead list that's Immutable, right?
+
+33:41 - Thomas Ryan Oakes
+Okay. Yeah. Yeah, if you can solve that problem, that's huge because then then it then it's like That's all that's incredible, but I have not found a reliable method method to take normal LinkedIn profile URLs and determine whether they have open in mail or not.
+
+33:58 - Jorge Lewis
+Yeah. Okay. Um, in terms of the costs at the very start, while we get this AI to be set up properly and over time, in general, the market AI costs go down. Um, and specifically within a product as the AI, as we get more data in terms of how the AI should perform, we can, the cost will get reducted as well. Um, how much is your leeway in terms of spending as a loss for the first batch of users?
+
+34:26 - Thomas Ryan Oakes
+Pretty open. I have a high threshold for risk.
+
+34:31 - Unidentified Speaker
+Let's say 5,000. Yeah. Okay. It shouldn't be anywhere near that, but good to know.
+
+34:39 - Thomas Ryan Oakes
+I wouldn't think so. But I mean, yeah, if we have to, yeah, I mean, I get it. I spend a couple grand a month right now on open AI. That's because we're generating close to a million messages per month with OpenAI.
+
+35:04 - Jorge Lewis
+and via API? Yeah. This is a bit out of scope, if you don't mind. How does that look?
+
+35:11 - Thomas Ryan Oakes
+We just use OpenAI.
+
+35:19 - Thomas Ryan Oakes
+And we give it instruction and then we have it generate the messages on a spreadsheet and then we upload that to instantly.
+
+35:29 - Jorge Lewis
+What's the user like, What's the UI?
+
+35:32 - Thomas Ryan Oakes
+Well, that's just the back end. We do that ourselves.
+
+35:36 - Jorge Lewis
+OK. Wow, I can recommend if you don't mind, maybe we can set up another Call to optimize that, because I was like there's Way better ways to do it. And probably, are you guys having to regenerate messages that are just shit or?
+
+35:51 - Unidentified Speaker
+No.
+
+35:54 - Jorge Lewis
+Okay. No. Open AI, a simple switch would be just switching to providers. Like there's a lot other options, a lot of other options that are a lot better and cost efficient. If that's something they guys bother.
+
+36:07 - Thomas Ryan Oakes
+Yeah. If it writes a better message, then absolutely.
+
+36:10 - Jorge Lewis
+I've really been liking Grok and it's really cheap. Huh, we can take a look at that later if you want. Um, yeah, yeah, I'm definitely But things like that and I'm not trying to show valley tracker down your throat, but things like that would be what would be able to see from valley tracker um, so if it ever becomes interesting to be able to know what's going on and how we can Automate improve costs.
+
+36:32 - Thomas Ryan Oakes
+Um, that'll be cool Yeah, I'm not opposed to that. I'm just like Look, I got my hands in like, you know this this is like the most recent one but then like another product that I'm launching. And then, you know, our, we have email and LinkedIn outreach. So, and then, you know, I have a team of 14 people. And so it's like, you know, I got, I got a lot to kind of, I have to prioritize is all. Yeah.
+
+36:59 - Jorge Lewis
+I mean, it would take probably 10 minutes of your time and a double click from the rest of your team to install the application.
+
+37:08 - Thomas Ryan Oakes
+Well, I'm, I'm, I mean, yeah. If you think it's going to be valuable and give us some good insight.
+
+37:15 - Jorge Lewis
+Completely Free.
+
+37:16 - Jorge Lewis
+The reports, the data that you get out of it, you can take it to any automation company, any experts you want, and they can help you with it.
+
+37:25 - Thomas Ryan Oakes
+Okay. Understood.
+
+37:26 - Jorge Lewis
+But yeah, so back to the product. A couple more questions in terms of the marketing. So we mentioned we could do some probably LinkedIn marketing, I'm guessing, Yeah, yeah. Any expectations in terms of revenue, like milestones?
+
+37:47 - Thomas Ryan Oakes
+I mean, I'd love to get like, you know, even just 10 users at a few hundred bucks a month would be a good start to know that like, okay, we could scale this, you know, like, if I can get 10, then we can get 100. If we can get get 1000.
+
+38:01 - Jorge Lewis
+That's how I feel. Yeah, the one thing in terms of the business model is, it's probably not going to be so The lifetime value won't be so high because they're gonna run at once maybe twice But from that point, I think most people with that sort of budget just kind of stop doing LinkedIn Is that what is do you agree or?
+
+38:20 - Thomas Ryan Oakes
+um, it depends on look if it's if it you know something there's gonna be varying degrees of success like Everybody that does it will get positive replies like guaranteed everybody that that runs even 100 these outreach messages is going to get positive replies. And that is not usually the case for most people doing outreach. And so it just depends on what's the degree of success. But I would agree with you in the sense that some people don't have a viable business, and they don't realize they don't have a viable business. We can't help. Exactly.
+
+39:04 - Unidentified Speaker
+and we don't want to.
+
+39:06 - Thomas Ryan Oakes
+Well, you'd be surprised at how many of those people there are. And it's like, look, but here's the thing is like, they don't realize they don't have a viable business until they start doing outreach and booking calls and then being like, Oh shit, I don't know what my offer is. I don't know how to sell it. I don't know how to keep people, but they won't get to even that realization until they start actually doing outreach and booking calls. So we are helping them. We're just helping them. Realize it on their own.
+
+39:33 - Jorge Lewis
+Okay. That's interesting. It can also be a marketing angle to help people validate an offer if they've just started something.
+
+39:39 - Thomas Ryan Oakes
+Yeah. It's like, I always tell people that I'm like, look, even if you don't like get a bunch of clients right away, this is really going to help you just to get the calls and the calls are actually what are going to help you like figure out what your offer should be, figure out how to close, how to talk about it. What's important to your ideal clients. Like, It's market research, if nothing else.
+
+40:02 - Jorge Lewis
+Yeah. Okay. Interesting. Okay. As of now, I don't have any more questions. So let's kind of figure out what's the action plan. I'll get back to my co-founder. We can discuss it over, figure out a proposal, send it over like a timeline, figure out how long it would take to build this thing. And we'd probably come up with some more technical questions like regarding the sales nap thing. And then we can have a quick 15 I'm gonna Call to go over that maybe what is today, Friday, maybe let's say Tuesday or Wednesday.
+
+40:35 - Thomas Ryan Oakes
+Yeah, that sounds good. I can do that. Would it be possible to have like, to draft like, I don't know if you guys do this or not, but like just something a little bit visual, even if it's just bare bones of like, what the user would kind of the path that the user would go on with a product like this?
+
+40:52 - Jorge Lewis
+Yeah, sure. Something like similar to what you've already made, like a clickable prototype.
+
+40:58 - Thomas Ryan Oakes
+Yeah, something like that, even if it's done in like Figma or Miro or something like that.
+
+41:02 - Jorge Lewis
+Yeah, we usually do that to kind of brainstorm how like to figure out the problem, the unforeseen problems, because we can't see problems until we actually feel like we know the product looks like,
+
+41:10 - Thomas Ryan Oakes
+Totally. Yeah, that makes sense. Yeah, I just want to make sure you guys are clear on because that I've given enough context on like, what the steps are in order to get the output we're looking for.
+
+41:23 - Jorge Lewis
+Yeah. Oh, actually. Yeah. I guess it would be good to revise that. So you were going through the flow and then we took a look at the document and then you were in a train of thought and then you'd look at the document. So the user puts their things, LinkedIn profile, their websites, um, and a, a, just those two, it creates the offers or the, I would say the offers, right?
+
+41:46 - Thomas Ryan Oakes
+Yeah.
+
+41:46 - Jorge Lewis
+User inputs, these things, um, let's Let's nail down that last one. If it doesn't make sense, then just remove it.
+
+41:55 - Thomas Ryan Oakes
+Yeah, they don't even need that. User puts this stuff in. This is correct. System uses add analyze this data and create value offer outreach strategies. Here I would say probably the user picks their favorite one, right? Okay.
+
+42:17 - Unidentified Speaker
+I'll put that here.
+
+42:19 - Thomas Ryan Oakes
+user chooses their favorite Strategy, right?
+
+42:29 - Jorge Lewis
+You and I know this is AI generation, but what is what is their what is the value offer actually look like, Is it going to be what's currently shown? Like with, for example, my what it gave me for mine?
+
+42:43 - Thomas Ryan Oakes
+Yeah, I think like, yes. So what you saw on this page, like it could look just like that, we could alter it. But it would be like, yeah, like, here are a few strategies. And maybe, you know, some people might want to create a video, other people might want to create like a report, they might want to create a tool, probably not so much tools, because people are not like, you know, they have to be kind of more AI users, if they're going to create a tool, but a video is a good one, like a report is a good one. Um, a, you know, they could host a workshop as their value offer. So it's like, think of it like a value offer, meaning like, it's like a slice of their service. It's a slice of their expertise. It's not quite a lead magnet.
+
+43:28 - Jorge Lewis
+It's a bit more, I was, I was kind of getting like lead magnet vibes.
+
+43:33 - Thomas Ryan Oakes
+It is a little bit like a lead magnet, but I would say, um, it's a lot of times it's going to be more personalized for a very specific problem that that actual person has.
+
+43:44 - Jorge Lewis
+and is it or are the things that they offer in there Free?
+
+43:48 - Unidentified Speaker
+Yes.
+
+43:49 - Jorge Lewis
+Okay. And have you ever tried chart like those charging for those offers?
+
+43:56 - Thomas Ryan Oakes
+I think it's really, really tough to get a total stranger to say yes to buying something on the first message.
+
+44:03 - Unidentified Speaker
+Especially Okay. Okay.
+
+44:08 - Thomas Ryan Oakes
+So you would choose a Strategy, then you know, I'm just gonna put what whatever in here, like, um, let's, uh, enters a sample profile URL, um, to generate, I'll just say, uh, message is generated. Uh, we'll say messages. We'll say a sample message. Example messages are generated. For that sample profile URL. And then the user chooses their favorite one. And then that's when we might say, great. Um, now we can, you know, now here's like a sample, you know, we deliver the sample lead list, something like that. Um, and then when they're happy with that, then we're like, okay, great. Now get, tell us how many you want and pay for it. And we'll get this to you in 24 hours. Okay.
+
+45:29 - Jorge Lewis
+The, the messages, I'd like your opinion and first on the Strategy you guys personalize your messages?
+
+45:38 - Thomas Ryan Oakes
+Yeah, everything is real, like extremely personalized. Yeah.
+
+45:42 - Unidentified Speaker
+Okay.
+
+45:44 - Thomas Ryan Oakes
+One of this, it's like, I'll give you, I'll give you an example of it real quick. Like, I'm actually creating one right now. For our own, like cold email campaign, for example. So I'll show you an example of what I mean by personalized. Here. So like this would be an example of what we might send to somebody who to pitch them some some outreach Strategy ideas, right? Because I want to, you know, I'm going to help you do an outreach campaign. Here's my outreach to them be like, you know, it looks like you built and exited some strong cybersecurity and IT firms over the years. One outreach play that could work well is a cyber readiness audit offer. Helps executives benchmark their defenses, yada, yada, yada. I've got a few other outreach ideas like this that could help start the right discussions with your target prospects. Want me to send them over or hop on a short Call, right? So that's what I mean by personalized would be we're actually giving them some value in this very first message of like one idea for them. And hey, I have some other ideas. Let's talk, right?
+
+46:56 - Jorge Lewis
+Yeah. So the, the personalization is the first line looks like you've built an exited some strong cybersecurity runs over the years, right?
+
+47:06 - Thomas Ryan Oakes
+Yeah. And, and just like, I would, I mean, I would argue this is also personalized, just because, but I guess, you know, you could send this to anybody that was in cybersecurity. So yeah, but yes, you're right. This is like the main, that's the main part of But you can go much more in-depth on personalization.
+
+47:27 - Jorge Lewis
+and what's been your experience with AI personalizing a large number of messages?
+
+47:37 - Thomas Ryan Oakes
+What do you mean by experience?
+
+47:39 - Jorge Lewis
+I ask that because I get a lot of messages of personalization that's shit. Yeah. Messages that are just like, I Read them. I know they're personalized with AI. And it's just I hate those and it's different for me because I'm very into the AI world But if they get it wrong, that's like really bad.
+
+47:59 - Thomas Ryan Oakes
+So yeah, you guys make sure that it's not just wrong Well That's kind of where X comes in and that's where you get a lot stronger because you can get much more context on the person or their company or both and so because X is doing that extra research on them and then building, like crafting the message based on the research it's done.
+
+48:29 - Jorge Lewis
+Okay. And there's going to be an element of like, when the user is running this on our side, we have to trust that our system will generate an accurate personalization, right?
+
+48:39 - Thomas Ryan Oakes
+That's has to be accurate. And it also has to have like the right tone and, um, It has to sound more human, right? Because if it sounds just like AI, it's just not going to work. So it's got to be short. Here's some examples of some of the messages that we send for our clients. Looks like you focus on building support for the arts. I can imagine that gets tough when program donors and audiences different kinds of attention. So I would say it still sounds a little bit like AI, but it's not over the top. And actually just creating it really short messages kind of mitigates much of that, right? Yeah.
+
+49:30 - Jorge Lewis
+OK. So yeah, that's something that we'll be working with you, and we'll probably take some time to make sure that the generations are actually good. Yeah.
+
+49:39 - Thomas Ryan Oakes
+I have, like, very in-depth prompts on how to get the like more human sounding language and add-on prompts and all kinds of stuff.
+
+49:49 - Jorge Lewis
+Okay and then also to help us be able to make this platform with as little of your time as possible but also I think it's necessary is we'd probably want you to send us over access to any confidential things so we'd be happy to sign an NDA if you want to shoot one over or I can draft it up but I think that's better if you send it.
+
+50:08 - Thomas Ryan Oakes
+Yeah, that's fine. I mean, I don't care then. I don't I don't care too much.
+
+50:13 - Jorge Lewis
+I think like if I mean, it's probably one of those things we should do but I don't like I'm not a paper guy, but it's always the things that you should do and someone in your team is gonna be like, did you sign an NDA?
+
+50:25 - Thomas Ryan Oakes
+Yeah, I hear you. Yeah. I can send one over. That's fine.
+
+50:30 - Jorge Lewis
+Sweet. Um, What else?
+
+50:40 - Thomas Ryan Oakes
+Just making sure you understand the, I guess the process is the main thing, like what, what each tool is going to do and how to string them together as much as we can, at least, you know what I mean? To phantom buster to X to the output, you know?
+
+50:57 - Jorge Lewis
+Yeah. We, we have a little bit of experience with that, um, ourselves. And also from one of our other clients. But yeah, that's where we'll probably be. The specifics, we'll probably be working with you to pick the right tools and all those things. So let me just Read this over. So user chooses their favorite message, receives a sample list. Message is tailored to real prospect profiles. Here, this one's going to be emailed to them. Right?
+
+51:28 - Thomas Ryan Oakes
+Yeah. The other thing to think about, well, that first one, we could just generate the messages on the spot, I would think.
+
+51:35 - Jorge Lewis
+Oh, right. Yep.
+
+51:37 - Thomas Ryan Oakes
+But it's the bigger, bigger, it's the bigger list that has the open profiles. That's what we need a little bit of time to create for them.
+
+51:46 - Jorge Lewis
+So this one number three, I guess is emailed.
+
+51:49 - Thomas Ryan Oakes
+Yeah, after within, yeah, after a within 24 hours.
+
+51:56 - Jorge Lewis
+I think for someone looking at getting a notification 24 hours, it feels like really time. What's the fastest that we could like guarantee that it gets sent?
+
+52:05 - Thomas Ryan Oakes
+I mean, as we go, it could be faster. But I don't know, I'm not concerned about 24. It's like, okay, like this, to do this takes a while. And so we're gonna make sure that all these leads are qualified, and they all have good messages. And that's going to take a little bit of time.
+
+52:22 - Jorge Lewis
+So we can phrase it in a way that that makes it feel like it's the quality. But also, the there's going to be a moment of euphoria when they're feeling this, the feeling the magic of this being generated, and it's going to get lost if they wait too long.
+
+52:36 - Thomas Ryan Oakes
+and I think I think that you for that that comes from the initial sample messages where they're like, holy shit, these are great. And these are great profiles. And these are great messages. This would take me forever to do this for everyone, right. And so that to me, it'd be like, alright, just, you know, in order for us to do this 500 it's gonna take us 24 hours, right? To find the right profiles too, because we have to probably even tell them like, these sample profiles, they don't, many of them, if any of them probably don't have an open profile, so you can't actually message them unless you send it just a connection request. And then something else to consider here is that audience size plays a big factor. So like, if your audience size is only, 2,000 people, because you only want to reach like, you know, architects in Stillwater, Minnesota, which is my hometown, it's very small. You know, your audience size might be at 500 people, 1000 people. And so we need to be able to start with an audience size of, I don't know what the number is, but it's probably like, for this to even make for someone, it's probably like 20, 30, maybe 50,000, where that's how big their audience size is going to need to be.
+
+54:00 - Jorge Lewis
+Okay. And, and, yeah, because if it's like, if it's, let's say 1000, let's say half of those are just not qualified, like we just go to them out.
+
+54:16 - Thomas Ryan Oakes
+Many of them won't have open profile many and, and yeah, and then and then a lot just won't be qualified. So it filters down. That's why you have to start with a decent size, which isn't that big, honestly, like most people's audiences are going to be well over 100,000.
+
+54:30 - Jorge Lewis
+Yeah, it could be an edge case that we kind of just handle with UI. And if that's the case, we say, Hey, sorry, this isn't for you. Yeah, just at least for the start. Because one of the goals that we want to do is minimize as much of the things we have to build. So we can get it out as soon as possible. Which actually, which which makes me think I think the open profile thing, because these are people that are just getting started, could we tailor only to people that don't have SalesNet? Or no, without SalesNet, you can only send like 10 day.
+
+55:03 - Thomas Ryan Oakes
+You could, it's just going to take them longer to execute the list.
+
+55:08 - Jorge Lewis
+Yeah. I guess the question should be, is there people that would use this that are opposed to getting sales now that we can work with?
+
+55:21 - Thomas Ryan Oakes
+Um, yeah, you could. It's just like, yeah, I mean, you can, you can send 100 connection requests a week if you are not paying for any premium LinkedIn, and you're going to get probably 30 40% of those are going to accept. And so now you can send 30 to 40 messages per week. So now you're sending 120, let's Call it in a month, which Depending on their offer, it could work.
+
+55:51 - Jorge Lewis
+If they're a SaaS, that could work. But yeah, I think one of the things we want to do, maybe we could do this async just so this doesn't go on so long. I'm open to do it now if you want. But just nailing on a persona that allows us to build less technical things right now, and then we can expand it later on. And it's going to be a much smaller market compared to the 100, 200 people that you mentioned earlier. But we just need 10 right now.
+
+56:15 - Thomas Ryan Oakes
+Yeah. Um, I'd have to think about that a little bit. I guess I don't know what the right market would be. You know, what you what you really want, though, Jorge, like is you want to find people that you want to find, like, we should be marketing to people that were their audience is much more likely to reply on LinkedIn. I have this audience. Built out because it's who I do outreach to myself. So, where do I have, I guess I have that. I have an annex actually I'll show you the audience right here. Let's see. It's here. I think this is it here, anyway. Is this the audience I put together? I have it, though. I think this is it. But it has these attributes, where their audience is going to be very likely to respond to a LinkedIn message. So like, I don't go after like, um, you know, like people that want to target like manufacturing companies, right. It's still B2B. They're not on LinkedIn, but they're not like, yeah. Like people that are in manufacturing or in like retail and stuff like that, or in restaurants, they're not in, they're not on LinkedIn. Right.
+
+58:20 - Jorge Lewis
+So, well, yeah. Okay. Yeah. So that's, yeah, I think. Figuring out the best 10 people that we could work with for this would be a great start. And that'll reduce our scope a bit, get us to market faster and then iterate it from there.
+
+58:34 - Unidentified Speaker
+Yeah.
+
+58:35 - Jorge Lewis
+So yeah, if you could send that over in just a one line or two line or whatever, that would, that'd be great.
+
+58:39 - Thomas Ryan Oakes
+Um, like the best 10, um, like just the audience description.
+
+58:46 - Jorge Lewis
+Yeah. Like the, or the avatar I think is the best, like the most detailed version of a, of those 10 people that we could get.
+
+58:57 - Thomas Ryan Oakes
+Yeah, do we want to create like one avatar? Do you want to have like 10 avatars?
+
+59:03 - Jorge Lewis
+Um 10 would be great if if that doesn't take too much time Um, and then we can work with 10 different people and figure out who's the best to to double down on afterwards Got it.
+
+59:19 - Thomas Ryan Oakes
+Yeah, I got it. I got I I have that somewhere in my chat gpt search. It's easy.
+
+59:23 - Jorge Lewis
+I have I have it I'll I'll get it to you very quickly One thing that I did notice in the user flow is they're going to enter a sample profile, and I added brackets for plural. I think a step that's missing is user refines ICP, because XO needs accurate data, or whatever database we're using needs accurate data, and if they only input one sample URL in my picker a very inaccurate result. So for example, it enters a sample profile URL and then shows ICP attributes. So it could be like $500 annual $1 revenue, CEO, executive. And ideally, the more profiles they input, the less work they have to do into refining it so that it's already perfect. What are your thoughts?
+
+1:00:28 - Thomas Ryan Oakes
+I think, yeah, somewhere along here, we need to, this is actually a big missing thing that I overlooked, is like, we actually need to have them build their ICP, much like you would do in SalesNav. So like, we should actually look in SalesNav and say, okay, what does SalesNav have? What are the things that are important for us to capture from the user? So they need to build their ICP. And even beyond this, what are some other things we can do now?
+
+1:01:02 - Jorge Lewis
+We can reverse engineer a preset ICP with just one or two, three profiles, and then have them build it out from there, just so it saves them time.
+
+1:01:12 - Thomas Ryan Oakes
+Yeah, that's fine. And then just keep in mind that because we're using Exa, it can get really crazily good information. So we should also just ask the user like what other attributes are you looking for? Like what other science?
+
+1:01:30 - Unidentified Speaker
+More qualitative things, yeah.
+
+1:01:32 - Thomas Ryan Oakes
+Exactly, yeah. And look, we might not be able to capture every single thing, but they should give us as much information as they can so that we can go and find.
+
+1:01:42 - Jorge Lewis
+and that's kind of the balance, like the beauty of the balance, because AI, the more data you give it, the better the outputs, but the more time you have to spend to give it. I guess we'll see if there's a big, like with the first 10 users, they're going to finish the process, hope like, if they don't finish the process, we know we need to work on the flow.
+
+1:02:03 - Thomas Ryan Oakes
+Yeah. On that last point about the attributes, like, if we're having the user give, let's say, let's say a user gets crazy. And they're like, well, here's 10 more attributes I'm looking for. And they have to fit all these qualifications, we should have something where it's like, this is nice to have, But they should be able to check off of all their attributes that they want to put in. Is it a nice to have or is it a necessity?
+
+1:02:30 - Unidentified Speaker
+Because if it's a nice...
+
+1:02:32 - Thomas Ryan Oakes
+Yeah, because what's going to end up happening if they give us like 10 different things, we're going to put that into Exa and we're not going to get any matches, right? Or we're going to get like seven matches out of and so we need to start eliminating attributes in order to get more matches.
+
+1:02:53 - Jorge Lewis
+So to know, that's Yeah, that's an important one. Because then sales now if you turn on one filter, and it's like back down to 20. Right.
+
+1:03:03 - Thomas Ryan Oakes
+So just something to think about is like, hey, we'll try to hit as many of these attributes as we can. But which ones are like non starters or which ones are, are in order to in order to get you a full list, we need There needs to be a balance of good information, but we have so many attributes that we don't get any.
+
+1:03:22 - Jorge Lewis
+and what I want to do, and it's probably outside of the scope of the first version, is provide an estimate to the filters that they've given us so far. Like same way LinkedIn SalesNet does. Yeah. Yeah, that's good. Okay.
+
+1:03:42 - Thomas Ryan Oakes
+and if you can find any other way throughout any of this or whatever else you're doing in how to, you know, do what we need to do without using sales nav URLs. Let me know.
+
+1:04:01 - Jorge Lewis
+Yeah. My, my, my guess would be trying to look at any existing databases in case they've already somehow scraped that information.
+
+1:04:09 - Unidentified Speaker
+Yeah. Like if they have open profile or not.
+
+1:04:12 - Jorge Lewis
+Yeah. Cause I, I might recall seeing somewhere that they have that.
+
+1:04:18 - Thomas Ryan Oakes
+Yeah, it wouldn't be updated though, because you know, if someone cancels their subscription, only LinkedIn is going to know that.
+
+1:04:26 - Jorge Lewis
+Yeah. And okay, one thing I guess is from our side, if they pay for 500 leads, we don't lose anything by saying here's an extra 100. Yeah.
+
+1:04:36 - Unidentified Speaker
+Yeah.
+
+1:04:37 - Jorge Lewis
+So I think well cost, but we'll look Welcome to that. Yeah, just to kind of exceed their expectations. Okay, cool. And they get a deliverable.
+
+1:04:50 - Thomas Ryan Oakes
+But it's actually pretty easy if you think about it, because what we're doing, EXA is the most expensive part of it. The other things don't really cost us much more. And with EXA, you would just if they pay for 500, you just tell EXA to go find 500 as a maximum. Right?
+
+1:05:08 - Jorge Lewis
+So, you know, yeah, that's all the costs. The, the unit economics might be a little bit tricky because of, which is why I asked how much you're willing to go on the negative for now while we get better solutions and we can do more things in bulk.
+
+1:05:23 - Thomas Ryan Oakes
+Yeah. Enterprise plan for exit here pretty soon. Um, and especially if we get this thing built out, I will, does that change on, um, does that change the API pricing? Yeah, it changes all the pricing. So like, for example, right now, you can only do the plan I'm on now, you can only do 1000 matches for each search. And so yeah, it changes. And then when you go on the enterprise plan, you can do like, you know, 10,000 or more for each search.
+
+1:05:58 - Jorge Lewis
+Yeah, I guess I'll also include those price those cost estimates in In the proposal as well as what you can expect in terms of time needed from you and all the resources Okay, that sounds good.
+
+1:06:09 - Thomas Ryan Oakes
+You want to get a Call scheduled for what you were saying Tuesday, I think yeah, let's let's do um, let's do Tuesday You want to do like the same I can do yeah Tuesday I can do 11% you're in you're in Florida, right?
+
+1:06:25 - Unidentified Speaker
+I'm in LA time zone Oh, you're in LA.
+
+1:06:28 - Thomas Ryan Oakes
+Why were you thinking you were on the East Coast? All right, so you're my time zone. I can do 11 or 1.30 on Tuesday.
+
+1:06:37 - Unidentified Speaker
+1.30 works great.
+
+1:06:38 - Unidentified Speaker
+Okay.
+
+1:06:39 - Thomas Ryan Oakes
+You want me to book it in or?
+
+1:06:41 - Thomas Ryan Oakes
+Yeah, go ahead. I'll just move our Call right now. Well, you're the organizer. Just move this Call to Tuesday and then we're good.
+
+1:06:53 - Jorge Lewis
+Let's do that. Cool. Well, it's really exciting. One thing that's kind of edging on my mind is exploring other products that we could build. And I know you're super busy, so it's not something you want to be focused on. But just kind of imagining what could come after this so that we can kind of stack the dominoes.
+
+1:07:18 - Thomas Ryan Oakes
+Yeah. I mean, I'm sure there are other things. Like, I have another product I'm on now that could be interesting for you guys, which is a referral platform that I'm just going to build an air table, but I have like the land, I'll send you the landing page for it. Okay, yeah. This is another one that I'm like, launching here soon. It kind of plays into my existing business. So this is this is the offer basically.
+
+1:07:50 - Jorge Lewis
+form referral partners delivered on autopilot. Interesting. Is referrals a big part of your client acquisition?
+
+1:08:01 - Thomas Ryan Oakes
+No, not right now. But this would be like, think about like, if you wanted to establish new referral partners, we will send you introductions to the people you want to be, that you want to establish relationships with. Not to sell to them, but to be like partners with them. So and we'll do that all through LinkedIn. So I'm working with another guy on this right now. But this I'm just going to build an MVP, I think an air table. And then from there, I'll need to build out like a much like more custom product.
+
+1:08:39 - Thomas Ryan Oakes
+But I want to just get proof of concept and get I don't want to step on your guys's toes for that.
+
+1:08:45 - Jorge Lewis
+But who are you working with on for that? Is it is Developer or it's probably gonna be my wife. Ah Is she like is she technical or what's that?
+
+1:08:55 - Thomas Ryan Oakes
+Yeah, she's a little technical. She's like good with spreadsheet I know she'll be able to figure out air table. Like I have it like partially built in here now I'm gonna find me a wife like that Yeah, I wouldn't say she's like super technical, but this is not a very difficult thing to do It's like we need a list of our clients. We need who are our super connectors. We need to have all our connections in there for each super connector, yada, yada, yada. So this is another project I'm working on now. And then we just find the clients, and then they define their IPP, and then we start making intros for them.
+
+1:09:32 - Jorge Lewis
+Yeah. I mean, that's cool. I've always wanted to build an affiliate platform. I love the idea of networks.
+
+1:09:39 - Thomas Ryan Oakes
+Yeah. And the nice thing is for each like super connector, we bring in like, they would get a cut of all the intros that that are made from their profile, because we control their profile. And then for each person they bring in, they would get a cut of their introductions as well, if that makes sense.
+
+1:10:00 - Unidentified Speaker
+Yeah, that's cool.
+
+1:10:02 - Thomas Ryan Oakes
+So that would be a possibility too. But let's, we'll get this thing rolling. And then yeah, I think you made it for 1230. Let's do it for one third. I guess I'm Maybe you're in that weird. Are you in LA or where are you?
+
+1:10:22 - Jorge Lewis
+I'm in Mexico, but It's 240 for me right now For you.
+
+1:10:28 - Unidentified Speaker
+Good me too. Me too.
+
+1:10:30 - Jorge Lewis
+Did I oh No, it says 130 for me or is my calendar off must be off For me, it says on my calendar. Okay, let me just move it back an hour then and I'll figure it out.
+
+1:10:47 - Unidentified Speaker
+What part of Mexico are you in?
+
+1:10:49 - Jorge Lewis
+I'm in Sonora, Sonora, Embasio. Up north, it's really close to Arizona.
+
+1:10:57 - Thomas Ryan Oakes
+Oh, okay.
+
+1:10:59 - Thomas Ryan Oakes
+I'm going to Baja in February. We're going to La Paz.
+
+1:11:02 - Unidentified Speaker
+Oh, for a little vacation?
+
+1:11:04 - Thomas Ryan Oakes
+Yeah, just for a week, but I love La Paz. Best food city I've ever been to, and I've been a lot of places.
+
+1:11:12 - Jorge Lewis
+Yeah, the food, I can't leave it.
+
+1:11:15 - Thomas Ryan Oakes
+Yeah, La Paz is incredible seafood.
+
+1:11:23 - Jorge Lewis
+Thanks for answering all these questions, and I'll talk to you soon on Tuesday.
+
+1:11:28 - Thomas Ryan Oakes
+Sounds good, appreciate it.
+
+1:11:29 - Unidentified Speaker
+Take care, man.
+
+1:11:30 - Unidentified Speaker
+Bye.
