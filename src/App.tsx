@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { ThemeProvider } from './contexts/ThemeContext'
-import { CampaignProvider } from './contexts/CampaignContext'
+import { CampaignProvider, useCampaign } from './contexts/CampaignContext'
+import { AuthProvider, useAuth } from './contexts/AuthContext'
+import { LandingPage } from './components/LandingPage'
 import { Sidenav } from './components/Sidenav'
-import { SectionHeader } from './components/ui/SectionHeader'
-import { Button } from './components/ui/Button'
 import { Card } from './components/ui/Card'
 import { StepIndicator } from './components/StepIndicator'
 import { Step1ProfileInput } from './components/steps/Step1ProfileInput'
@@ -11,15 +11,31 @@ import { Step2StrategySelection } from './components/steps/Step2StrategySelectio
 import { Step3SampleProfile } from './components/steps/Step3SampleProfile'
 import { Step4ICPRefinement } from './components/steps/Step4ICPRefinement'
 import { Step5MessageGeneration } from './components/steps/Step5MessageGeneration'
-import { Step6MessageSelection } from './components/steps/Step6MessageSelection'
 import { Step7SampleLeads } from './components/steps/Step7SampleLeads'
 import { Step8OrderPlacement } from './components/steps/Step8OrderPlacement'
 import { Step9QualificationForm } from './components/steps/Step9QualificationForm'
 
-const TOTAL_STEPS = 9
+const TOTAL_STEPS = 8
 
 function AppContent() {
-  const [currentStep, setCurrentStep] = useState(1)
+  const { state, updateState } = useCampaign()
+  const { isAnonymous, setAnonymous } = useAuth()
+  const [currentStep, setCurrentStep] = useState(() => {
+    // Start at step 2 if user is anonymous (they already provided profile info)
+    return isAnonymous && state.linkedInUrl && state.website ? 2 : 1
+  })
+  const [showLanding, setShowLanding] = useState(() => {
+    // Show landing page if user has no data (first visit)
+    return !state.linkedInUrl && !state.website
+  })
+
+  const handleLandingSubmit = (website: string, linkedInUrl: string) => {
+    // Mark as anonymous and store the data
+    setAnonymous(true)
+    updateState({ website, linkedInUrl })
+    setShowLanding(false)
+    setCurrentStep(2) // Skip Step 1, start at Step 2
+  }
 
   const handleNext = () => {
     setCurrentStep((prev) => Math.min(prev + 1, TOTAL_STEPS))
@@ -46,35 +62,28 @@ function AppContent() {
       case 5:
         return <Step5MessageGeneration onNext={handleNext} onBack={handleBack} />
       case 6:
-        return <Step6MessageSelection onNext={handleNext} onBack={handleBack} />
-      case 7:
         return <Step7SampleLeads onNext={handleNext} onBack={handleBack} />
-      case 8:
+      case 7:
         return <Step8OrderPlacement onNext={handleNext} onBack={handleBack} />
-      case 9:
+      case 8:
         return <Step9QualificationForm onComplete={() => alert('Campaign submitted successfully! 🎉')} />
       default:
         return null
     }
   }
 
+  // Show landing page
+  if (showLanding) {
+    return <LandingPage onSubmit={handleLandingSubmit} />
+  }
+
+  // Show main campaign builder
   return (
     <div className="min-h-screen flex">
       <Sidenav />
-      <main className="flex-1 ml-[260px] p-8">
+      <main className="flex-1 ml-[260px] p-8 lg:p-12">
         <div className="max-w-[1200px] mx-auto">
-          <SectionHeader
-            title="Campaign Builder"
-            subtitle="Create and preview your outreach assets"
-            actions={
-              <div className="flex items-center gap-2">
-                <Button variant="secondary">Help</Button>
-                <Button>Export</Button>
-              </div>
-            }
-          />
-
-          <Card className="mb-6">
+          <Card className="mb-8">
             <StepIndicator
               currentStep={currentStep}
               totalSteps={TOTAL_STEPS}
@@ -94,9 +103,11 @@ function AppContent() {
 function App() {
   return (
     <ThemeProvider>
-      <CampaignProvider>
-        <AppContent />
-      </CampaignProvider>
+      <AuthProvider>
+        <CampaignProvider>
+          <AppContent />
+        </CampaignProvider>
+      </AuthProvider>
     </ThemeProvider>
   )
 }

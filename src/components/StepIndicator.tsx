@@ -6,40 +6,68 @@ interface StepIndicatorProps {
   onStepClick: (step: number) => void
 }
 
+const STEP_LABELS = [
+  'Profile',
+  'Strategy',
+  'Samples',
+  'ICP',
+  'Messages',
+  'Leads',
+  'Order',
+  'Complete',
+]
+
 export function StepIndicator({ currentStep, totalSteps, onStepClick }: StepIndicatorProps) {
   const steps = Array.from({ length: totalSteps }, (_, i) => i + 1)
 
   return (
-    <div className="flex items-center justify-center gap-2 mb-6">
+    <div className="flex items-start justify-center gap-1.5 mb-6 py-4">
       {steps.map((step) => {
         const isActive = step === currentStep
         const isCompleted = step < currentStep
         const isClickable = step <= currentStep || isCompleted
+        const label = STEP_LABELS[step - 1] || `Step ${step}`
 
         return (
-          <div key={step} className="flex items-center">
-            <button
-              onClick={() => isClickable && onStepClick(step)}
-              disabled={!isClickable}
+          <div key={step} className="flex flex-col items-center flex-1">
+            <div className="flex items-center w-full">
+              <button
+                onClick={() => isClickable && onStepClick(step)}
+                disabled={!isClickable}
+                className={cn(
+                  'h-9 w-9 rounded-full flex items-center justify-center text-xs font-semibold transition-premium border-0 flex-shrink-0',
+                  isActive
+                    ? 'bg-gradient-to-br from-[var(--color-accent)] to-[#6b9eff] text-white shadow-[var(--shadow-button)] scale-110'
+                    : isCompleted
+                    ? 'bg-[var(--muted)] text-[var(--color-accent)] hover:bg-[var(--surface)] hover:shadow-[var(--shadow-sm)] cursor-pointer border border-[var(--border-subtle)]'
+                    : 'bg-transparent text-[var(--subtle)] cursor-not-allowed border border-[var(--border-subtle)]'
+                )}
+              >
+                {step}
+              </button>
+              {step < totalSteps && (
+                <div
+                  className={cn(
+                    'h-1 rounded-full transition-premium mx-2 flex-1',
+                    isCompleted 
+                      ? 'bg-gradient-to-r from-[var(--color-accent)] to-[#6b9eff]' 
+                      : 'bg-[var(--border-subtle)]'
+                  )}
+                />
+              )}
+            </div>
+            <span
               className={cn(
-                'h-8 px-3 rounded-full flex items-center justify-center text-xs font-medium transition-all duration-200 border-0',
+                'text-xs font-medium mt-2 text-center transition-premium',
                 isActive
-                  ? 'bg-[var(--color-accent)] text-white shadow'
+                  ? 'text-[var(--color-accent)]'
                   : isCompleted
-                  ? 'bg-[var(--muted)] text-[var(--text)]'
-                  : 'bg-transparent text-[var(--subtle)] cursor-not-allowed'
+                  ? 'text-[var(--text)]'
+                  : 'text-[var(--subtle)]'
               )}
             >
-              {step}
-            </button>
-            {step < totalSteps && (
-              <div
-                className={cn(
-                  'w-4 h-0.5 transition-colors duration-200',
-                  isCompleted ? 'bg-[var(--color-accent)]' : 'bg-[var(--border)]'
-                )}
-              />
-            )}
+              {label}
+            </span>
           </div>
         )
       })}

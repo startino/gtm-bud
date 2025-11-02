@@ -23,9 +23,10 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
   }
 
   return (
-    <Card className="max-w-2xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-1 text-[var(--text)]">Thank you! 🎉</h2>
-      <p className="text-[var(--subtle)] mb-6">Your campaign is being prepared. Help us serve you better with a quick question:</p>
+    <Card className="max-w-2xl mx-auto animate-in">
+      <h2 className="text-2xl font-semibold mb-2 text-[var(--text)] tracking-tight">Your campaign is being prepared</h2>
+      <p className="text-[var(--subtle)] mb-8 font-medium">We'll send your leads to your email within the delivery window you selected.</p>
+      <p className="text-sm text-[var(--subtle)] mb-8">Help us serve you better with a quick question:</p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Business Revenue */}

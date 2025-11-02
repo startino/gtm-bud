@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState, useEffect } from 'react'
 import type { ReactNode } from 'react'
 import { mockICPAttributes } from '@/lib/mockData'
 import type { Strategy, ICPAttribute, Message, SampleLead } from '@/lib/mockData'
@@ -13,18 +13,22 @@ interface CampaignState {
   
   // Step 3
   sampleProfileUrl: string
+  sampleProfileUrls: string[]
   
   // Step 4
   icpAttributes: ICPAttribute[]
+  icpCriteria: string[]
   
-  // Step 5 & 6
+  // Step 5
   generatedMessages: Message[]
+  selectedMessage: Message | null
   selectedMessageTone: 'casual' | 'professional' | 'value-first' | null
   
   // Step 7
   sampleLeads: SampleLead[]
   
   // Step 8
+  email: string
   quantity: number
   deliverySpeed: 'standard' | 'rush'
   
@@ -44,10 +48,14 @@ const initialState: CampaignState = {
   website: '',
   selectedStrategy: null,
   sampleProfileUrl: '',
+  sampleProfileUrls: [],
   icpAttributes: mockICPAttributes,
+  icpCriteria: [],
   generatedMessages: [],
+  selectedMessage: null,
   selectedMessageTone: null,
   sampleLeads: [],
+  email: '',
   quantity: 100,
   deliverySpeed: 'standard',
   businessRevenue: '',
@@ -57,7 +65,27 @@ const initialState: CampaignState = {
 const CampaignContext = createContext<CampaignContextType | undefined>(undefined)
 
 export function CampaignProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<CampaignState>(initialState)
+  const [state, setState] = useState<CampaignState>(() => {
+    // Load from localStorage on mount
+    try {
+      const stored = localStorage.getItem('gtm-bud-campaign-data')
+      if (stored) {
+        return { ...initialState, ...JSON.parse(stored) }
+      }
+    } catch (e) {
+      console.error('Failed to load campaign data from localStorage:', e)
+    }
+    return initialState
+  })
+
+  // Persist to localStorage whenever state changes
+  useEffect(() => {
+    try {
+      localStorage.setItem('gtm-bud-campaign-data', JSON.stringify(state))
+    } catch (e) {
+      console.error('Failed to save campaign data to localStorage:', e)
+    }
+  }, [state])
 
   const updateState = (updates: Partial<CampaignState>) => {
     setState((prev) => ({ ...prev, ...updates }))
@@ -65,6 +93,7 @@ export function CampaignProvider({ children }: { children: ReactNode }) {
 
   const resetCampaign = () => {
     setState(initialState)
+    localStorage.removeItem('gtm-bud-campaign-data')
   }
 
   return (

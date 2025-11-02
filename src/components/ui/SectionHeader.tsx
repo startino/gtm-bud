@@ -10,14 +10,14 @@ interface SectionHeaderProps {
 
 export function SectionHeader({ title, subtitle, actions, className }: SectionHeaderProps) {
   return (
-    <div className={cn('mb-6 flex items-center justify-between', className)}>
+    <div className={cn('mb-8 flex items-center justify-between', className)}>
       <div>
-        <h2 className="text-2xl font-semibold text-[var(--text)]">{title}</h2>
+        <h2 className="text-3xl font-semibold text-[var(--text)] tracking-tight mb-1.5">{title}</h2>
         {subtitle && (
-          <p className="text-sm text-[var(--subtle)] mt-1">{subtitle}</p>
+          <p className="text-sm text-[var(--subtle)] font-medium">{subtitle}</p>
         )}
       </div>
-      {actions && <div className="flex items-center gap-2">{actions}</div>}
+      {actions && <div className="flex items-center gap-3">{actions}</div>}
     </div>
   )
 }

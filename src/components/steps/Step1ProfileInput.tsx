@@ -23,17 +23,17 @@ export function Step1ProfileInput({ onNext }: Step1ProfileInputProps) {
   const isValid = linkedInUrl.trim() !== '' && website.trim() !== ''
 
   return (
-    <Card className="max-w-2xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-1 text-[var(--text)]">Tell us about yourself</h2>
-      <p className="text-[var(--subtle)] mb-6">
+    <Card className="max-w-2xl mx-auto animate-in">
+      <h2 className="text-2xl font-semibold mb-2 text-[var(--text)] tracking-tight">Tell us about yourself</h2>
+      <p className="text-[var(--subtle)] mb-8 font-medium">
         We'll analyze your profile and website to create personalized outreach strategies
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-6">
         {/* LinkedIn URL */}
         <div>
-          <label className="block text-sm font-medium mb-2 flex items-center gap-2">
-            <Linkedin className="w-4 h-4" />
+          <label className="block text-sm font-semibold mb-3 flex items-center gap-2 text-[var(--text)]">
+            <Linkedin className="w-4 h-4 text-[var(--color-accent)]" />
             LinkedIn Profile URL
           </label>
           <Input
@@ -47,8 +47,8 @@ export function Step1ProfileInput({ onNext }: Step1ProfileInputProps) {
 
         {/* Website */}
         <div>
-          <label className="block text-sm font-medium mb-2 flex items-center gap-2">
-            <Globe className="w-4 h-4" />
+          <label className="block text-sm font-semibold mb-3 flex items-center gap-2 text-[var(--text)]">
+            <Globe className="w-4 h-4 text-[var(--color-accent)]" />
             Website
           </label>
           <Input
@@ -61,7 +61,7 @@ export function Step1ProfileInput({ onNext }: Step1ProfileInputProps) {
         </div>
 
         {/* Next Button */}
-        <Button type="submit" disabled={!isValid} className="w-full">
+        <Button type="submit" disabled={!isValid} className="w-full mt-8">
           Continue
         </Button>
       </form>

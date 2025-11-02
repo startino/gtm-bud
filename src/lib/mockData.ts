@@ -62,6 +62,31 @@ export const mockICPAttributes: ICPAttribute[] = [
   { id: 'qualitative-3', label: 'Has established client base', value: 'Stable recurring clients', type: 'qualitative', required: false },
 ]
 
+// Plain-English criteria suggestions for autocomplete
+export const criteriaSuggestions = [
+  'currently founder of an agency established before november 2020',
+  'agency annual revenue is between $500,000 and $10,000,000',
+  'founder is at least 35 years old',
+  'agency or founder is based in north america, europe, or oceania',
+  'agency has more than 10 employees',
+  'founder has at least 5 years of experience in their industry',
+  'agency specializes in marketing, creative, or consulting services',
+  'founder is actively seeking to scale their business',
+  'agency has recurring revenue from long-term clients',
+  'founder is interested in productizing their services',
+  'agency has been operating for at least 3 years',
+  'founder has previous experience with SaaS products',
+]
+
+export function getCriteriaSuggestions(urls: string[]): string[] {
+  // In a real implementation, this would analyze URLs and return relevant suggestions
+  // For now, return a mix of suggestions based on URL count
+  if (urls.length === 0) return criteriaSuggestions
+  
+  // Return suggestions that might match common patterns
+  return criteriaSuggestions.slice(0, Math.min(urls.length * 2 + 3, criteriaSuggestions.length))
+}
+
 export const mockMessages: Record<string, Message[]> = {
   casual: [
     {

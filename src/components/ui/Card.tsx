@@ -10,8 +10,9 @@ export function Card({ children, className }: CardProps) {
   return (
     <div
       className={cn(
-        'bg-[var(--surface)] rounded-[var(--radius-card)] shadow-[var(--shadow-card)] border-0',
-        'p-6',
+        'bg-[var(--surface)] rounded-[var(--radius-card)] shadow-[var(--shadow-card)]',
+        'border border-[var(--border-subtle)]',
+        'p-6 transition-premium hover:shadow-[var(--shadow-card-hover)]',
         className
       )}
     >
@@ -26,7 +27,7 @@ export function CardHeader({ children, className }: CardProps) {
 
 export function CardTitle({ children, className }: CardProps) {
   return (
-    <h3 className={cn('text-lg font-semibold text-[var(--text)]', className)}>
+    <h3 className={cn('text-lg font-semibold text-[var(--text)] tracking-tight', className)}>
       {children}
     </h3>
   )
