@@ -3,12 +3,12 @@ import { useCampaign } from '@/contexts/CampaignContext'
 import { Sparkles, Moon, Sun } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-function generateCampaignName(state: any): string {
+function generateCampaignName(state: ReturnType<typeof useCampaign>['state']): string {
   // Generate name based on campaign data
-  if (state.selectedStrategy?.name) {
-    const strategyName = state.selectedStrategy.name.toLowerCase()
-    // Extract key words from strategy name
-    const words = strategyName.split(' ')
+  if (state.selectedStrategy?.title) {
+    const strategyTitle = state.selectedStrategy.title.toLowerCase()
+    // Extract key words from strategy title
+    const words = strategyTitle.split(' ')
     if (words.length > 0) {
       const firstWord = words[0].charAt(0).toUpperCase() + words[0].slice(1)
       return `${firstWord} Campaign`
@@ -55,23 +55,15 @@ export function Sidenav() {
       <div className="flex-1 px-5 py-6 overflow-y-auto">
         <div className="mb-6">
           <h2 className="text-xs font-bold text-[var(--subtle)] uppercase tracking-wider mb-4 px-2">
-          Campaigns
+          Campaign
         </h2>
           <nav className="space-y-1">
-            {campaigns.map((campaign, index) => (
             <button
-              key={campaign}
-                className={cn(
-                  'w-full text-left px-3 py-2.5 rounded-[var(--radius-sm)] text-sm font-medium text-[var(--text)] border-0 transition-premium',
-                  index === 0
-                    ? 'bg-[var(--muted)] text-[var(--color-accent)] shadow-[var(--shadow-sm)]'
-                    : 'hover:bg-[var(--muted)] hover:text-[var(--color-accent)] hover:shadow-[var(--shadow-sm)]'
-                )}
+              className="w-full text-left px-3 py-2.5 rounded-[var(--radius-sm)] text-sm font-medium bg-[var(--muted)] text-[var(--color-accent)] shadow-[var(--shadow-sm)] border-0 transition-premium"
             >
-              {campaign}
+              {campaignName}
             </button>
-          ))}
-        </nav>
+          </nav>
         </div>
       </div>
 
