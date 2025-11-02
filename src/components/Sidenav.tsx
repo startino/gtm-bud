@@ -12,30 +12,30 @@ export function Sidenav() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <div className="fixed left-0 top-0 h-full w-[280px] bg-[var(--color-primary)] border-r border-[var(--color-card)] flex flex-col">
+    <div className="fixed left-0 top-0 h-full w-[260px] bg-[var(--surface)]/80 backdrop-blur border-r border-[var(--border)] flex flex-col">
       {/* Logo */}
-      <div className="p-6 border-b border-[var(--color-card)]">
+      <div className="p-6 border-b border-[var(--border)]">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-primary)] flex items-center justify-center">
-            <Sparkles className="w-5 h-5 text-white" />
+          <div className="w-10 h-10 rounded-xl bg-[var(--muted)] flex items-center justify-center border border-[var(--border)]">
+            <Sparkles className="w-5 h-5 text-[var(--color-accent)]" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-white">GTM Bud</h1>
-            <p className="text-xs text-[var(--color-text-muted)]">AI Outreach</p>
+            <h1 className="text-xl font-semibold text-[var(--text)]">GTM Bud</h1>
+            <p className="text-xs text-[var(--subtle)]">AI Outreach</p>
           </div>
         </div>
       </div>
 
       {/* Campaigns Section */}
-      <div className="flex-1 p-6 overflow-y-auto">
-        <h2 className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider mb-4">
+      <div className="flex-1 p-5 overflow-y-auto">
+        <h2 className="text-xs font-semibold text-[var(--subtle)] uppercase tracking-wider mb-3">
           Campaigns
         </h2>
         <nav className="space-y-2">
           {campaigns.map((campaign) => (
             <button
               key={campaign}
-              className="w-full text-left px-4 py-3 rounded-lg text-sm text-[var(--color-text-secondary)] hover:bg-[var(--color-card)] hover:text-white transition-colors"
+              className="w-full text-left px-4 py-2.5 rounded-full text-sm text-[var(--text)] hover:bg-[var(--muted)] border border-transparent hover:border-[var(--border)] transition-colors"
             >
               {campaign}
             </button>
@@ -44,30 +44,30 @@ export function Sidenav() {
       </div>
 
       {/* Profile & Theme Toggle */}
-      <div className="p-6 border-t border-[var(--color-card)] space-y-4">
+      <div className="p-5 border-t border-[var(--border)] space-y-3">
         {/* Theme Toggle */}
         <button
           onClick={toggleTheme}
-          className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[var(--color-card)] transition-colors group"
+          className="w-full flex items-center gap-3 px-4 py-2.5 rounded-full hover:bg-[var(--muted)] transition-colors group border border-[var(--border)]"
         >
           {theme === 'dark' ? (
-            <Moon className="w-5 h-5 text-[var(--color-text-secondary)] group-hover:text-[var(--color-accent)] transition-colors" />
+            <Moon className="w-5 h-5 text-[var(--subtle)] group-hover:text-[var(--color-accent)] transition-colors" />
           ) : (
-            <Sun className="w-5 h-5 text-[var(--color-text-secondary)] group-hover:text-[var(--color-accent)] transition-colors" />
+            <Sun className="w-5 h-5 text-[var(--subtle)] group-hover:text-[var(--color-accent)] transition-colors" />
           )}
-          <span className="text-sm text-[var(--color-text-secondary)] group-hover:text-white transition-colors">
+          <span className="text-sm text-[var(--text)] transition-colors">
             {theme === 'dark' ? 'Dark Mode' : 'Light Mode'}
           </span>
         </button>
 
         {/* Profile Button */}
-        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-[var(--color-card)] transition-colors group">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-primary)] flex items-center justify-center text-white font-semibold">
+        <button className="w-full flex items-center gap-3 px-4 py-2.5 rounded-full hover:bg-[var(--muted)] transition-colors group border border-[var(--border)]">
+          <div className="w-8 h-8 rounded-full bg-[var(--muted)] flex items-center justify-center text-[var(--text)] font-semibold border border-[var(--border)]">
             JD
           </div>
           <div className="flex-1 text-left">
-            <p className="text-sm font-medium text-white">John Doe</p>
-            <p className="text-xs text-[var(--color-text-muted)]">john@example.com</p>
+            <p className="text-sm font-medium text-[var(--text)]">John Doe</p>
+            <p className="text-xs text-[var(--subtle)]">john@example.com</p>
           </div>
         </button>
       </div>

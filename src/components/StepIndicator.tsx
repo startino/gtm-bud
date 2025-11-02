@@ -10,7 +10,7 @@ export function StepIndicator({ currentStep, totalSteps, onStepClick }: StepIndi
   const steps = Array.from({ length: totalSteps }, (_, i) => i + 1)
 
   return (
-    <div className="flex items-center justify-center gap-4 mb-8">
+    <div className="flex items-center justify-center gap-2 mb-6">
       {steps.map((step) => {
         const isActive = step === currentStep
         const isCompleted = step < currentStep
@@ -22,12 +22,12 @@ export function StepIndicator({ currentStep, totalSteps, onStepClick }: StepIndi
               onClick={() => isClickable && onStepClick(step)}
               disabled={!isClickable}
               className={cn(
-                'w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm transition-all duration-200',
+                'h-8 px-3 rounded-full flex items-center justify-center text-xs font-medium transition-all duration-200 border',
                 isActive
-                  ? 'bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-primary)] text-white shadow-lg shadow-[var(--color-accent)]/30 scale-110'
+                  ? 'bg-[var(--color-accent)] text-white border-transparent shadow'
                   : isCompleted
-                  ? 'bg-[var(--color-accent)] text-white hover:scale-105 cursor-pointer'
-                  : 'bg-[var(--color-card)] text-[var(--color-text-muted)] cursor-not-allowed'
+                  ? 'bg-[var(--muted)] text-[var(--text)] border-[var(--border)]'
+                  : 'bg-transparent text-[var(--subtle)] border-[var(--border)] cursor-not-allowed'
               )}
             >
               {step}
@@ -35,8 +35,8 @@ export function StepIndicator({ currentStep, totalSteps, onStepClick }: StepIndi
             {step < totalSteps && (
               <div
                 className={cn(
-                  'w-8 h-0.5 transition-colors duration-200',
-                  isCompleted ? 'bg-[var(--color-accent)]' : 'bg-[var(--color-card)]'
+                  'w-4 h-0.5 transition-colors duration-200',
+                  isCompleted ? 'bg-[var(--color-accent)]' : 'bg-[var(--border)]'
                 )}
               />
             )}

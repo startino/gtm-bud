@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { useCampaign } from '@/contexts/CampaignContext'
 import { Linkedin } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { Card } from '@/components/ui/Card'
+import { Input } from '@/components/ui/Input'
+import { Button } from '@/components/ui/Button'
 
 interface Step3SampleProfileProps {
   onNext: () => void
@@ -26,24 +28,23 @@ export function Step3SampleProfile({ onNext, onBack }: Step3SampleProfileProps) 
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h2 className="text-3xl font-bold mb-2">Provide a sample prospect</h2>
-      <p className="text-[var(--color-text-secondary)] mb-8">
+    <Card className="max-w-2xl mx-auto">
+      <h2 className="text-2xl font-semibold mb-1 text-[var(--text)]">Provide a sample prospect</h2>
+      <p className="text-[var(--subtle)] mb-6">
         Share a LinkedIn profile of an ideal prospect. We'll extract ICP attributes and generate example messages.
       </p>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-5">
         <div>
           <label className="block text-sm font-medium mb-2 flex items-center gap-2">
             <Linkedin className="w-4 h-4" />
             Sample Prospect Profile URL
           </label>
-          <input
+          <Input
             type="url"
             value={sampleProfileUrl}
             onChange={(e) => setSampleProfileUrl(e.target.value)}
             placeholder="https://linkedin.com/in/prospect"
-            className="w-full px-4 py-3 rounded-lg bg-[var(--color-surface)] border border-[var(--color-card)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] transition-all"
             required
             disabled={isLoading}
           />
@@ -58,30 +59,16 @@ export function Step3SampleProfile({ onNext, onBack }: Step3SampleProfileProps) 
           </div>
         )}
 
-        <div className="flex gap-4">
-          <button
-            type="button"
-            onClick={onBack}
-            disabled={isLoading}
-            className="flex-1 py-3 px-6 rounded-lg font-semibold bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-card)] transition-colors disabled:opacity-50"
-          >
+        <div className="flex gap-3">
+          <Button variant="secondary" type="button" onClick={onBack} disabled={isLoading} className="flex-1">
             Back
-          </button>
-          <button
-            type="submit"
-            disabled={!sampleProfileUrl.trim() || isLoading}
-            className={cn(
-              'flex-1 py-3 px-6 rounded-lg font-semibold transition-all',
-              sampleProfileUrl.trim() && !isLoading
-                ? 'bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-primary)] text-white hover:shadow-lg hover:shadow-[var(--color-accent)]/30 hover:scale-[1.02]'
-                : 'bg-[var(--color-card)] text-[var(--color-text-muted)] cursor-not-allowed'
-            )}
-          >
+          </Button>
+          <Button type="submit" disabled={!sampleProfileUrl.trim() || isLoading} className="flex-1">
             {isLoading ? 'Processing...' : 'Continue'}
-          </button>
+          </Button>
         </div>
       </form>
-    </div>
+    </Card>
   )
 }
 

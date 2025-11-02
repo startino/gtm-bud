@@ -1,0 +1,39 @@
+import type { ReactNode } from 'react'
+import { cn } from '@/lib/utils'
+
+interface CardProps {
+  children: ReactNode
+  className?: string
+}
+
+export function Card({ children, className }: CardProps) {
+  return (
+    <div
+      className={cn(
+        'bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius-card)] shadow-[var(--shadow-card)]',
+        'p-6',
+        className
+      )}
+    >
+      {children}
+    </div>
+  )
+}
+
+export function CardHeader({ children, className }: CardProps) {
+  return <div className={cn('mb-4', className)}>{children}</div>
+}
+
+export function CardTitle({ children, className }: CardProps) {
+  return (
+    <h3 className={cn('text-lg font-semibold text-[var(--text)]', className)}>
+      {children}
+    </h3>
+  )
+}
+
+export function CardContent({ children, className }: CardProps) {
+  return <div className={cn('', className)}>{children}</div>
+}
+
+

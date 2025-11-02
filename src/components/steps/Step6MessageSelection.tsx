@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useCampaign } from '@/contexts/CampaignContext'
 import { cn } from '@/lib/utils'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
 
 interface Step6MessageSelectionProps {
   onNext: () => void
@@ -36,9 +38,9 @@ export function Step6MessageSelection({ onNext, onBack }: Step6MessageSelectionP
   }
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <h2 className="text-3xl font-bold mb-2">Choose your message style</h2>
-      <p className="text-[var(--color-text-secondary)] mb-8">
+    <Card className="max-w-3xl mx-auto">
+      <h2 className="text-2xl font-semibold mb-1 text-[var(--text)]">Choose your message style</h2>
+      <p className="text-[var(--subtle)] mb-6">
         Select the tone that best matches your brand voice. All messages are fully personalized.
       </p>
 
@@ -50,19 +52,19 @@ export function Step6MessageSelection({ onNext, onBack }: Step6MessageSelectionP
               <button
                 onClick={() => handleSelect(tone.id)}
                 className={cn(
-                  'w-full p-4 rounded-lg border-2 transition-all text-left',
+                  'w-full p-4 rounded-[var(--radius-card)] border transition-all text-left bg-[var(--surface)]',
                   selectedTone === tone.id
-                    ? 'border-[var(--color-accent)] bg-[var(--color-card)]'
-                    : 'border-[var(--color-card)] hover:border-[var(--color-accent)]/50'
+                    ? 'border-[var(--color-accent)] shadow-[var(--shadow-card)]'
+                    : 'border-[var(--border)] hover:border-[var(--color-accent)]/50'
                 )}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">{tone.icon}</span>
-                  <h3 className="text-lg font-semibold">{tone.label}</h3>
+                  <h3 className="text-lg font-semibold text-[var(--text)]">{tone.label}</h3>
                 </div>
                 {messages[0] && (
                   <div className="pl-11">
-                    <div className="p-3 rounded bg-[var(--color-surface)] text-sm text-[var(--color-text-secondary)] whitespace-pre-line">
+                    <div className="p-3 rounded bg-[var(--muted)] text-sm text-[var(--subtle)] whitespace-pre-line border border-[var(--border)]">
                       {messages[0].content}
                     </div>
                   </div>
@@ -73,27 +75,11 @@ export function Step6MessageSelection({ onNext, onBack }: Step6MessageSelectionP
         })}
       </div>
 
-      <div className="flex gap-4">
-        <button
-          onClick={onBack}
-          className="flex-1 py-3 px-6 rounded-lg font-semibold bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-card)] transition-colors"
-        >
-          Back
-        </button>
-        <button
-          onClick={handleNext}
-          disabled={!selectedTone}
-          className={cn(
-            'flex-1 py-3 px-6 rounded-lg font-semibold transition-all',
-            selectedTone
-              ? 'bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-primary)] text-white hover:shadow-lg hover:shadow-[var(--color-accent)]/30 hover:scale-[1.02]'
-              : 'bg-[var(--color-card)] text-[var(--color-text-muted)] cursor-not-allowed'
-          )}
-        >
-          Continue
-        </button>
+      <div className="flex gap-3">
+        <Button variant="secondary" onClick={onBack} className="flex-1">Back</Button>
+        <Button onClick={handleNext} disabled={!selectedTone} className="flex-1">Continue</Button>
       </div>
-    </div>
+    </Card>
   )
 }
 

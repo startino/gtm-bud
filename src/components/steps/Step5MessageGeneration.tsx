@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { useCampaign } from '@/contexts/CampaignContext'
 import { mockMessages } from '@/lib/mockData'
 import { Sparkles } from 'lucide-react'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
 
 interface Step5MessageGenerationProps {
   onNext: () => void
@@ -28,12 +30,12 @@ export function Step5MessageGeneration({ onNext, onBack }: Step5MessageGeneratio
   }, [updateState])
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <Card className="max-w-3xl mx-auto">
       <h2 className="text-3xl font-bold mb-2 flex items-center gap-3">
         <Sparkles className="w-8 h-8 text-[var(--color-accent)]" />
         Generating personalized messages
       </h2>
-      <p className="text-[var(--color-text-secondary)] mb-8">
+      <p className="text-[var(--subtle)] mb-6">
         AI is crafting multiple message variations for your sample prospect...
       </p>
 
@@ -52,21 +54,11 @@ export function Step5MessageGeneration({ onNext, onBack }: Step5MessageGeneratio
       )}
 
       {!isGenerating && (
-        <div className="flex gap-4">
-          <button
-            onClick={onBack}
-            className="flex-1 py-3 px-6 rounded-lg font-semibold bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-card)] transition-colors"
-          >
-            Back
-          </button>
-          <button
-            onClick={onNext}
-            className="flex-1 py-3 px-6 rounded-lg font-semibold bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-primary)] text-white hover:shadow-lg hover:shadow-[var(--color-accent)]/30 hover:scale-[1.02] transition-all"
-          >
-            View Messages
-          </button>
+        <div className="flex gap-3">
+          <Button variant="secondary" onClick={onBack} className="flex-1">Back</Button>
+          <Button onClick={onNext} className="flex-1">View Messages</Button>
         </div>
       )}
-    </div>
+    </Card>
   )
 }

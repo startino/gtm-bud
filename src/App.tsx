@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { CampaignProvider } from './contexts/CampaignContext'
 import { Sidenav } from './components/Sidenav'
+import { SectionHeader } from './components/ui/SectionHeader'
+import { Button } from './components/ui/Button'
+import { Card } from './components/ui/Card'
 import { StepIndicator } from './components/StepIndicator'
 import { Step1ProfileInput } from './components/steps/Step1ProfileInput'
 import { Step2StrategySelection } from './components/steps/Step2StrategySelection'
@@ -58,13 +61,27 @@ function AppContent() {
   return (
     <div className="min-h-screen flex">
       <Sidenav />
-      <main className="flex-1 ml-[280px] p-8 bg-[var(--color-background)]">
-        <div className="max-w-6xl mx-auto">
-          <StepIndicator
-            currentStep={currentStep}
-            totalSteps={TOTAL_STEPS}
-            onStepClick={handleStepClick}
+      <main className="flex-1 ml-[260px] p-8">
+        <div className="max-w-[1200px] mx-auto">
+          <SectionHeader
+            title="Campaign Builder"
+            subtitle="Create and preview your outreach assets"
+            actions={
+              <div className="flex items-center gap-2">
+                <Button variant="secondary">Help</Button>
+                <Button>Export</Button>
+              </div>
+            }
           />
+
+          <Card className="mb-6">
+            <StepIndicator
+              currentStep={currentStep}
+              totalSteps={TOTAL_STEPS}
+              onStepClick={handleStepClick}
+            />
+          </Card>
+
           <div className="animate-in fade-in duration-300">
             {renderStep()}
           </div>

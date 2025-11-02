@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useCampaign } from '@/contexts/CampaignContext'
 import { Clock, Zap } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
 
 interface Step8OrderPlacementProps {
   onNext: () => void
@@ -28,11 +30,9 @@ export function Step8OrderPlacement({ onNext, onBack }: Step8OrderPlacementProps
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h2 className="text-3xl font-bold mb-2">Complete your order</h2>
-      <p className="text-[var(--color-text-secondary)] mb-8">
-        Choose your lead quantity and delivery speed
-      </p>
+    <Card className="max-w-2xl mx-auto">
+      <h2 className="text-2xl font-semibold mb-1 text-[var(--text)]">Complete your order</h2>
+      <p className="text-[var(--subtle)] mb-6">Choose your lead quantity and delivery speed</p>
 
       <div className="space-y-6 mb-8">
         {/* Quantity Selection */}
@@ -44,14 +44,14 @@ export function Step8OrderPlacement({ onNext, onBack }: Step8OrderPlacementProps
                 key={qty}
                 onClick={() => setQuantity(qty)}
                 className={cn(
-                  'p-4 rounded-xl border-2 transition-all',
+                  'p-4 rounded-[var(--radius-card)] border transition-all bg-[var(--surface)]',
                   quantity === qty
-                    ? 'border-[var(--color-accent)] bg-[var(--color-card)]'
-                    : 'border-[var(--color-card)] hover:border-[var(--color-accent)]/50'
+                    ? 'border-[var(--color-accent)] shadow-[var(--shadow-card)]'
+                    : 'border-[var(--border)] hover:border-[var(--color-accent)]/50'
                 )}
               >
                 <div className="text-2xl font-bold">{qty}</div>
-                <div className="text-xs text-[var(--color-text-secondary)]">${(qty * basePricePerLead).toFixed(2)}</div>
+                <div className="text-xs text-[var(--subtle)]">${(qty * basePricePerLead).toFixed(2)}</div>
               </button>
             ))}
           </div>
@@ -64,17 +64,17 @@ export function Step8OrderPlacement({ onNext, onBack }: Step8OrderPlacementProps
             <button
               onClick={() => setDeliverySpeed('standard')}
               className={cn(
-                'w-full p-4 rounded-xl border-2 transition-all flex items-center justify-between',
+                'w-full p-4 rounded-[var(--radius-card)] border transition-all flex items-center justify-between bg-[var(--surface)]',
                 deliverySpeed === 'standard'
-                  ? 'border-[var(--color-accent)] bg-[var(--color-card)]'
-                  : 'border-[var(--color-card)] hover:border-[var(--color-accent)]/50'
+                  ? 'border-[var(--color-accent)] shadow-[var(--shadow-card)]'
+                  : 'border-[var(--border)] hover:border-[var(--color-accent)]/50'
               )}
             >
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-[var(--color-accent)]" />
                 <div className="text-left">
                   <div className="font-semibold">Standard (24 hours)</div>
-                  <div className="text-sm text-[var(--color-text-secondary)]">Included</div>
+                  <div className="text-sm text-[var(--subtle)]">Included</div>
                 </div>
               </div>
               <div className="text-lg font-bold">$0</div>
@@ -83,17 +83,17 @@ export function Step8OrderPlacement({ onNext, onBack }: Step8OrderPlacementProps
             <button
               onClick={() => setDeliverySpeed('rush')}
               className={cn(
-                'w-full p-4 rounded-xl border-2 transition-all flex items-center justify-between',
+                'w-full p-4 rounded-[var(--radius-card)] border transition-all flex items-center justify-between bg-[var(--surface)]',
                 deliverySpeed === 'rush'
-                  ? 'border-[var(--color-accent)] bg-[var(--color-card)]'
-                  : 'border-[var(--color-card)] hover:border-[var(--color-accent)]/50'
+                  ? 'border-[var(--color-accent)] shadow-[var(--shadow-card)]'
+                  : 'border-[var(--border)] hover:border-[var(--color-accent)]/50'
               )}
             >
               <div className="flex items-center gap-3">
                 <Zap className="w-5 h-5 text-[var(--color-accent)]" />
                 <div className="text-left">
                   <div className="font-semibold">Rush (2 hours)</div>
-                  <div className="text-sm text-[var(--color-text-secondary)]">Get your leads fast</div>
+                  <div className="text-sm text-[var(--subtle)]">Get your leads fast</div>
                 </div>
               </div>
               <div className="text-lg font-bold">+${rushFee}</div>
@@ -102,39 +102,29 @@ export function Step8OrderPlacement({ onNext, onBack }: Step8OrderPlacementProps
         </div>
 
         {/* Price Summary */}
-        <div className="p-6 rounded-xl bg-[var(--color-card)] border border-[var(--color-accent)]/20">
+        <div className="p-6 rounded-[var(--radius-card)] bg-[var(--muted)] border border-[var(--border)]">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-[var(--color-text-secondary)]">Subtotal</span>
+            <span className="text-[var(--subtle)]">Subtotal</span>
             <span className="font-semibold">${(quantity * basePricePerLead).toFixed(2)}</span>
           </div>
           {deliverySpeed === 'rush' && (
             <div className="flex justify-between items-center mb-4">
-              <span className="text-[var(--color-text-secondary)]">Rush delivery</span>
+              <span className="text-[var(--subtle)]">Rush delivery</span>
               <span className="font-semibold">+${rushFee.toFixed(2)}</span>
             </div>
           )}
-          <div className="pt-4 border-t border-[var(--color-surface)] flex justify-between items-center">
+          <div className="pt-4 border-t border-[var(--border)] flex justify-between items-center">
             <span className="text-lg font-bold">Total</span>
             <span className="text-2xl font-bold text-[var(--color-accent)]">${calculatePrice().toFixed(2)}</span>
           </div>
         </div>
       </div>
 
-      <div className="flex gap-4">
-        <button
-          onClick={onBack}
-          className="flex-1 py-3 px-6 rounded-lg font-semibold bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-card)] transition-colors"
-        >
-          Back
-        </button>
-        <button
-          onClick={handleNext}
-          className="flex-1 py-3 px-6 rounded-lg font-semibold bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-primary)] text-white hover:shadow-lg hover:shadow-[var(--color-accent)]/30 hover:scale-[1.02] transition-all"
-        >
-          Confirm Order
-        </button>
+      <div className="flex gap-3">
+        <Button variant="secondary" onClick={onBack} className="flex-1">Back</Button>
+        <Button onClick={handleNext} className="flex-1">Confirm Order</Button>
       </div>
-    </div>
+    </Card>
   )
 }
 

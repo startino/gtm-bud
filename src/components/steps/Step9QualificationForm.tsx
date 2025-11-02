@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { CheckCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
+import { Select } from '@/components/ui/Select'
 
 interface Step9QualificationFormProps {
   onComplete: () => void
@@ -20,11 +23,9 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
   }
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h2 className="text-3xl font-bold mb-2">Thank you! 🎉</h2>
-      <p className="text-[var(--color-text-secondary)] mb-8">
-        Your campaign is being prepared. Help us serve you better with a quick question:
-      </p>
+    <Card className="max-w-2xl mx-auto">
+      <h2 className="text-2xl font-semibold mb-1 text-[var(--text)]">Thank you! 🎉</h2>
+      <p className="text-[var(--subtle)] mb-6">Your campaign is being prepared. Help us serve you better with a quick question:</p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Business Revenue */}
@@ -32,12 +33,7 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
           <label className="block text-sm font-medium mb-2">
             What's your current monthly revenue?
           </label>
-          <select
-            value={businessRevenue}
-            onChange={(e) => setBusinessRevenue(e.target.value)}
-            className="w-full px-4 py-3 rounded-lg bg-[var(--color-surface)] border border-[var(--color-card)] text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] transition-all"
-            required
-          >
+          <Select value={businessRevenue} onChange={(e) => setBusinessRevenue(e.target.value)} required>
             <option value="">Select monthly revenue</option>
             <option value="0">Less than $1,000</option>
             <option value="1000">$1,000 - $4,999</option>
@@ -45,7 +41,7 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
             <option value="10000">$10,000 - $24,999</option>
             <option value="25000">$25,000 - $49,999</option>
             <option value="50000">$50,000+</option>
-          </select>
+          </Select>
         </div>
 
         {/* Consulting Interest */}
@@ -90,40 +86,30 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
             value={additionalInfo}
             onChange={(e) => setAdditionalInfo(e.target.value)}
             rows={3}
-            className="w-full px-4 py-3 rounded-lg bg-[var(--color-surface)] border border-[var(--color-card)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] transition-all resize-none"
+            className="w-full px-4 py-3 rounded-[var(--radius-ctl)] bg-[var(--surface)] border border-[var(--border)] text-[var(--text)] placeholder-[var(--subtle)] focus:outline-none focus:ring-4 focus:ring-[color:rgb(80_172_228_/_20%)] transition-all resize-none"
             placeholder="Optional..."
           />
         </div>
 
         {/* Sales Call CTA for qualified users */}
         {isQualifiedForSalesCall && (
-          <div className="p-6 rounded-xl bg-gradient-to-r from-[var(--color-accent)]/20 to-[var(--color-primary)]/20 border-2 border-[var(--color-accent)]">
+          <div className="p-6 rounded-[var(--radius-card)] bg-[var(--muted)] border border-[var(--border)]">
             <div className="flex items-start gap-3 mb-3">
               <CheckCircle className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
               <div>
-                <h3 className="font-bold text-lg mb-1">You're qualified for a sales call!</h3>
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <h3 className="font-semibold text-lg mb-1 text-[var(--text)]">You're qualified for a sales call!</h3>
+                <p className="text-sm text-[var(--subtle)]">
                   Based on your revenue, our full-service agency program could be a perfect fit. Let's chat.
                 </p>
               </div>
             </div>
-            <button
-              type="button"
-              className="w-full mt-4 py-3 px-6 rounded-lg font-semibold bg-[var(--color-accent)] text-white hover:shadow-lg hover:shadow-[var(--color-accent)]/30 transition-all"
-            >
-              Book a Sales Call
-            </button>
+            <Button type="button" className="w-full mt-2">Book a Sales Call</Button>
           </div>
         )}
 
-        <button
-          type="submit"
-          className="w-full py-3 px-6 rounded-lg font-semibold bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-primary)] text-white hover:shadow-lg hover:shadow-[var(--color-accent)]/30 hover:scale-[1.02] transition-all"
-        >
-          Complete
-        </button>
+        <Button type="submit" className="w-full">Complete</Button>
       </form>
-    </div>
+    </Card>
   )
 }
 
