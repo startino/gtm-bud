@@ -13,7 +13,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     const stored = localStorage.getItem('theme') as Theme | null
-    return stored || 'dark'
+    return stored || 'light'
   })
 
   useEffect(() => {
@@ -21,13 +21,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     root.classList.remove('light', 'dark')
     root.classList.add(theme)
     localStorage.setItem('theme', theme)
-    
-    // Update body background color for smooth transitions
-    if (theme === 'dark') {
-      root.style.setProperty('--color-background', '#210aae')
-    } else {
-      root.style.setProperty('--color-background', '#ffffff')
-    }
   }, [theme])
 
   const toggleTheme = () => {
