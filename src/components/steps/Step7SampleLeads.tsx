@@ -49,7 +49,7 @@ export function Step7SampleLeads({ onNext, onBack }: Step7SampleLeadsProps) {
         {leads.map((lead) => (
           <div
             key={lead.id}
-            className="p-5 rounded-[var(--radius-card)] border border-[var(--border)] bg-[var(--surface)] hover:border-[var(--color-accent)]/50 transition-colors"
+            className="p-5 rounded-[var(--radius-card)] bg-[var(--surface)] transition-all shadow-[var(--shadow-card)] border-0"
           >
             <div className="flex items-start justify-between mb-3">
               <div>
@@ -64,11 +64,11 @@ export function Step7SampleLeads({ onNext, onBack }: Step7SampleLeadsProps) {
               )}
             </div>
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="px-2 py-1 text-xs bg-[var(--muted)] border border-[var(--border)] rounded">{lead.industry}</span>
-              <span className="px-2 py-1 text-xs bg-[var(--muted)] border border-[var(--border)] rounded">{lead.companySize}</span>
-              <span className="px-2 py-1 text-xs bg-[var(--muted)] border border-[var(--border)] rounded">{lead.location}</span>
+              <span className="px-2 py-1 text-xs bg-[var(--muted)] rounded border-0">{lead.industry}</span>
+              <span className="px-2 py-1 text-xs bg-[var(--muted)] rounded border-0">{lead.companySize}</span>
+              <span className="px-2 py-1 text-xs bg-[var(--muted)] rounded border-0">{lead.location}</span>
             </div>
-            <div className="p-4 rounded-lg bg-[var(--muted)] border border-[var(--border)] text-sm text-[var(--subtle)] whitespace-pre-line">
+            <div className="p-4 rounded-lg bg-[var(--muted)] text-sm text-[var(--subtle)] whitespace-pre-line border-0">
               {lead.message}
             </div>
           </div>

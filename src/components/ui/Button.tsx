@@ -14,11 +14,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants: Record<Variant, string> = {
       primary:
-        'bg-[var(--color-accent)] text-white shadow-[var(--shadow-card)] hover:opacity-90',
+        'bg-[var(--color-accent)] text-white hover:opacity-90 border-0',
       secondary:
-        'bg-[var(--muted)] text-[var(--text)] border border-[var(--border)] hover:bg-white',
+        'bg-[var(--muted)] text-[var(--text)] hover:bg-white border-0',
       ghost:
-        'bg-transparent text-[var(--text)] hover:bg-[var(--muted)] border border-transparent',
+        'bg-transparent text-[var(--text)] hover:bg-[var(--muted)] border-0',
     }
 
     return (

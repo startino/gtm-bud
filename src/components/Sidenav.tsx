@@ -12,11 +12,11 @@ export function Sidenav() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <div className="fixed left-0 top-0 h-full w-[260px] bg-[var(--surface)]/80 backdrop-blur border-r border-[var(--border)] flex flex-col">
+    <div className="fixed left-0 top-0 h-full w-[260px] bg-[var(--surface)]/80 backdrop-blur flex flex-col">
       {/* Logo */}
-      <div className="p-6 border-b border-[var(--border)]">
+      <div className="p-6">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-[var(--muted)] flex items-center justify-center border border-[var(--border)]">
+          <div className="w-10 h-10 rounded-xl bg-[var(--muted)] flex items-center justify-center border-0">
             <Sparkles className="w-5 h-5 text-[var(--color-accent)]" />
           </div>
           <div>
@@ -35,7 +35,7 @@ export function Sidenav() {
           {campaigns.map((campaign) => (
             <button
               key={campaign}
-              className="w-full text-left px-4 py-2.5 rounded-full text-sm text-[var(--text)] hover:bg-[var(--muted)] border border-transparent hover:border-[var(--border)] transition-colors"
+              className="w-full text-left px-4 py-2.5 rounded-full text-sm text-[var(--text)] hover:bg-[var(--muted)] border-0 transition-colors"
             >
               {campaign}
             </button>
@@ -44,11 +44,11 @@ export function Sidenav() {
       </div>
 
       {/* Profile & Theme Toggle */}
-      <div className="p-5 border-t border-[var(--border)] space-y-3">
+      <div className="p-5 space-y-3">
         {/* Theme Toggle */}
         <button
           onClick={toggleTheme}
-          className="w-full flex items-center gap-3 px-4 py-2.5 rounded-full hover:bg-[var(--muted)] transition-colors group border border-[var(--border)]"
+          className="w-full flex items-center gap-3 px-4 py-2.5 rounded-full hover:bg-[var(--muted)] transition-colors group border-0"
         >
           {theme === 'dark' ? (
             <Moon className="w-5 h-5 text-[var(--subtle)] group-hover:text-[var(--color-accent)] transition-colors" />
@@ -61,8 +61,8 @@ export function Sidenav() {
         </button>
 
         {/* Profile Button */}
-        <button className="w-full flex items-center gap-3 px-4 py-2.5 rounded-full hover:bg-[var(--muted)] transition-colors group border border-[var(--border)]">
-          <div className="w-8 h-8 rounded-full bg-[var(--muted)] flex items-center justify-center text-[var(--text)] font-semibold border border-[var(--border)]">
+        <button className="w-full flex items-center gap-3 px-4 py-2.5 rounded-full hover:bg-[var(--muted)] transition-colors group border-0">
+          <div className="w-8 h-8 rounded-full bg-[var(--muted)] flex items-center justify-center text-[var(--text)] font-semibold border-0">
             JD
           </div>
           <div className="flex-1 text-left">

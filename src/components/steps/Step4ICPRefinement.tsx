@@ -42,10 +42,10 @@ export function Step4ICPRefinement({ onNext, onBack }: Step4ICPRefinementProps) 
           <div
             key={attr.id}
             className={cn(
-              'p-4 rounded-[var(--radius-card)] border transition-all bg-[var(--surface)]',
+              'p-4 rounded-[var(--radius-card)] transition-all bg-[var(--surface)] border-0',
               attr.required
-                ? 'border-[var(--color-accent)] shadow-[var(--shadow-card)]'
-                : 'border-[var(--border)]'
+                ? 'shadow-[var(--shadow-card)]'
+                : ''
             )}
           >
             <div className="flex items-start justify-between gap-4">
@@ -61,10 +61,10 @@ export function Step4ICPRefinement({ onNext, onBack }: Step4ICPRefinementProps) 
               <button
                 onClick={() => handleToggleRequired(attr.id)}
                 className={cn(
-                  'px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap',
+                  'px-4 py-2 rounded-lg text-sm font-medium transition-all whitespace-nowrap border-0',
                   attr.required
                     ? 'bg-[var(--color-accent)] text-white'
-                    : 'bg-[var(--muted)] text-[var(--text)] border border-[var(--border)] hover:bg-white'
+                    : 'bg-[var(--muted)] text-[var(--text)] hover:bg-white'
                 )}
               >
                 {attr.required ? 'Required' : 'Nice-to-have'}

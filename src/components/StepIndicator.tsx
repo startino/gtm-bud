@@ -22,12 +22,12 @@ export function StepIndicator({ currentStep, totalSteps, onStepClick }: StepIndi
               onClick={() => isClickable && onStepClick(step)}
               disabled={!isClickable}
               className={cn(
-                'h-8 px-3 rounded-full flex items-center justify-center text-xs font-medium transition-all duration-200 border',
+                'h-8 px-3 rounded-full flex items-center justify-center text-xs font-medium transition-all duration-200 border-0',
                 isActive
-                  ? 'bg-[var(--color-accent)] text-white border-transparent shadow'
+                  ? 'bg-[var(--color-accent)] text-white shadow'
                   : isCompleted
-                  ? 'bg-[var(--muted)] text-[var(--text)] border-[var(--border)]'
-                  : 'bg-transparent text-[var(--subtle)] border-[var(--border)] cursor-not-allowed'
+                  ? 'bg-[var(--muted)] text-[var(--text)]'
+                  : 'bg-transparent text-[var(--subtle)] cursor-not-allowed'
               )}
             >
               {step}

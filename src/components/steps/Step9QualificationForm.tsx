@@ -54,10 +54,10 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
               type="button"
               onClick={() => setConsultingInterest(true)}
               className={cn(
-                'flex-1 p-4 rounded-lg border-2 transition-all',
+                'flex-1 p-4 rounded-lg transition-all border-0',
                 consultingInterest
-                  ? 'border-[var(--color-accent)] bg-[var(--color-card)]'
-                  : 'border-[var(--color-card)] hover:border-[var(--color-accent)]/50'
+                  ? 'bg-[var(--color-accent)] text-white'
+                  : 'bg-[var(--muted)] text-[var(--text)]'
               )}
             >
               Yes, I'm interested
@@ -66,10 +66,10 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
               type="button"
               onClick={() => setConsultingInterest(false)}
               className={cn(
-                'flex-1 p-4 rounded-lg border-2 transition-all',
+                'flex-1 p-4 rounded-lg transition-all border-0',
                 !consultingInterest
-                  ? 'border-[var(--color-accent)] bg-[var(--color-card)]'
-                  : 'border-[var(--color-card)] hover:border-[var(--color-accent)]/50'
+                  ? 'bg-[var(--color-accent)] text-white'
+                  : 'bg-[var(--muted)] text-[var(--text)]'
               )}
             >
               Not right now
@@ -86,14 +86,14 @@ export function Step9QualificationForm({ onComplete }: Step9QualificationFormPro
             value={additionalInfo}
             onChange={(e) => setAdditionalInfo(e.target.value)}
             rows={3}
-            className="w-full px-4 py-3 rounded-[var(--radius-ctl)] bg-[var(--surface)] border border-[var(--border)] text-[var(--text)] placeholder-[var(--subtle)] focus:outline-none focus:ring-4 focus:ring-[color:rgb(80_172_228_/_20%)] transition-all resize-none"
+            className="w-full px-4 py-3 rounded-[var(--radius-ctl)] bg-[var(--muted)] text-[var(--text)] placeholder-[var(--subtle)] focus:outline-none focus:ring-4 focus:ring-[color:rgb(80_172_228_/_20%)] transition-all resize-none border-0"
             placeholder="Optional..."
           />
         </div>
 
         {/* Sales Call CTA for qualified users */}
         {isQualifiedForSalesCall && (
-          <div className="p-6 rounded-[var(--radius-card)] bg-[var(--muted)] border border-[var(--border)]">
+          <div className="p-6 rounded-[var(--radius-card)] bg-[var(--muted)] border-0">
             <div className="flex items-start gap-3 mb-3">
               <CheckCircle className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-0.5" />
               <div>

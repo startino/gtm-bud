@@ -38,10 +38,10 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
               key={strategy.id}
               onClick={() => handleSelect(strategy)}
               className={cn(
-                'p-5 rounded-[var(--radius-card)] border transition-all text-left bg-[var(--surface)]',
+                'p-5 rounded-[var(--radius-card)] transition-all text-left bg-[var(--surface)] border-0',
                 selectedStrategy?.id === strategy.id
-                  ? 'border-[var(--color-accent)] shadow-[var(--shadow-card)]'
-                  : 'border-[var(--border)] hover:border-[var(--color-accent)]/50'
+                  ? 'shadow-[var(--shadow-card)]'
+                  : ''
               )}
             >
               <div className="text-4xl mb-3">{strategy.icon}</div>

@@ -44,10 +44,10 @@ export function Step8OrderPlacement({ onNext, onBack }: Step8OrderPlacementProps
                 key={qty}
                 onClick={() => setQuantity(qty)}
                 className={cn(
-                  'p-4 rounded-[var(--radius-card)] border transition-all bg-[var(--surface)]',
+                  'p-4 rounded-[var(--radius-card)] transition-all bg-[var(--surface)] border-0',
                   quantity === qty
-                    ? 'border-[var(--color-accent)] shadow-[var(--shadow-card)]'
-                    : 'border-[var(--border)] hover:border-[var(--color-accent)]/50'
+                    ? 'shadow-[var(--shadow-card)]'
+                    : ''
                 )}
               >
                 <div className="text-2xl font-bold">{qty}</div>
@@ -64,10 +64,10 @@ export function Step8OrderPlacement({ onNext, onBack }: Step8OrderPlacementProps
             <button
               onClick={() => setDeliverySpeed('standard')}
               className={cn(
-                'w-full p-4 rounded-[var(--radius-card)] border transition-all flex items-center justify-between bg-[var(--surface)]',
+                'w-full p-4 rounded-[var(--radius-card)] transition-all flex items-center justify-between bg-[var(--surface)] border-0',
                 deliverySpeed === 'standard'
-                  ? 'border-[var(--color-accent)] shadow-[var(--shadow-card)]'
-                  : 'border-[var(--border)] hover:border-[var(--color-accent)]/50'
+                  ? 'shadow-[var(--shadow-card)]'
+                  : ''
               )}
             >
               <div className="flex items-center gap-3">
@@ -83,10 +83,10 @@ export function Step8OrderPlacement({ onNext, onBack }: Step8OrderPlacementProps
             <button
               onClick={() => setDeliverySpeed('rush')}
               className={cn(
-                'w-full p-4 rounded-[var(--radius-card)] border transition-all flex items-center justify-between bg-[var(--surface)]',
+                'w-full p-4 rounded-[var(--radius-card)] transition-all flex items-center justify-between bg-[var(--surface)] border-0',
                 deliverySpeed === 'rush'
-                  ? 'border-[var(--color-accent)] shadow-[var(--shadow-card)]'
-                  : 'border-[var(--border)] hover:border-[var(--color-accent)]/50'
+                  ? 'shadow-[var(--shadow-card)]'
+                  : ''
               )}
             >
               <div className="flex items-center gap-3">
@@ -102,7 +102,7 @@ export function Step8OrderPlacement({ onNext, onBack }: Step8OrderPlacementProps
         </div>
 
         {/* Price Summary */}
-        <div className="p-6 rounded-[var(--radius-card)] bg-[var(--muted)] border border-[var(--border)]">
+        <div className="p-6 rounded-[var(--radius-card)] bg-[var(--muted)] border-0">
           <div className="flex justify-between items-center mb-2">
             <span className="text-[var(--subtle)]">Subtotal</span>
             <span className="font-semibold">${(quantity * basePricePerLead).toFixed(2)}</span>
@@ -113,7 +113,7 @@ export function Step8OrderPlacement({ onNext, onBack }: Step8OrderPlacementProps
               <span className="font-semibold">+${rushFee.toFixed(2)}</span>
             </div>
           )}
-          <div className="pt-4 border-t border-[var(--border)] flex justify-between items-center">
+          <div className="pt-4 flex justify-between items-center">
             <span className="text-lg font-bold">Total</span>
             <span className="text-2xl font-bold text-[var(--color-accent)]">${calculatePrice().toFixed(2)}</span>
           </div>

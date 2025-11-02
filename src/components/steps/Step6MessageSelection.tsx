@@ -52,10 +52,10 @@ export function Step6MessageSelection({ onNext, onBack }: Step6MessageSelectionP
               <button
                 onClick={() => handleSelect(tone.id)}
                 className={cn(
-                  'w-full p-4 rounded-[var(--radius-card)] border transition-all text-left bg-[var(--surface)]',
+                  'w-full p-4 rounded-[var(--radius-card)] transition-all text-left bg-[var(--surface)] border-0',
                   selectedTone === tone.id
-                    ? 'border-[var(--color-accent)] shadow-[var(--shadow-card)]'
-                    : 'border-[var(--border)] hover:border-[var(--color-accent)]/50'
+                    ? 'shadow-[var(--shadow-card)]'
+                    : ''
                 )}
               >
                 <div className="flex items-center gap-3 mb-3">
@@ -64,7 +64,7 @@ export function Step6MessageSelection({ onNext, onBack }: Step6MessageSelectionP
                 </div>
                 {messages[0] && (
                   <div className="pl-11">
-                    <div className="p-3 rounded bg-[var(--muted)] text-sm text-[var(--subtle)] whitespace-pre-line border border-[var(--border)]">
+                    <div className="p-3 rounded bg-[var(--muted)] text-sm text-[var(--subtle)] whitespace-pre-line border-0">
                       {messages[0].content}
                     </div>
                   </div>

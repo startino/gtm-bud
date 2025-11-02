@@ -10,7 +10,7 @@ export function Card({ children, className }: CardProps) {
   return (
     <div
       className={cn(
-        'bg-[var(--surface)] border border-[var(--border)] rounded-[var(--radius-card)] shadow-[var(--shadow-card)]',
+        'bg-[var(--surface)] rounded-[var(--radius-card)] shadow-[var(--shadow-card)] border-0',
         'p-6',
         className
       )}
