@@ -1,7 +1,6 @@
 import { useTheme } from '@/contexts/ThemeContext'
 import { useCampaign } from '@/contexts/CampaignContext'
 import { Sparkles, Moon, Sun } from 'lucide-react'
-import { cn } from '@/lib/utils'
 
 function generateCampaignName(state: ReturnType<typeof useCampaign>['state']): string {
   // Generate name based on campaign data

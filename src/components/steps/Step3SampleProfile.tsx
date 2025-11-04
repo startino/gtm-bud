@@ -5,7 +5,6 @@ import { Card } from '@/components/ui/Card'
 import { Input } from '@/components/ui/Input'
 import { Button } from '@/components/ui/Button'
 import { Spinner } from '@/components/ui/Spinner'
-import { cn } from '@/lib/utils'
 
 interface Step3SampleProfileProps {
   onNext: () => void

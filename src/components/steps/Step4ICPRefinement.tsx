@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Toggle } from '@/components/ui/Toggle'
-import { criteriaSuggestions, getCriteriaSuggestions } from '@/lib/mockData'
+import { getCriteriaSuggestions } from '@/lib/mockData'
 
 interface Step4ICPRefinementProps {
   onNext: () => void
