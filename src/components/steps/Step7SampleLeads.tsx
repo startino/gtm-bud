@@ -97,7 +97,7 @@ export function Step7SampleLeads({ onNext, onBack }: Step7SampleLeadsProps) {
               </div>
             </div>
           ) : (
-            <div className="flex-1 flex flex-col items-center justify-center text-center px-6">
+            <div className="flex flex-col items-center text-center px-6 pt-6 bg-[var(--muted)] rounded-[var(--radius-card)]">
               <div className="w-16 h-16 rounded-full bg-[var(--muted)] flex items-center justify-center mb-4">
                 <Linkedin className="w-8 h-8 text-[var(--subtle)]" />
               </div>

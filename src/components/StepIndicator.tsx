@@ -8,7 +8,7 @@ interface StepIndicatorProps {
 
 const STEP_LABELS = [
   'Profile',
-  'Strategy',
+  'Value Offer',
   'Samples',
   'ICP',
   'Messages',
@@ -35,10 +35,10 @@ export function StepIndicator({ currentStep, totalSteps, onStepClick }: StepIndi
               className={cn(
                   'h-9 w-9 rounded-full flex items-center justify-center text-xs font-semibold transition-premium border-0 cursor-pointer',
                 isActive
-                    ? 'bg-gradient-to-br from-[var(--color-accent)] to-[#6b9eff] text-white shadow-[var(--shadow-button)] scale-110'
+                    ? 'bg-[var(--color-accent)] text-white shadow-[var(--shadow-button)] scale-110'
                   : isCompleted
-                    ? 'bg-[var(--muted)] text-[var(--color-accent)] hover:bg-[var(--surface)] hover:shadow-[var(--shadow-sm)] border border-[var(--border-subtle)]'
-                    : 'bg-transparent text-[var(--subtle)] hover:bg-[var(--muted)] hover:text-[var(--text)] border border-[var(--border-subtle)]'
+                    ? 'bg-[var(--muted)] text-[var(--color-accent)] hover:bg-[var(--muted)]/80'
+                    : 'bg-[var(--muted)] text-[var(--subtle)] hover:bg-[var(--muted)]/80 hover:text-[var(--text)]'
               )}
             >
               {step}
@@ -61,7 +61,7 @@ export function StepIndicator({ currentStep, totalSteps, onStepClick }: StepIndi
                 className={cn(
                   'h-1 rounded-full transition-premium mx-2 flex-1 mt-4',
                   isCompleted 
-                    ? 'bg-gradient-to-r from-[var(--color-accent)] to-[#6b9eff]' 
+                    ? 'bg-[var(--color-accent)]' 
                     : 'bg-[var(--border-subtle)]'
                 )}
               />

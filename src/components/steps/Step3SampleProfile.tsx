@@ -120,7 +120,7 @@ export function Step3SampleProfile({ onNext, onBack }: Step3SampleProfileProps) 
 
         <Button
           type="button"
-          variant="secondary"
+          variant="outline"
           onClick={handleAddUrl}
           disabled={isLoading}
           className="w-full"

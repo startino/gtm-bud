@@ -31,6 +31,7 @@ interface CampaignState {
   email: string
   quantity: number
   deliverySpeed: 'standard' | 'rush'
+  outboundStrategy: 'inmail' | 'connections'
   
   // Step 9
   businessRevenue: string
@@ -58,6 +59,7 @@ const initialState: CampaignState = {
   email: '',
   quantity: 100,
   deliverySpeed: 'standard',
+  outboundStrategy: 'connections',
   businessRevenue: '',
   consultingInterest: false,
 }

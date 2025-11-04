@@ -144,7 +144,7 @@ export function Step5MessageGeneration({ onNext, onBack }: Step5MessageGeneratio
 
               if (isEditing) {
                 return (
-                  <Card key={message.id} className="p-5 border-2 border-[var(--color-accent)]">
+                  <Card key={message.id} className="p-5 bg-[var(--color-accent-light)] border-0">
                     <div className="space-y-4">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-sm font-medium text-[var(--subtle)]">{getToneLabel(message.tone)}</span>
@@ -172,10 +172,10 @@ export function Step5MessageGeneration({ onNext, onBack }: Step5MessageGeneratio
                 <Card
                   key={message.id}
                   className={cn(
-                    'p-5 transition-premium border',
+                    'p-5 transition-premium border-0',
                     isSelected
-                      ? 'border-2 border-[var(--color-accent)] shadow-[var(--shadow-card-hover)]'
-                      : 'border-[var(--border-subtle)] hover:border-[var(--border)] hover:shadow-[var(--shadow-card)]'
+                      ? 'bg-[var(--color-accent-light)] shadow-[var(--shadow-card-hover)]'
+                      : 'bg-[var(--muted)] hover:bg-[var(--muted)]/80 hover:shadow-[var(--shadow-card)]'
                   )}
                 >
                   <div className="flex items-start justify-between gap-4 mb-3">
@@ -220,7 +220,7 @@ export function Step5MessageGeneration({ onNext, onBack }: Step5MessageGeneratio
       {!showCustomForm ? (
         <div className="mb-6">
           <Button
-            variant="secondary"
+            variant="outline"
             onClick={() => {
               setShowCustomForm(true)
               setEditingMessageId(null)
@@ -232,7 +232,7 @@ export function Step5MessageGeneration({ onNext, onBack }: Step5MessageGeneratio
           </Button>
         </div>
       ) : (
-        <Card className="p-6 mb-6 border-2 border-[var(--color-accent)]">
+        <Card className="p-6 mb-6 bg-[var(--color-accent-light)] border-0">
           <h3 className="text-lg font-semibold mb-4 text-[var(--text)]">Create Custom Message</h3>
           <div className="space-y-4">
             <textarea

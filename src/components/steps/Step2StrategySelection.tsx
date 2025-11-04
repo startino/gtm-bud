@@ -66,9 +66,9 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
 
   return (
     <Card className="max-w-4xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-2 text-[var(--text)] tracking-tight">Choose your outreach strategy</h2>
+      <h2 className="text-2xl font-semibold mb-2 text-[var(--text)] tracking-tight">Choose your value offer outreach strategy</h2>
       <p className="text-[var(--subtle)] mb-8 font-medium">
-        AI has generated these strategies based on your profile. Pick one, edit it, or create your own.
+        AI has generated these value offer outreach strategies based on your profile. Pick one, edit it, or create your own.
       </p>
 
       <div className="grid grid-cols-1 gap-4 mb-6">
@@ -83,12 +83,12 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
                   <Input
                     value={editedStrategy.title}
                     onChange={(e) => setEditedStrategy({ ...editedStrategy, title: e.target.value })}
-                    placeholder="Strategy title"
+                    placeholder="Value offer title"
                   />
                   <textarea
                     value={editedStrategy.description}
                     onChange={(e) => setEditedStrategy({ ...editedStrategy, description: e.target.value })}
-                    placeholder="Strategy description"
+                    placeholder="Value offer description"
                     rows={4}
                     className="w-full px-4 py-3 rounded-[var(--radius-ctl)] bg-[var(--surface)] border border-[var(--border)] text-[var(--text)] placeholder-[var(--subtle)] focus:outline-none focus:ring-4 focus:ring-[var(--color-accent-light)] transition-premium resize-none"
                   />
@@ -125,7 +125,7 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
                   'opacity-0 group-hover:opacity-100',
                   isSelected && 'opacity-100'
                 )}
-                title="Edit strategy"
+                title="Edit value offer"
               >
                 <Edit2 className="w-4 h-4" />
               </button>
@@ -138,7 +138,7 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
       {!showCustomForm ? (
         <div className="mb-6">
           <Button
-            variant="secondary"
+            variant="outline"
             onClick={() => {
               setShowCustomForm(true)
               setEditingStrategyId(null)
@@ -146,19 +146,19 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
             className="w-full"
           >
             <Plus className="w-4 h-4 mr-2" />
-            Create Custom Strategy
+            Create Custom Value Offer
           </Button>
         </div>
       ) : (
         <Card className="p-6 mb-6 border-2 border-[var(--color-accent)]">
-          <h3 className="text-lg font-semibold mb-4 text-[var(--text)]">Create Custom Strategy</h3>
+          <h3 className="text-lg font-semibold mb-4 text-[var(--text)]">Create Custom Value Offer</h3>
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-semibold mb-2 text-[var(--text)]">Title</label>
               <Input
                 value={customStrategy.title}
                 onChange={(e) => setCustomStrategy({ ...customStrategy, title: e.target.value })}
-                placeholder="Strategy title"
+                placeholder="Value offer title"
               />
             </div>
             <div>
@@ -166,7 +166,7 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
               <textarea
                 value={customStrategy.description}
                 onChange={(e) => setCustomStrategy({ ...customStrategy, description: e.target.value })}
-                placeholder="Describe your outreach strategy..."
+                placeholder="Describe your value offer..."
                 rows={4}
                 className="w-full px-4 py-3 rounded-[var(--radius-ctl)] bg-[var(--surface)] border border-[var(--border)] text-[var(--text)] placeholder-[var(--subtle)] focus:outline-none focus:ring-4 focus:ring-[var(--color-accent-light)] transition-premium resize-none"
               />
@@ -177,7 +177,7 @@ export function Step2StrategySelection({ onNext, onBack }: Step2StrategySelectio
                 disabled={!customStrategy.title.trim() || !customStrategy.description.trim()}
                 className="flex-1"
               >
-                Use This Strategy
+                Use This Value Offer
               </Button>
               <Button
                 variant="secondary"
