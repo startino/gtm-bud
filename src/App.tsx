@@ -24,9 +24,15 @@ function AppContent() {
   const [isEarlyAccess, setIsEarlyAccess] = useState(false)
   
   useEffect(() => {
-    // Check if we're on the /early-access route (handle both with and without base path)
+    // Check if we're on the /early-access route
+    // The 404.html script converts query string back to pathname before React loads
     const pathname = window.location.pathname
-    setIsEarlyAccess(pathname === '/early-access' || pathname === '/gtm-bud/early-access' || pathname.endsWith('/early-access'))
+    setIsEarlyAccess(
+      pathname === '/early-access' || 
+      pathname === '/gtm-bud/early-access' || 
+      pathname.endsWith('/early-access') ||
+      window.location.search.includes('/early-access')
+    )
   }, [])
 
   const [currentStep, setCurrentStep] = useState(() => {
