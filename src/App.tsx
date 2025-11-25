@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { CampaignProvider, useCampaign } from './contexts/CampaignContext'
 import { AuthProvider, useAuth } from './contexts/AuthContext'
 import { LandingPage } from './components/LandingPage'
+import { GTMBudLandingPage } from './components/GTMBudLandingPage'
 import { Sidenav } from './components/Sidenav'
 import { Card } from './components/ui/Card'
 import { StepIndicator } from './components/StepIndicator'
@@ -20,6 +21,14 @@ const TOTAL_STEPS = 8
 function AppContent() {
   const { state, updateState } = useCampaign()
   const { isAnonymous, setAnonymous } = useAuth()
+  const [isEarlyAccess, setIsEarlyAccess] = useState(false)
+  
+  useEffect(() => {
+    // Check if we're on the /early-access route (handle both with and without base path)
+    const pathname = window.location.pathname
+    setIsEarlyAccess(pathname === '/early-access' || pathname === '/gtm-bud/early-access' || pathname.endsWith('/early-access'))
+  }, [])
+
   const [currentStep, setCurrentStep] = useState(() => {
     // Start at step 2 if user is anonymous (they already provided profile info)
     return isAnonymous && state.linkedInUrl && state.website ? 2 : 1
@@ -70,6 +79,11 @@ function AppContent() {
       default:
         return null
     }
+  }
+
+  // Show early access landing page
+  if (isEarlyAccess) {
+    return <GTMBudLandingPage />
   }
 
   // Show landing page
