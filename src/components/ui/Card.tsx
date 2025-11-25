@@ -4,11 +4,13 @@ import { cn } from '@/lib/utils'
 interface CardProps {
   children: ReactNode
   className?: string
+  id?: string
 }
 
-export function Card({ children, className }: CardProps) {
+export function Card({ children, className, id }: CardProps) {
   return (
     <div
+      id={id}
       className={cn(
         'rounded-[var(--radius-card)]',
         'p-6 transition-premium',
